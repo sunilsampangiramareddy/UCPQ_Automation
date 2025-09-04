@@ -3,16 +3,17 @@
 <suite name="Suite">
 
 	<listeners>
-		<listener class-name="utilities.ExtentReportManager"></listener>
+		<listener class-name="utilities.ExtentReportManager"></listener><listener class-name="utilities.ExtentReportManager"></listener><listener class-name="utilities.ExtentReportManager"></listener><listener class-name="utilities.ExtentReportManager"></listener>
+		<!--<listener class-name="retryAnalyzer.RetryListener" />-->
 	</listeners>
-
+  
   <test thread-count="5" name="Test">
    
    	<parameter name="os" value="Windows"/>
     <parameter name="browser" value="chrome"/>    
     <classes>
-     	  <class name="testCases.TC001_HappyPath"/> 
-     <!-- <class name="testCases.TC005_HandleTables"/> -->
+     	  <!--<class name="testCases.TC001_HappyPathScript"/>-->
+      <class name="testCases.tryLogic"/>
     </classes>
    
    

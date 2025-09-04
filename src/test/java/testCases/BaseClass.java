@@ -8,7 +8,6 @@ import java.time.Duration;
 import java.util.Date;
 import java.util.Properties;
 import java.net.URL;
-
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Platform;
@@ -22,6 +21,33 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.time.Duration;
+import java.util.Date;
+import java.util.Properties;
+import java.net.URL;
+import org.apache.commons.lang3.RandomStringUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.Platform;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.io.FileHandler;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
+import org.apache.commons.io.FileUtils; 
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
@@ -97,11 +123,35 @@ public class BaseClass {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
-		driver.get(p.getProperty("baseURL")); //reading url from properties file
+		driver.get(p.getProperty("sfdcURL")); //reading url from properties file
 		logger.info("Application url loaded");
 		driver.manage().window().maximize();
-		Thread.sleep(Duration.ofSeconds(10));
+		Thread.sleep(Duration.ofSeconds(6));
 	}
+	
+	
+	
+	
+//	@AfterMethod(groups= {"Sanity", "Regression", "Master"})
+//	public void captureFailedScreenshot(ITestResult result) throws IOException
+//	{
+//		{   if (ITestResult.FAILURE==(result.getStatus()-1)){
+//			try {
+//	            TakesScreenshot ts = (TakesScreenshot) driver;
+//	            File source = ts.getScreenshotAs(OutputType.FILE);
+//	            String timeNote=new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+//	            String screenshotName = "FailedScreenShot_"+result.getName()+"_" +timeNote+ ".png";
+//	            File destination = new File(".\\screenshots\\" + screenshotName); // Create a 'screenshots' folder in your project
+//	            FileUtils.copyFile(source, destination);
+//	            System.out.println("Screenshot captured for failed test: " + result.getName());
+//	        } catch (Exception e) {
+//	            System.out.println("Exception while taking screenshot: " + e.getMessage());
+//	        	}		
+//			}
+//	   }
+//     }
+	
+	
 	
 	
 	
@@ -112,19 +162,7 @@ public class BaseClass {
 	}
 	
 	
-	
-	public String randomString()
-	{
-		String generatedString=RandomStringUtils.randomAlphabetic(5);
-		return generatedString;
-	}
-	
-	public String randomNumber()
-	{
-		String generatedNumber=RandomStringUtils.randomNumeric(10);
-		return generatedNumber;
-	}
-	
+		
 	public String captureScreen(String tname) throws IOException {
 		String timeStamp=new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());		
 		
@@ -138,9 +176,5 @@ public class BaseClass {
 		return targetFilePath;	
 	}
 	
-	public static void implicitWait(WebDriver driver, int wait_sec)
-	{
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(wait_sec));
-	}
-
+	
 }

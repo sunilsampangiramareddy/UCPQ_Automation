@@ -1,18 +1,28 @@
 package pageObects;
 
-
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.Set;
+import java.util.TreeMap;
 import java.util.concurrent.TimeUnit;
+import java.util.Date;
+
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -22,10 +32,19 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestResult;
+import org.apache.commons.codec.binary.Base64;
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.RandomStringUtils;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.io.FileHandler;
 
 public class BasePage {
 	
-public static WebDriver driver;
+	public WebDriver driver;
 	
 	public BasePage(WebDriver driver)
 	{
@@ -34,9 +53,9 @@ public static WebDriver driver;
 	}
 	
 	
-		
 	
-	//----COMMON METHODS-----------------------------------------------------------------------------------------
+	
+//----COMMON METHODS-------------------------------------------------------------------------------------------------------
 	//Java script click on element
 	public static void jsClick(WebDriver driver, WebElement elementToClick) {
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
@@ -95,6 +114,7 @@ public static WebDriver driver;
 				                   .pollingEvery(Duration.ofMillis(300))
 				                   .ignoring(NoSuchElementException.class);
 		wait.until(d -> elementToClick.isDisplayed());
+		wait.until(d -> elementToClick.isEnabled());
 	    elementToClick.click();
 	}
 	
@@ -109,7 +129,9 @@ public static WebDriver driver;
 	public static void jsScrollToElementAndClick(WebDriver driver, WebElement element)
 	{
 	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-	 element.click();
+	element.isDisplayed();
+	element.isEnabled();
+	element.click();
 	}
 	
 	//Actions class to move to the element
@@ -167,7 +189,15 @@ public static WebDriver driver;
 	   //alert.dismiss();
 	    }
 		
-		//Mouse Hover on main element and click sub element
+		//Mouse hover and click element
+		public static void mouseHover(WebDriver driver, WebElement mainElement) 
+		{
+			Actions action = new Actions(driver);
+			action.moveToElement(mainElement).contextClick().perform();
+		}		
+		
+		
+		//Mouse hover and click element
 		public static void mouseHoverClick(WebDriver driver, WebElement mainElement, WebElement subElementToClick) 
 		{
 			Actions action = new Actions(driver);
@@ -252,13 +282,101 @@ public static WebDriver driver;
 //-------------------------------------------------------------------------------------------------------------------------	
 		
 		
+		//Method to decode password
+		//use the below decodeString method like below ex:
+		//driver.findElement(By.xpath("//@id-password").sendKeys(decodeString("----------")
+		public static String decodeString(String encodedPassword)
+		{
+			byte[] decodedString=Base64.decodeBase64(encodedPassword);
+			return(new String(decodedString));
+		}		
+		
+				
+		//Direct method to capture screenshots
+		public void captureScreenshot(WebDriver driver) throws IOException {
+			File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+			// Now you can do whatever you need to do with it, for example copy somewhere
+			String timeNote=new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+			FileUtils.copyFile(scrFile, new File(".\\screenshots\\screenshot"+"_"+ timeNote +".png"));
+	    }
+		
+						
+       //Write test results to excel sheet
+		public void writeExcelTestResults(WebDriver driver, String testName, int optyNumber, int quoteNumber, String testRusult ) throws IOException
+		{
+			// workbook object
+	        XSSFWorkbook workbook = new XSSFWorkbook();
+	        // spreadsheet object
+	        XSSFSheet spreadsheet = workbook.createSheet("Test Execution Results");
+	        // creating a row object
+	        XSSFRow row;
+	        
+	     // This data needs to be written (Object[])
+	        Map<String, Object[]> studentData = new TreeMap<String, Object[]>();
+	        studentData.put("1", new Object[] { "Test Name", "Opportunity Number", "Quote Number", "Execution Status" });
+	        studentData.put("2", new Object[] { testName, Integer.toString(optyNumber), Integer.toString(quoteNumber),testRusult });
+	       
+	        Set<String> keyid = studentData.keySet();
+	        int rowid = 0;
+	        
+	     // writing the data into the sheets...
+	        for (String key : keyid) 
+	        {
+	        	row = spreadsheet.createRow(rowid++);
+	            Object[] objectArr = studentData.get(key);
+	            int cellid = 0;
+
+	            for (Object obj : objectArr) 
+	            {
+	                Cell cell = row.createCell(cellid++);
+	                cell.setCellValue((String)obj);
+	            }
+	        }
+	        // writing the workbook into the file...
+	    	// Now you can do whatever you need to do with it, for example copy somewhere
+			String timeNote=new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());			
+	        FileOutputStream out = new FileOutputStream(new File(".\\excelTestResults\\Test_Results"+"_"+timeNote+".xlsx"));
+	        workbook.write(out);
+	        out.close();
+		}
 		
 		
+		//Generate random string 
+		public String randomString(int num)
+		{
+			String generatedString=RandomStringUtils.randomAlphabetic(num);
+			return generatedString;
+		}
+		
+		//Generate random number
+		public String randomNumber(int num)
+		{
+			String generatedNumber=RandomStringUtils.randomNumeric(num);
+			return generatedNumber;
+		}
+		
+	
+		
+//--------------------------------------------------------------------------------------------------------------------------------		
 		
 		
-		
-		
-		
-		
-		
+
+
+
+
+
+
+
 }
+
+
+
+
+
+		
+		
+		
+		
+
+	
+	

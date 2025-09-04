@@ -1,5 +1,8 @@
 package pageObects;
 
+import java.time.Duration;
+import java.util.Properties;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,9 +15,8 @@ import org.openqa.selenium.support.ui.Select;
 public class LoginPage extends BasePage {
 	
 public static WebDriver driver;
-
 	
-int small_Wait=5; int medium_Wait=10; int long_Wait=20;
+public int sw=5; public int mw=10; public int lw=20;
 
 	public LoginPage(WebDriver driver)
 	{
@@ -43,10 +45,9 @@ int small_Wait=5; int medium_Wait=10; int long_Wait=20;
 	
 	
 	
-	
 	public void enterEmailAddress(String email)
 	{
-		BasePage.fluentWait_IsDiplayed(driver, emailAddress, medium_Wait);
+		BasePage.fluentWait_IsDiplayed(driver, emailAddress, mw);
 		emailAddress.sendKeys(email);		
 	}
 	
@@ -57,8 +58,8 @@ int small_Wait=5; int medium_Wait=10; int long_Wait=20;
 	
 	public void enterPassword(String pwd)
 	{
-		BasePage.fluentWait_IsDiplayed(driver, password, medium_Wait);
-		password.sendKeys(pwd);		
+		BasePage.fluentWait_IsDiplayed(driver, password, mw);
+		password.sendKeys(decodeString(pwd));		
 	}
 	
 	public void clickSignInButton()
@@ -66,28 +67,16 @@ int small_Wait=5; int medium_Wait=10; int long_Wait=20;
 		signInButton.click();
 	}
 	
-	public void clickStaySignInButton()
+	public void clickStaySignInButton() throws InterruptedException
 	{
-		BasePage.fluentWait_IsDiplayed(driver, staySignInYesButton, medium_Wait);
+		BasePage.fluentWait_IsDiplayed(driver, staySignInYesButton, mw);
 		staySignInYesButton.click();
+		Thread.sleep(Duration.ofSeconds(lw));
+	}
+
+	
 	}
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}

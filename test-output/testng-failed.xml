@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.TC001_HappyPath">
+      <class name="testCases.tryLogic">
         <methods>
           <include name="setup"/>
-          <include name="verifyHappyPath"/>
           <include name="tearDown"/>
+          <include name="verifyHappyPath"/>
         </methods>
-      </class> <!-- testCases.TC001_HappyPath -->
+      </class> <!-- testCases.tryLogic -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
