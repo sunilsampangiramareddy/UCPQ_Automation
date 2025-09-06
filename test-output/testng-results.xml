@@ -2,18 +2,18 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-05T01:09:52 IST" name="Suite" finished-at="2025-09-05T01:12:38 IST" duration-ms="165630">
+  <suite started-at="2025-09-07T01:46:12 IST" name="Suite" finished-at="2025-09-07T01:49:35 IST" duration-ms="203501">
     <groups>
       <group name="Master">
-        <method signature="tryLogic.verifyHappyPath(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.tryLogic@4097cac]" name="verifyHappyPath" class="testCases.tryLogic"/>
+        <method signature="TC001_CreateOpportunity.createOpportunity(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC001_CreateOpportunity@ccb4b1b]" name="createOpportunity" class="testCases.TC001_CreateOpportunity"/>
       </group> <!-- Master -->
       <group name="Regression">
-        <method signature="tryLogic.verifyHappyPath(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.tryLogic@4097cac]" name="verifyHappyPath" class="testCases.tryLogic"/>
+        <method signature="TC001_CreateOpportunity.createOpportunity(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC001_CreateOpportunity@ccb4b1b]" name="createOpportunity" class="testCases.TC001_CreateOpportunity"/>
       </group> <!-- Regression -->
     </groups>
-    <test started-at="2025-09-05T01:09:52 IST" name="Test" finished-at="2025-09-05T01:12:38 IST" duration-ms="165630">
-      <class name="testCases.tryLogic">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.tryLogic@4097cac]" started-at="2025-09-05T01:09:52 IST" name="setup" finished-at="2025-09-05T01:10:07 IST" duration-ms="14480" status="PASS">
+    <test started-at="2025-09-07T01:46:12 IST" name="Test" finished-at="2025-09-07T01:49:35 IST" duration-ms="203501">
+      <class name="testCases.TC001_CreateOpportunity">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC001_CreateOpportunity@ccb4b1b]" started-at="2025-09-07T01:46:12 IST" name="setup" finished-at="2025-09-07T01:46:24 IST" duration-ms="12155" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -29,7 +29,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyHappyPath(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.tryLogic@4097cac]" started-at="2025-09-05T01:10:10 IST" name="verifyHappyPath" data-provider="excelData" finished-at="2025-09-05T01:10:10 IST" duration-ms="228" status="PASS">
+        <test-method signature="createOpportunity(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC001_CreateOpportunity@ccb4b1b]" started-at="2025-09-07T01:46:26 IST" name="createOpportunity" data-provider="excelData" finished-at="2025-09-07T01:46:26 IST" duration-ms="68" status="PASS">
           <params>
             <param index="0">
               <value is-null="true"/>
@@ -61,11 +61,35 @@
             <param index="9">
               <value is-null="true"/>
             </param>
+            <param index="10">
+              <value is-null="true"/>
+            </param>
+            <param index="11">
+              <value is-null="true"/>
+            </param>
+            <param index="12">
+              <value is-null="true"/>
+            </param>
+            <param index="13">
+              <value is-null="true"/>
+            </param>
+            <param index="14">
+              <value is-null="true"/>
+            </param>
+            <param index="15">
+              <value is-null="true"/>
+            </param>
+            <param index="16">
+              <value is-null="true"/>
+            </param>
+            <param index="17">
+              <value is-null="true"/>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyHappyPath -->
-        <test-method signature="verifyHappyPath(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.tryLogic@4097cac]" started-at="2025-09-05T01:10:10 IST" name="verifyHappyPath" data-provider="excelData" finished-at="2025-09-05T01:10:10 IST" duration-ms="66" status="PASS">
+        </test-method> <!-- createOpportunity -->
+        <test-method signature="createOpportunity(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC001_CreateOpportunity@ccb4b1b]" started-at="2025-09-07T01:46:26 IST" name="createOpportunity" data-provider="excelData" finished-at="2025-09-07T01:46:26 IST" duration-ms="6" status="PASS">
           <params>
             <param index="0">
               <value is-null="true"/>
@@ -97,11 +121,35 @@
             <param index="9">
               <value is-null="true"/>
             </param>
+            <param index="10">
+              <value is-null="true"/>
+            </param>
+            <param index="11">
+              <value is-null="true"/>
+            </param>
+            <param index="12">
+              <value is-null="true"/>
+            </param>
+            <param index="13">
+              <value is-null="true"/>
+            </param>
+            <param index="14">
+              <value is-null="true"/>
+            </param>
+            <param index="15">
+              <value is-null="true"/>
+            </param>
+            <param index="16">
+              <value is-null="true"/>
+            </param>
+            <param index="17">
+              <value is-null="true"/>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyHappyPath -->
-        <test-method signature="verifyHappyPath(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.tryLogic@4097cac]" started-at="2025-09-05T01:10:10 IST" name="verifyHappyPath" data-provider="excelData" finished-at="2025-09-05T01:12:35 IST" duration-ms="145247" status="PASS">
+        </test-method> <!-- createOpportunity -->
+        <test-method signature="createOpportunity(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC001_CreateOpportunity@ccb4b1b]" started-at="2025-09-07T01:46:26 IST" name="createOpportunity" data-provider="excelData" finished-at="2025-09-07T01:49:34 IST" duration-ms="187886" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -150,18 +198,58 @@
             </param>
             <param index="9">
               <value>
-                <![CDATA[Direct]]>
+                <![CDATA[Indirect]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[Reseller through NetApp]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Reseller]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Own Use]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Test]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Bhuvan Testing]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Bhuvan Testing]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[All SAN Array Flash Config]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[1000]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyHappyPath -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.tryLogic@4097cac]" started-at="2025-09-05T01:12:35 IST" name="tearDown" finished-at="2025-09-05T01:12:38 IST" duration-ms="2362" status="PASS">
+        </test-method> <!-- createOpportunity -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC001_CreateOpportunity@ccb4b1b]" started-at="2025-09-07T01:49:34 IST" name="tearDown" finished-at="2025-09-07T01:49:35 IST" duration-ms="1334" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testCases.tryLogic -->
+      </class> <!-- testCases.TC001_CreateOpportunity -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

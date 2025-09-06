@@ -18,7 +18,7 @@ public class DataProviders {
 		@DataProvider(name="excelData")
 		public String [][] getData() throws IOException
 		{
-			String path=".\\testData\\TestDataSheet.xlsx";//taking xl file from testData
+			String path=".\\testData\\TestDataSheet_Indirect.xlsx";//taking xl file from testData
 					
 			ExcelUtility xlutil=new ExcelUtility(path);//creating an object for XLUtility
 			
