@@ -14,7 +14,8 @@
     <classes>
      	<!--<class name="testCases.TC001_SolidFireConfig"/>-->
       	<!--<class name="testCases.TC_CreateIndirectOpportunity"/>-->
-      	<class name="testCases.TC_CreateDirectOpportunity"/>
+      	<!--<class name="testCases.TC_CreateDirectOpportunity"/>-->
+      	<class name="testCases.tryLogic"/>
     </classes>
    
    

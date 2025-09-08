@@ -26,7 +26,7 @@ public class tryLogic extends BaseClass{
 	public Properties p;
 	
 	
-	@Test(dataProvider="SolidFire", dataProviderClass=DataProviders.class, groups={"Regression", "Master"})
+	@Test(dataProvider="SolidFire_Config", dataProviderClass=DataProviders.class, groups={"Regression", "Master"})
 	public void verifyHappyPath(String userName, String accountName, String opportunityType, String opportunityName, String primaryContact, String salesPlay, String salesType, String installedBaseType, String currency, String channel, String pathway, String partnerSalesModel, String endCustomerUsage, String reseller, String resellerSalesRep, String resellerSE, String product, String salesPrice, String subProduct, String newCapacity, String newTerm) throws InterruptedException, IOException
 	{
 		
@@ -137,12 +137,12 @@ public class tryLogic extends BaseClass{
 			bp.captureScreenshot(driver);
 			hpsf.clickAddToQuote();
 			logger.info("Clicked on add to quote button");
-			op.clickSaveButton();
-			logger.info("Clicked on save button");
+//			op.clickSaveButton();
+//			logger.info("Clicked on save button");
 			hpc.clickSettingsExpandAll();
 			logger.info("Clicked on settings and clicked on expand all option");			
-//			hpc.readFullTable(driver);
-//			logger.info("Reading prodct table details");
+			hpc.readFullTable(driver);
+			logger.info("Reading prodct table details");
 			bp.captureScreenshot(driver);
 			
 			

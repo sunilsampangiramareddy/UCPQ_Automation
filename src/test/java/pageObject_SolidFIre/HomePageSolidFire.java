@@ -102,7 +102,7 @@ public int nw=3; int sw=5; public int mw=10; public int lw=20;
 	{
 		BasePage.jsClick(driver, addToQuote);
 		Thread.sleep(Duration.ofSeconds(lw));	
-		Thread.sleep(Duration.ofSeconds(sw));
+		Thread.sleep(Duration.ofSeconds(mw));
 	}
 	
 	

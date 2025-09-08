@@ -175,8 +175,8 @@ public class TC001_SolidFireConfig extends BaseClass{
 //			logger.info("Clicked on settings and clicked on expand all option");			
 //			hpc.readFullTable(driver);
 //			logger.info("Reading product table details");
-			quoteStatus=hpc.getQuoteStatus();
-			logger.info("Captured quote status "+quoteStatus);
+//			quoteStatus=hpc.getQuoteStatus();
+//			logger.info("Captured quote status "+quoteStatus);
 			bp.captureScreenshot(driver);
 			logger.info("Captured screen shot of solid fire product config");
 			

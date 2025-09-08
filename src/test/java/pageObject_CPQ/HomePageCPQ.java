@@ -97,7 +97,7 @@ public int sw=5; public int mw=10; public int lw=20;
 	// Print full table data
 	public void readFullTable(WebDriver driver) throws InterruptedException
 	{
-		WebElement table = driver.findElement(By.xpath("//*[@id=\"cx_cpq_products_and_pricing_lig_section\"]/div[3]")); 
+		WebElement table = driver.findElement(By.id("datagrid-container")); 
 		List<WebElement> rows = table.findElements(By.tagName("tr"));
 		// print complete table data 
 		for (WebElement row : rows) { 
@@ -107,7 +107,7 @@ public int sw=5; public int mw=10; public int lw=20;
 		} 
 		System.out.println();
 		}
-		Thread.sleep(Duration.ofSeconds(mw));
+		Thread.sleep(Duration.ofSeconds(lw));
 	}
 	
 }
