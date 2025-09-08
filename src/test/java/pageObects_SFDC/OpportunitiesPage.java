@@ -128,8 +128,11 @@ public int sw=5; public int mw=10; public int lw=20;
 	public void clickSaveButton() throws InterruptedException
 	{
 		saveButtonCPQ.click();
-		Thread.sleep(Duration.ofSeconds(lw));
+		Thread.sleep(Duration.ofSeconds(mw));
 		
 	}
+	
+	
+	
 	
 }

@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Testdemo(failed)">
+  <listeners>
+    <listener class-name="utilities.ExtentReportManager"/>
+    <listener class-name="utilities.ExtentReportManager"/>
+    <listener class-name="utilities.ExtentReportManager"/>
+    <listener class-name="utilities.ExtentReportManager"/>
+    <listener class-name="retryAnalyzer.RetryListener"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="os" value="Windows"/>
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="utilities.DataProviders">
+      <class name="testCases.tryLogic">
         <methods>
-          <include name="dataTest"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="verifyHappyPath"/>
         </methods>
-      </class> <!-- utilities.DataProviders -->
+      </class> <!-- testCases.tryLogic -->
     </classes>
-  </test> <!-- Testdemo(failed) -->
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

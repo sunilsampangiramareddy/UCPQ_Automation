@@ -57,7 +57,7 @@ public class BasePage {
 	
 //----COMMON METHODS-------------------------------------------------------------------------------------------------------
 	//Java script click on element
-	public void jsClick(WebDriver driver, WebElement elementToClick) {
+	public static void jsClick(WebDriver driver, WebElement elementToClick) {
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", elementToClick);
 			}

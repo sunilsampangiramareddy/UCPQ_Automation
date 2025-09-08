@@ -3,7 +3,7 @@
 <suite name="Suite">
 
 	<listeners>
-		<listener class-name="utilities.ExtentReportManager"></listener><listener class-name="utilities.ExtentReportManager"></listener><listener class-name="utilities.ExtentReportManager"></listener><listener class-name="utilities.ExtentReportManager"></listener>
+		<listener class-name="utilities.ExtentReportManager"></listener>
 		<listener class-name="retryAnalyzer.RetryListener" />
 	</listeners>
   
@@ -12,9 +12,9 @@
    	<parameter name="os" value="Windows"/>
     <parameter name="browser" value="chrome"/>    
     <classes>
-     	<!--<class name="testCases.TC002_HappyPathScript"/>-->
-      	<!--<class name="testCases.tryLogic"/>-->
-      	<class name="testCases.TC001_CreateOpportunity"/>
+     	<!--<class name="testCases.TC001_SolidFireConfig"/>-->
+      	<!--<class name="testCases.TC_CreateIndirectOpportunity"/>-->
+      	<class name="testCases.TC_CreateDirectOpportunity"/>
     </classes>
    
    
