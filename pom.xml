@@ -4,12 +4,14 @@
   <artifactId>UCPQ_Automation</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
-  	<properties>
+ 
+  <properties>
   		<maven.compiler.source>17</maven.compiler.source>
   		<maven.compiler.target>17</maven.compiler.target>
   		    <!--<suiteFile>testng.xml</suiteFile>-->
-  			<suiteFile>XMLs_Execution\TC_CreateDirectOpportunity.xml</suiteFile>
-  	</properties>
+  		<suiteFile>XMLs_Execution\TC_CreateDirectOpportunity.xml</suiteFile>
+  </properties>
+ 
  
 <!--plugins required for execution tests -->
   <build>
