@@ -6,6 +6,7 @@ testBase\testBase.class
 retryAnalyzer\RetryListener.class
 pageObject_CPQ\HomePageCPQ.class
 utilities\ExcelUtility.class
+testCases\TC_SolidFireConfig.class
 retryAnalyzer\RetryAnalyzer.class
 pageObects_SFDC\AddProductsPage.class
 testCases\BaseClass.class

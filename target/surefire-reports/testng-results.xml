@@ -2,7 +2,7 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-10T19:00:26 IST" name="Suite" finished-at="2025-09-10T19:03:31 IST" duration-ms="185882">
+  <suite started-at="2025-09-10T21:00:12 IST" name="Suite" finished-at="2025-09-10T21:00:59 IST" duration-ms="47062">
     <groups>
       <group name="Master">
         <method signature="TC_CreateDirectOpportunity.createDirectOpportunity(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_CreateDirectOpportunity@142269f2]" name="createDirectOpportunity" class="testCases.TC_CreateDirectOpportunity"/>
@@ -11,9 +11,9 @@
         <method signature="TC_CreateDirectOpportunity.createDirectOpportunity(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_CreateDirectOpportunity@142269f2]" name="createDirectOpportunity" class="testCases.TC_CreateDirectOpportunity"/>
       </group> <!-- Smoke -->
     </groups>
-    <test started-at="2025-09-10T19:00:26 IST" name="Test" finished-at="2025-09-10T19:03:31 IST" duration-ms="185882">
+    <test started-at="2025-09-10T21:00:12 IST" name="Test" finished-at="2025-09-10T21:00:59 IST" duration-ms="47062">
       <class name="testCases.TC_CreateDirectOpportunity">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_CreateDirectOpportunity@142269f2]" started-at="2025-09-10T19:00:26 IST" name="setup" finished-at="2025-09-10T19:00:40 IST" duration-ms="14066" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_CreateDirectOpportunity@142269f2]" started-at="2025-09-10T21:00:13 IST" name="setup" finished-at="2025-09-10T21:00:32 IST" duration-ms="18494" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -29,7 +29,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="createDirectOpportunity(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_CreateDirectOpportunity@142269f2]" started-at="2025-09-10T19:00:47 IST" name="createDirectOpportunity" data-provider="DirectOpportunity_Create" finished-at="2025-09-10T19:00:47 IST" duration-ms="78" status="PASS">
+        <test-method signature="createDirectOpportunity(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_CreateDirectOpportunity@142269f2]" started-at="2025-09-10T21:00:35 IST" name="createDirectOpportunity" data-provider="DirectOpportunity_Create" finished-at="2025-09-10T21:00:35 IST" duration-ms="96" status="PASS">
           <params>
             <param index="0">
               <value is-null="true"/>
@@ -83,7 +83,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createDirectOpportunity -->
-        <test-method signature="createDirectOpportunity(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_CreateDirectOpportunity@142269f2]" started-at="2025-09-10T19:00:47 IST" name="createDirectOpportunity" data-provider="DirectOpportunity_Create" finished-at="2025-09-10T19:00:47 IST" duration-ms="5" status="PASS">
+        <test-method signature="createDirectOpportunity(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_CreateDirectOpportunity@142269f2]" started-at="2025-09-10T21:00:35 IST" name="createDirectOpportunity" data-provider="DirectOpportunity_Create" finished-at="2025-09-10T21:00:35 IST" duration-ms="7" status="PASS">
           <params>
             <param index="0">
               <value is-null="true"/>
@@ -137,7 +137,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createDirectOpportunity -->
-        <test-method signature="createDirectOpportunity(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_CreateDirectOpportunity@142269f2]" started-at="2025-09-10T19:00:47 IST" name="createDirectOpportunity" data-provider="DirectOpportunity_Create" finished-at="2025-09-10T19:03:30 IST" duration-ms="162543" status="PASS">
+        <test-method signature="createDirectOpportunity(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_CreateDirectOpportunity@142269f2]" started-at="2025-09-10T21:00:35 IST" name="createDirectOpportunity" data-provider="DirectOpportunity_Create" finished-at="2025-09-10T21:00:58 IST" duration-ms="22802" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -223,7 +223,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createDirectOpportunity -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC_CreateDirectOpportunity@142269f2]" started-at="2025-09-10T19:03:30 IST" name="tearDown" finished-at="2025-09-10T19:03:31 IST" duration-ms="1655" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC_CreateDirectOpportunity@142269f2]" started-at="2025-09-10T21:00:58 IST" name="tearDown" finished-at="2025-09-10T21:00:59 IST" duration-ms="1523" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
