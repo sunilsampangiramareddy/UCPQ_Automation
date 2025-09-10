@@ -5,7 +5,7 @@
   <version>0.0.1-SNAPSHOT</version>
  
  <properties>
- 	<suiteFile>file.xml</suiteFile>
+ 	<suiteFile>TC_SolidFireConfig.xml</suiteFile>
  </properties>
  
  <!--plugins required for execution tests -->
