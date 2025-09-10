@@ -2,18 +2,18 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-09T00:20:27 IST" name="Suite" finished-at="2025-09-09T00:22:37 IST" duration-ms="129487">
+  <suite started-at="2025-09-10T19:57:32 IST" name="Suite" finished-at="2025-09-10T19:58:02 IST" duration-ms="30065">
     <groups>
       <group name="Master">
-        <method signature="tryLogic.verifyHappyPath(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.tryLogic@ccb4b1b]" name="verifyHappyPath" class="testCases.tryLogic"/>
+        <method signature="TC_CreateIndirectOpportunity.createIndirectOpportunity(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_CreateIndirectOpportunity@ccb4b1b]" name="createIndirectOpportunity" class="testCases.TC_CreateIndirectOpportunity"/>
       </group> <!-- Master -->
-      <group name="Regression">
-        <method signature="tryLogic.verifyHappyPath(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.tryLogic@ccb4b1b]" name="verifyHappyPath" class="testCases.tryLogic"/>
-      </group> <!-- Regression -->
+      <group name="Smoke">
+        <method signature="TC_CreateIndirectOpportunity.createIndirectOpportunity(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_CreateIndirectOpportunity@ccb4b1b]" name="createIndirectOpportunity" class="testCases.TC_CreateIndirectOpportunity"/>
+      </group> <!-- Smoke -->
     </groups>
-    <test started-at="2025-09-09T00:20:27 IST" name="Test" finished-at="2025-09-09T00:22:37 IST" duration-ms="129487">
-      <class name="testCases.tryLogic">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.tryLogic@ccb4b1b]" started-at="2025-09-09T00:20:28 IST" name="setup" finished-at="2025-09-09T00:20:45 IST" duration-ms="17066" status="PASS">
+    <test started-at="2025-09-10T19:57:32 IST" name="Test" finished-at="2025-09-10T19:58:02 IST" duration-ms="30065">
+      <class name="testCases.TC_CreateIndirectOpportunity">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_CreateIndirectOpportunity@ccb4b1b]" started-at="2025-09-10T19:57:33 IST" name="setup" finished-at="2025-09-10T19:57:47 IST" duration-ms="14457" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -29,7 +29,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyHappyPath(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.tryLogic@ccb4b1b]" started-at="2025-09-09T00:20:50 IST" name="verifyHappyPath" data-provider="SolidFire_Config" finished-at="2025-09-09T00:20:50 IST" duration-ms="300" status="PASS">
+        <test-method signature="createIndirectOpportunity(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_CreateIndirectOpportunity@ccb4b1b]" started-at="2025-09-10T19:57:50 IST" name="createIndirectOpportunity" data-provider="IndirectOpportunity_Create" finished-at="2025-09-10T19:57:50 IST" duration-ms="149" status="PASS">
           <params>
             <param index="0">
               <value is-null="true"/>
@@ -79,26 +79,11 @@
             <param index="15">
               <value is-null="true"/>
             </param>
-            <param index="16">
-              <value is-null="true"/>
-            </param>
-            <param index="17">
-              <value is-null="true"/>
-            </param>
-            <param index="18">
-              <value is-null="true"/>
-            </param>
-            <param index="19">
-              <value is-null="true"/>
-            </param>
-            <param index="20">
-              <value is-null="true"/>
-            </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyHappyPath -->
-        <test-method signature="verifyHappyPath(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.tryLogic@ccb4b1b]" started-at="2025-09-09T00:20:50 IST" name="verifyHappyPath" data-provider="SolidFire_Config" finished-at="2025-09-09T00:20:50 IST" duration-ms="32" status="PASS">
+        </test-method> <!-- createIndirectOpportunity -->
+        <test-method signature="createIndirectOpportunity(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_CreateIndirectOpportunity@ccb4b1b]" started-at="2025-09-10T19:57:50 IST" name="createIndirectOpportunity" data-provider="IndirectOpportunity_Create" finished-at="2025-09-10T19:57:50 IST" duration-ms="17" status="PASS">
           <params>
             <param index="0">
               <value is-null="true"/>
@@ -148,26 +133,11 @@
             <param index="15">
               <value is-null="true"/>
             </param>
-            <param index="16">
-              <value is-null="true"/>
-            </param>
-            <param index="17">
-              <value is-null="true"/>
-            </param>
-            <param index="18">
-              <value is-null="true"/>
-            </param>
-            <param index="19">
-              <value is-null="true"/>
-            </param>
-            <param index="20">
-              <value is-null="true"/>
-            </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyHappyPath -->
-        <test-method signature="verifyHappyPath(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.tryLogic@ccb4b1b]" started-at="2025-09-09T00:20:50 IST" name="verifyHappyPath" data-provider="SolidFire_Config" finished-at="2025-09-09T00:22:34 IST" duration-ms="103610" status="PASS">
+        </test-method> <!-- createIndirectOpportunity -->
+        <test-method signature="createIndirectOpportunity(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_CreateIndirectOpportunity@ccb4b1b]" started-at="2025-09-10T19:57:50 IST" name="createIndirectOpportunity" data-provider="IndirectOpportunity_Create" finished-at="2025-09-10T19:58:01 IST" duration-ms="11000" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -216,73 +186,48 @@
             </param>
             <param index="9">
               <value>
-                <![CDATA[Direct]]>
+                <![CDATA[Indirect]]>
               </value>
             </param>
             <param index="10">
               <value>
-                <![CDATA[]]>
+                <![CDATA[Reseller through NetApp]]>
               </value>
             </param>
             <param index="11">
               <value>
-                <![CDATA[]]>
+                <![CDATA[Reseller]]>
               </value>
             </param>
             <param index="12">
               <value>
-                <![CDATA[]]>
+                <![CDATA[Own Use]]>
               </value>
             </param>
             <param index="13">
               <value>
-                <![CDATA[]]>
+                <![CDATA[Test]]>
               </value>
             </param>
             <param index="14">
               <value>
-                <![CDATA[]]>
+                <![CDATA[Bhuvan Testing]]>
               </value>
             </param>
             <param index="15">
               <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="16">
-              <value>
-                <![CDATA[All SAN Array Flash Config]]>
-              </value>
-            </param>
-            <param index="17">
-              <value>
-                <![CDATA[1000]]>
-              </value>
-            </param>
-            <param index="18">
-              <value>
-                <![CDATA[Term Based Capacity License Software]]>
-              </value>
-            </param>
-            <param index="19">
-              <value>
-                <![CDATA[10]]>
-              </value>
-            </param>
-            <param index="20">
-              <value>
-                <![CDATA[24 Months]]>
+                <![CDATA[Bhuvan Testing]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyHappyPath -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.tryLogic@ccb4b1b]" started-at="2025-09-09T00:22:34 IST" name="tearDown" finished-at="2025-09-09T00:22:37 IST" duration-ms="2963" status="PASS">
+        </test-method> <!-- createIndirectOpportunity -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC_CreateIndirectOpportunity@ccb4b1b]" started-at="2025-09-10T19:58:01 IST" name="tearDown" finished-at="2025-09-10T19:58:02 IST" duration-ms="963" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testCases.tryLogic -->
+      </class> <!-- testCases.TC_CreateIndirectOpportunity -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

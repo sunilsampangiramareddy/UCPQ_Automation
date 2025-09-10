@@ -12,10 +12,10 @@
    	<parameter name="os" value="Windows"/>
     <parameter name="browser" value="chrome"/>    
     <classes>
-     	<!--<class name="testCases.TC001_SolidFireConfig"/>-->
+     	<!--<class name="testCases.TC_SolidFireConfig"/>-->
       	<!--<class name="testCases.TC_CreateIndirectOpportunity"/>-->
-      	<!--<class name="testCases.TC_CreateDirectOpportunity"/>-->
-      	<class name="testCases.tryLogic"/>
+      	<class name="testCases.TC_CreateDirectOpportunity"/>
+      	<!--<class name="testCases.tryLogic"/>-->
     </classes>
    
    
