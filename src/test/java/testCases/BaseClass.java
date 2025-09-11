@@ -108,7 +108,11 @@ public class BaseClass {
 		}
 		
 		
-		//execution in local machine environment 
+		 		                 
+//-------Enable below line of code to run browser parameter from POM.xml file or Jenkins browser parameters-----------
+			br=System.getProperty("browserProperty");
+			
+		//execution in local machine environment
 		if(p.getProperty("execution_env").equalsIgnoreCase("local"))
 		{
 		switch(br.toLowerCase())
@@ -123,8 +127,14 @@ public class BaseClass {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
-		driver.get(p.getProperty("sfdcURL")); //reading url from properties file
-		logger.info("Application url loaded");
+		//reading url from properties file
+		String baseUrl=p.getProperty("sfdcURL");
+		
+//-----Enable below line of code to read url from POM.xml file or Jenkins URL parameters----------------
+		baseUrl = System.getProperty("test.env.url");
+        
+		driver.get(baseUrl);
+		logger.info("Application url loaded "+baseUrl);
 		driver.manage().window().maximize();
 		Thread.sleep(Duration.ofSeconds(6));
 	}

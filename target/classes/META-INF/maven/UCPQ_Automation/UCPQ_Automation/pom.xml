@@ -4,12 +4,14 @@
   <artifactId>UCPQ_Automation</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
- 
+ <!--========Create below properties to parameterize values and run via Jenkins parameters=========-->
   <properties>
   		<maven.compiler.source>17</maven.compiler.source>
   		<maven.compiler.target>17</maven.compiler.target>
   		    <!--<suiteFile>testng.xml</suiteFile>-->
   		<suiteFile>XMLs_Execution\TC_CreateDirectOpportunity.xml</suiteFile>
+  		<browserProperty>Chrome</browserProperty>
+  		<test.env.url>https://netapp2--uat.sandbox.lightning.force.com/</test.env.url>
   </properties>
  
  
@@ -38,6 +40,12 @@
 <!--=============Parameterize testng.xml file to execute using Bat files===================-->
                        <suiteXmlFile>${suiteFile}</suiteXmlFile>			  
 				  </suiteXmlFiles>
+				  
+				  <systemPropertyVariables>
+				  	<browserProperty>${browserProperty}</browserProperty>
+				  	 <test.env.url>${test.env.url}</test.env.url>
+				  </systemPropertyVariables>
+				  
 			  </configuration>
 		  </plugin>
 		  
