@@ -59,7 +59,7 @@ public int sw=5; public int mw=10; public int lw=20;
 	
 	@FindBy(how = How.XPATH, using = "//div/flowruntime-list-container/div/flowruntime-base-section/div/flowruntime-screen-field[1]/flowruntime-lwc-field/div/flowruntime-picklist-input-lwc/div/lightning-select/div/div/select")
 	@CacheLookup
-	WebElement opportunityType;
+	WebElement opptyType;
 	
 	@FindBy(how = How.XPATH, using = "//flowruntime-input-wrapper2/div/lightning-input/lightning-primitive-input-simple/div[1]/div/input")
 	@CacheLookup
@@ -67,45 +67,45 @@ public int sw=5; public int mw=10; public int lw=20;
 	
 	@FindBy(how = How.XPATH, using = "//flowruntime-screen-field[4]/flowruntime-lwc-field/div/flowruntime-picklist-input-lwc/div/lightning-select/div/div/select")
 	@CacheLookup
-	WebElement primaryContact;
+	WebElement primary_Contact;
 	
 	@FindBy(how = How.XPATH, using = "//flowruntime-screen-field[11]/flowruntime-lwc-field/div/flowruntime-picklist-input-lwc/div/lightning-select/div/div/select")
 	@CacheLookup
-	WebElement salesPlay;
+	WebElement sales_Play;
 	
 	@FindBy(how = How.XPATH, using = "//flowruntime-screen-field[3]/flowruntime-lwc-field/div/flowruntime-picklist-input-lwc/div/lightning-select/div/div/select")
 	@CacheLookup
-	WebElement salesType;
+	WebElement sales_Type;
 	
 	@FindBy(how = How.XPATH, using = "//flowruntime-screen-field[8]/flowruntime-lwc-field/div/flowruntime-picklist-input-lwc/div/lightning-select/div/div/select")
 	@CacheLookup
-	WebElement installedBaseType;
+	WebElement installed_BaseType;
 	
 	@FindBy(how = How.XPATH, using = "//flowruntime-screen-field[9]/flowruntime-lwc-field/div/flowruntime-picklist-input-lwc/div/lightning-select/div/div/select")
 	@CacheLookup
-	WebElement currency;
+	WebElement currency_Type;
 	
 	@FindBy(how = How.XPATH, using = "//flowruntime-screen-field[13]/flowruntime-lwc-field/div/flowruntime-picklist-input-lwc/div/lightning-select/div/div/select")
 	@CacheLookup
-	WebElement channel;
+	WebElement channelType;
 	
 	
 	@FindBy(how = How.XPATH, using = "//div/flowruntime-base-section/div/flowruntime-screen-field[1]/flowruntime-list-container/div/flowruntime-base-section/div/flowruntime-screen-field/flowruntime-lwc-field/div/flowruntime-picklist-input-lwc/div/lightning-select/div/div/select")
 	@CacheLookup
-	WebElement pathway;
+	WebElement pathway_Type;
 	
 	@FindBy(how = How.XPATH, using = "//div/flowruntime-base-section/div/flowruntime-screen-field[2]/flowruntime-list-container/div/flowruntime-base-section/div/flowruntime-screen-field/flowruntime-lwc-field/div/flowruntime-picklist-input-lwc/div/lightning-select/div/div/select")
 	@CacheLookup
-	WebElement partnerSalesModel;	
+	WebElement partner_SalesModel;	
 	
 	
 	@FindBy(how = How.XPATH, using = "//lightning-button[2]/button")
 	@CacheLookup
 	WebElement nextButton2;
 	
-	@FindBy(how = How.XPATH, using = "/html/body/div[4]/div[1]/section/div[2]/div[2]/div[2]/div[1]/div/div/div/div[3]/section/div/div/section/flowruntime-flow/flowruntime-lwc-body/div/flowruntime-list-container/div/flowruntime-base-section/div/flowruntime-screen-field[1]/flowruntime-list-container/div/flowruntime-section-with-header/lightning-accordion/div/slot/lightning-accordion-section/div/section/div[2]/slot/flowruntime-base-section/div/flowruntime-screen-field[1]/flowruntime-list-container/div/flowruntime-base-section/div/flowruntime-screen-field/flowruntime-lwc-field/div/flowruntime-picklist-input-lwc/div/lightning-select/div/div/select")
+	@FindBy(how = How.XPATH, using = "\"/html/body/div[4]/div[1]/section/div[2]/div[2]/div[2]/div[1]/div/div/div/div[3]/section/div/div/section/flowruntime-flow/flowruntime-lwc-body/div/flowruntime-list-container/div/flowruntime-base-section/div/flowruntime-screen-field[1]/flowruntime-list-container/div/flowruntime-section-with-header/lightning-accordion/div/slot/lightning-accordion-section/div/section/div[2]/slot/flowruntime-base-section/div/flowruntime-screen-field[1]/flowruntime-list-container/div/flowruntime-base-section/div/flowruntime-screen-field/flowruntime-lwc-field/div/flowruntime-picklist-input-lwc/div/lightning-select/div/div/select\"")
 	@CacheLookup
-	WebElement endCustomerUsage;
+	WebElement end_CustomerUsage;
 	
 	@FindBy(how = How.XPATH, using = "//div[1]/div[1]/div/input")
 	@CacheLookup
@@ -129,11 +129,11 @@ public int sw=5; public int mw=10; public int lw=20;
 	
 	@FindBy(how = How.XPATH, using = "//flowruntime-screen-field[1]/flowruntime-list-container/div/flowruntime-base-section/div/flowruntime-screen-field/flowruntime-lwc-field/div/flowruntime-picklist-input-lwc/div/lightning-select/div/div/select")
 	@CacheLookup
-	WebElement resellerSalesRep;
+	WebElement reseller_SalesRep;
 	
 	@FindBy(how = How.XPATH, using = "//flowruntime-screen-field[2]/flowruntime-list-container/div/flowruntime-base-section/div/flowruntime-screen-field/flowruntime-lwc-field/div/flowruntime-picklist-input-lwc/div/lightning-select/div/div/select")
 	@CacheLookup
-	WebElement resellerSE;
+	WebElement reseller_SE;
 	
 	@FindBy(how = How.XPATH, using = "//lightning-button[2]/button")
 	@CacheLookup
@@ -205,7 +205,7 @@ public int sw=5; public int mw=10; public int lw=20;
 	{
 		if(!(opportunityType.isEmpty()))
 		{
-		Select dd = new Select(driver.findElement(By.xpath("//div/flowruntime-list-container/div/flowruntime-base-section/div/flowruntime-screen-field[1]/flowruntime-lwc-field/div/flowruntime-picklist-input-lwc/div/lightning-select/div/div/select")));
+		Select dd = new Select(opptyType);
 		dd.selectByVisibleText(opportunityType);
 		}
 	}
@@ -223,7 +223,7 @@ public int sw=5; public int mw=10; public int lw=20;
 	{
 		if(!(primaryContact.isEmpty()))
 		{
-		Select dd = new Select(driver.findElement(By.xpath("//flowruntime-screen-field[4]/flowruntime-lwc-field/div/flowruntime-picklist-input-lwc/div/lightning-select/div/div/select")));
+		Select dd = new Select(primary_Contact);
 		dd.selectByVisibleText(primaryContact);
 		}
 	}
@@ -232,7 +232,7 @@ public int sw=5; public int mw=10; public int lw=20;
 	{
 		if(!(salesPlay.isEmpty()))
 		{
-		Select dd = new Select(driver.findElement(By.xpath("//flowruntime-screen-field[11]/flowruntime-lwc-field/div/flowruntime-picklist-input-lwc/div/lightning-select/div/div/select")));
+		Select dd = new Select(sales_Play);
 		dd.selectByVisibleText(salesPlay);
 		}
 	}
@@ -241,7 +241,7 @@ public int sw=5; public int mw=10; public int lw=20;
 	{
 		if(!(salesType.isEmpty()))
 		{
-			Select dd = new Select(driver.findElement(By.xpath("//flowruntime-screen-field[3]/flowruntime-lwc-field/div/flowruntime-picklist-input-lwc/div/lightning-select/div/div/select")));
+			Select dd = new Select(sales_Type);
 			dd.selectByVisibleText(salesType);
 		}
 	}
@@ -250,7 +250,7 @@ public int sw=5; public int mw=10; public int lw=20;
 	{
 		if(!(installedBase.isEmpty()))
 		{
-			Select dd = new Select(driver.findElement(By.xpath("//flowruntime-screen-field[8]/flowruntime-lwc-field/div/flowruntime-picklist-input-lwc/div/lightning-select/div/div/select")));
+			Select dd = new Select(installed_BaseType);
 			dd.selectByVisibleText(installedBase);
 		}
 	}
@@ -259,7 +259,7 @@ public int sw=5; public int mw=10; public int lw=20;
 	{
 		if(!(currency.isEmpty()))
 		{
-			Select dd = new Select(driver.findElement(By.xpath("//flowruntime-screen-field[9]/flowruntime-lwc-field/div/flowruntime-picklist-input-lwc/div/lightning-select/div/div/select")));
+			Select dd = new Select(currency_Type);
 			dd.selectByVisibleText(currency); 
 		}
 	}
@@ -268,7 +268,7 @@ public int sw=5; public int mw=10; public int lw=20;
 	{
 		if(!(channel.isEmpty()))
 		{
-			Select dd = new Select(driver.findElement(By.xpath("//flowruntime-screen-field[13]/flowruntime-lwc-field/div/flowruntime-picklist-input-lwc/div/lightning-select/div/div/select")));
+			Select dd = new Select(channelType);
 			dd.selectByVisibleText(channel);
 			Thread.sleep(Duration.ofSeconds(sw));
 		}
@@ -278,7 +278,7 @@ public int sw=5; public int mw=10; public int lw=20;
 	{
 		if(!(pathway.isEmpty()))
 		{
-			Select dd = new Select(driver.findElement(By.xpath("//div/flowruntime-base-section/div/flowruntime-screen-field[1]/flowruntime-list-container/div/flowruntime-base-section/div/flowruntime-screen-field/flowruntime-lwc-field/div/flowruntime-picklist-input-lwc/div/lightning-select/div/div/select")));
+			Select dd = new Select(pathway_Type);
 			dd.selectByVisibleText(pathway); 
 		}
 	}
@@ -287,7 +287,7 @@ public int sw=5; public int mw=10; public int lw=20;
 	{
 		if(!(partnerSalesModel.isEmpty()))
 		{
-			Select dd = new Select(driver.findElement(By.xpath("//div/flowruntime-base-section/div/flowruntime-screen-field[2]/flowruntime-list-container/div/flowruntime-base-section/div/flowruntime-screen-field/flowruntime-lwc-field/div/flowruntime-picklist-input-lwc/div/lightning-select/div/div/select")));
+			Select dd = new Select(partner_SalesModel);
 			dd.selectByVisibleText(partnerSalesModel); 
 		}
 	}	
@@ -304,7 +304,7 @@ public int sw=5; public int mw=10; public int lw=20;
 	{
 		if(!(endCustomerUsage.isEmpty()))
 		{
-			Select dd = new Select(driver.findElement(By.xpath("/html/body/div[4]/div[1]/section/div[2]/div[2]/div[2]/div[1]/div/div/div/div[3]/section/div/div/section/flowruntime-flow/flowruntime-lwc-body/div/flowruntime-list-container/div/flowruntime-base-section/div/flowruntime-screen-field[1]/flowruntime-list-container/div/flowruntime-section-with-header/lightning-accordion/div/slot/lightning-accordion-section/div/section/div[2]/slot/flowruntime-base-section/div/flowruntime-screen-field[1]/flowruntime-list-container/div/flowruntime-base-section/div/flowruntime-screen-field/flowruntime-lwc-field/div/flowruntime-picklist-input-lwc/div/lightning-select/div/div/select")));
+			Select dd = new Select(end_CustomerUsage);
 			dd.selectByVisibleText(endCustomerUsage); 
 		}
 	}
@@ -348,7 +348,7 @@ public int sw=5; public int mw=10; public int lw=20;
 	{
 		if(!(resellerSalesRep.isEmpty()))
 		{
-			Select dd = new Select(driver.findElement(By.xpath("//flowruntime-screen-field[1]/flowruntime-list-container/div/flowruntime-base-section/div/flowruntime-screen-field/flowruntime-lwc-field/div/flowruntime-picklist-input-lwc/div/lightning-select/div/div/select")));
+			Select dd = new Select(reseller_SalesRep);
 			dd.selectByVisibleText(resellerSalesRep); 
 		}
 	}
@@ -357,7 +357,7 @@ public int sw=5; public int mw=10; public int lw=20;
 	{
 		if(!(resellerSE.isEmpty()))
 		{
-			Select dd = new Select(driver.findElement(By.xpath("//flowruntime-screen-field[2]/flowruntime-list-container/div/flowruntime-base-section/div/flowruntime-screen-field/flowruntime-lwc-field/div/flowruntime-picklist-input-lwc/div/lightning-select/div/div/select")));
+			Select dd = new Select(reseller_SE);
 			dd.selectByVisibleText(resellerSE); 
 		}
 	}

@@ -105,15 +105,12 @@ public class TC_CreateDirectOpportunity extends BaseClass{
 //-----------Write test results to excel sheet--------------------------------------------------------------
 			wtr.writeCreateDirectOpportunityTestResults(driver, opptyNumber, opptyName, accName, channelName);			
 			logger.info("Test execution results has been written in excel sheet");
-		
-		
-		
+			
 		}
 		catch(Exception e)
 		{
 			logger.error("Test Failed");
-			logger.debug("Debug logs");
-			
+			logger.debug("Debug logs");	
 		}
 		
 	}
