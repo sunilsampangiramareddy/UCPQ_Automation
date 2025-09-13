@@ -3,22 +3,19 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="utilities.ExtentReportManager"/>
-    <listener class-name="utilities.ExtentReportManager"/>
-    <listener class-name="utilities.ExtentReportManager"/>
-    <listener class-name="utilities.ExtentReportManager"/>
     <listener class-name="retryAnalyzer.RetryListener"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <parameter name="os" value="Windows"/>
-    <parameter name="browser" value="chrome"/>
+    <parameter name="browser" value="Chrome"/>
     <classes>
-      <class name="testCases.tryLogic">
+      <class name="testCases.TC_CreateDirectOpportunity">
         <methods>
           <include name="setup"/>
+          <include name="createDirectOpportunity" invocation-numbers="2"/>
           <include name="tearDown"/>
-          <include name="verifyHappyPath"/>
         </methods>
-      </class> <!-- testCases.tryLogic -->
+      </class> <!-- testCases.TC_CreateDirectOpportunity -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -107,12 +107,16 @@ public class TC_CreateDirectOpportunity extends BaseClass{
 			logger.info("Test execution results has been written in excel sheet");
 			
 		}
-		catch(Exception e)
-		{
+		catch (NullPointerException eNull) {
+			 System.err.println("Error message: " + eNull.getMessage());
+			 System.err.println("NullPointerException has been handled");
+     	}
+		catch(Exception e) {
 			logger.error("Test Failed");
-			logger.debug("Debug logs");	
-		}
-		
+			logger.debug("Debug logs");
+			e.printStackTrace();
+			throw e;
+		}		
 	}
 
 

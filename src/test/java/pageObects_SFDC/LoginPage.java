@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -42,9 +43,7 @@ public int sw=5; public int mw=10; public int lw=20;
 	@FindBy(how=How.XPATH, using="//input[@id='idSIButton9']")
 	@CacheLookup
 	WebElement staySignInYesButton;
-	
-	
-	
+		
 	public void enterEmailAddress(String email)
 	{
 		if(!(email.isEmpty()))

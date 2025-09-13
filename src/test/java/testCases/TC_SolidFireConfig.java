@@ -40,7 +40,7 @@ public class TC_SolidFireConfig extends BaseClass{
 		p=new Properties();
 		p.load(file);
 		
-		logger.info("Started TC001_SolidFireConfig Test Execution");
+		logger.info("Started TC_SolidFireConfig Test Execution");
 		
 		try
 		{	
@@ -185,12 +185,16 @@ public class TC_SolidFireConfig extends BaseClass{
 			logger.info("Test execution results has been written in excel sheet");
 			
 		}
-		catch(Exception e)
-		{
+		catch (NullPointerException eNull) {
+			 System.err.println("Error message: " + eNull.getMessage());
+			 System.err.println("NullPointerException has been handled");
+    	}
+		catch(Exception e) {
 			logger.error("Test Failed");
 			logger.debug("Debug logs");
-			
-		}
+			e.printStackTrace();
+			throw e;
+		}		
 		
 	}
 
