@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.TC_CreateDirectOpportunity">
+      <class name="testCases.TC_CreateIndirectOpportunity">
         <methods>
-          <include name="createDirectOpportunity"/>
           <include name="setup"/>
           <include name="tearDown"/>
+          <include name="createIndirectOpportunity"/>
         </methods>
-      </class> <!-- testCases.TC_CreateDirectOpportunity -->
+      </class> <!-- testCases.TC_CreateIndirectOpportunity -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

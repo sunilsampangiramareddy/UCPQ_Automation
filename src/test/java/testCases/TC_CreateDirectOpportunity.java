@@ -1,11 +1,11 @@
 package testCases;
 
 import java.io.FileReader;
+
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Properties;
-
 import org.testng.annotations.Test;
-
 import pageObects_SFDC.AddProductsPage;
 import pageObects_SFDC.BasePage;
 import pageObects_SFDC.CreateOpportunitiesPage;
@@ -14,12 +14,14 @@ import pageObects_SFDC.OpportunitiesPage;
 import pageObject_CPQ.HomePageCPQ;
 import testBase.WriteTestResults;
 import utilities.DataProviders;
-
+import retryAnalyzer.RetryAnalyzer;
+import retryAnalyzer.RetryListener;
 public class TC_CreateDirectOpportunity extends BaseClass{
 	public Properties p;
+	public int pre_Count=1; int sw=5;
+	public String current_URL;
 	
-	
-	@Test(dataProvider="DirectOpportunity_Create", dataProviderClass=DataProviders.class, groups={"Smoke", "Master"})
+	@Test(dataProvider="DirectOpportunity_Create", dataProviderClass=DataProviders.class, retryAnalyzer = RetryAnalyzer.class, groups={"Smoke", "Master"})
 	public void createDirectOpportunity (String userName, String accountName, String opportunityType, String opportunityName, String primaryContact, String salesPlay, String salesType, String installedBaseType, String currency, String channel, String pathway, String partnerSalesModel, String endCustomerUsage, String reseller, String resellerSalesRep, String resellerSE) throws InterruptedException, IOException
 	{
 		
@@ -36,8 +38,10 @@ public class TC_CreateDirectOpportunity extends BaseClass{
 		logger.info("Started TC_CreateDirectOpportunity Test Execution");
 		
 		try
-		{	
+		{						
 //-----------------Login Screen-----------------------------------------------
+			if(pre_Count==1)
+			{	
 			lp.enterEmailAddress(userName);
 			logger.info("Entered email address as " + userName);
 			lp.clickNextButton();
@@ -49,11 +53,15 @@ public class TC_CreateDirectOpportunity extends BaseClass{
 			lp.clickStaySignInButton();
 			logger.info("Click on stay signin yes button");	
 			bp.captureScreenshot(driver);
-			logger.info("SFDC homepage screen captured");
-			
+			logger.info("SFDC homepage screen captured");			
+			pre_Count++;
+			current_URL=driver.getCurrentUrl();
+			logger.info("Captured SFDC homepage url");
+			}
 //---------------Create Direct Opportunity-----------------------------------------	
-//			cop.navigateToOpportunitiesPage();
-//			logger.info("Navigated to opportunities page");				
+			driver.get(current_URL);			
+			logger.info("Navigated to Home page");	
+			Thread.sleep(Duration.ofSeconds(sw));
 			cop.clickOpportunityTab();
 			logger.info("Navigated to opportunities page");
 			cop.clickNewOpportunity();

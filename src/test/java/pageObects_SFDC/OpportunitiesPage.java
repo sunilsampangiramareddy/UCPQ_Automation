@@ -104,7 +104,7 @@ public int sw=5; public int mw=10; public int lw=20;
 	}
 	
 	public String oldTab;
-	public void switchToNewTab() throws InterruptedException
+	public void switchToNewTabAndCloseParentTab() throws InterruptedException
 	{		
 		 //BasePage.jsScrollToElement(driver, newTabButton);
 		 		 
@@ -113,6 +113,10 @@ public int sw=5; public int mw=10; public int lw=20;
 	    
 	    ArrayList<String> newTab = new ArrayList<String>(driver.getWindowHandles());
 	    newTab.remove(oldTab);
+	    
+	    //Close parent tab
+	    Thread.sleep(Duration.ofSeconds(mw));
+	    driver.close();
 	    
 	    // change focus to new tab
 	    driver.switchTo().window(newTab.get(0));

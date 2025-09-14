@@ -16,14 +16,17 @@ import pageObects_SFDC.LoginPage;
 import pageObects_SFDC.OpportunitiesPage;
 import pageObject_CPQ.HomePageCPQ;
 import pageObject_SolidFIre.HomePageSolidFire;
+import retryAnalyzer.RetryAnalyzer;
 import testBase.WriteTestResults;
 import utilities.DataProviders;
 
 public class TC_SolidFireConfig extends BaseClass{
 	public Properties p;
 	public int sw=5; public int mw=10; public int lw=20;
+	public int pre_Count=1;
+	public String current_URL;
 	
-	@Test(dataProvider="SolidFire_Config", dataProviderClass=DataProviders.class, groups={"Regression", "Master"})
+	@Test(dataProvider="SolidFire_Config", dataProviderClass=DataProviders.class, retryAnalyzer = RetryAnalyzer.class, groups={"Regression", "Master"})
 	public void createSolidFireConfig (String userName, String accountName, String opportunityType, String opportunityName, String primaryContact, String salesPlay, String salesType, String installedBaseType, String currency, String channel, String pathway, String partnerSalesModel, String endCustomerUsage, String reseller, String resellerSalesRep, String resellerSE, String product, String salesPrice, String subProduct, String newCapacity, String newTerm) throws InterruptedException, IOException
 	{
 		
@@ -44,7 +47,9 @@ public class TC_SolidFireConfig extends BaseClass{
 		
 		try
 		{	
-			//-------Login Screen-----------------------------------------------
+//-----------------Login Screen--------------------------------------------------------------------------------
+			if(pre_Count==1)
+			{	
 			lp.enterEmailAddress(userName);
 			logger.info("Entered email address as " + userName);
 			lp.clickNextButton();
@@ -54,13 +59,18 @@ public class TC_SolidFireConfig extends BaseClass{
 			lp.clickSignInButton();
 			logger.info("Click on sign in button");			
 			lp.clickStaySignInButton();
-			logger.info("Click on stay signin yes button");			
+			logger.info("Click on stay signin yes button");	
 			bp.captureScreenshot(driver);
-			logger.info("SFDC homepage screen captured");
+			logger.info("SFDC homepage screen captured");			
+			pre_Count++;
+			current_URL=driver.getCurrentUrl();
+			logger.info("Captured SFDC homepage url");
+			}	
 			
 //-------------------Create Opportunity-------------------------------------------------------------------------	
-//			cop.navigateToOpportunitiesPage();
-//			logger.info("Navigated to opportunities page");				
+			driver.get(current_URL);			
+			logger.info("Navigated to Home page");	
+			Thread.sleep(Duration.ofSeconds(sw));			
 			cop.clickOpportunityTab();
 			logger.info("Navigated to opportunities page");
 			cop.clickNewOpportunity();
@@ -135,8 +145,8 @@ public class TC_SolidFireConfig extends BaseClass{
 			logger.info("Clicked on unified CPQ");			
 			op.clickCreateQuoteButton();
 			logger.info("Clicked on create quote button");			
-			op.switchToNewTab();
-			logger.info("Driver control switched to CPQ tab");			
+			op.switchToNewTabAndCloseParentTab();
+			logger.info("Driver control switched to new CPQ tab and closed parent sfdc tab");			
 			
 //-------------------CPQ capture home page details---------------------------------------------------------
 			op.clickSaveButton();

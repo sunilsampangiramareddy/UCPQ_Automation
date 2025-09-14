@@ -37,7 +37,7 @@ public int sw=5; public int mw=10; public int lw=20;
 	@CacheLookup
 	WebElement searchAccount;
 									  
-	@FindBy(how = How.XPATH, using = "/html/body/div[4]/div[1]/section/div[2]/div[2]/div[2]/div[1]/div/div/div/div[3]/section/div/div/section/flowruntime-flow/flowruntime-lwc-body/div/flowruntime-list-container/div/flowruntime-base-section/div/flowruntime-screen-field/flowruntime-list-container/div/flowruntime-section-with-header/lightning-accordion/div/slot/lightning-accordion-section/div/section/div[2]/slot/flowruntime-base-section/div/flowruntime-screen-field/flowruntime-list-container/div/flowruntime-base-section/div/flowruntime-screen-field/flowruntime-lwc-field/div/flowruntime-lookup/lightning-lookup/lightning-lookup-desktop/lightning-grouped-combobox/div[1]/div/lightning-base-combobox/div/div/div[2]/lightning-base-combobox-item/span[1]/lightning-icon/span/lightning-primitive-icon")
+	@FindBy(how = How.XPATH, using = "//span[2]/span/span")
 	@CacheLookup
 	WebElement lightningIcon;
 	
@@ -103,7 +103,7 @@ public int sw=5; public int mw=10; public int lw=20;
 	@CacheLookup
 	WebElement nextButton2;
 	
-	@FindBy(how = How.XPATH, using = "\"/html/body/div[4]/div[1]/section/div[2]/div[2]/div[2]/div[1]/div/div/div/div[3]/section/div/div/section/flowruntime-flow/flowruntime-lwc-body/div/flowruntime-list-container/div/flowruntime-base-section/div/flowruntime-screen-field[1]/flowruntime-list-container/div/flowruntime-section-with-header/lightning-accordion/div/slot/lightning-accordion-section/div/section/div[2]/slot/flowruntime-base-section/div/flowruntime-screen-field[1]/flowruntime-list-container/div/flowruntime-base-section/div/flowruntime-screen-field/flowruntime-lwc-field/div/flowruntime-picklist-input-lwc/div/lightning-select/div/div/select\"")
+	@FindBy(how = How.XPATH, using = "//select")
 	@CacheLookup
 	WebElement end_CustomerUsage;
 	

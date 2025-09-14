@@ -1,0 +1,5 @@
+*** Pre-Steps to run from Jenkins via pom.xml file***
+1) BaseClass= Enable below line of code to run browser parameter from POM.xml file or Jenkins browser parameters
+			  //br=System.getProperty("browserProperty");
+2) BaseClass= Enable below line of code to read url from POM.xml file or Jenkins URL parameters----------------
+		      //baseUrl = System.getProperty("test.env.url");

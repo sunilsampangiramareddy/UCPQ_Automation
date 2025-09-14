@@ -2,6 +2,7 @@ package testCases;
 
 import java.io.FileReader;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Properties;
 
 import org.testng.annotations.Test;
@@ -12,14 +13,17 @@ import pageObects_SFDC.CreateOpportunitiesPage;
 import pageObects_SFDC.LoginPage;
 import pageObects_SFDC.OpportunitiesPage;
 import pageObject_CPQ.HomePageCPQ;
+import retryAnalyzer.RetryAnalyzer;
 import testBase.WriteTestResults;
 import utilities.DataProviders;
 
 public class TC_CreateIndirectOpportunity extends BaseClass{
 	public Properties p;
+	public int pre_Count=1; int sw=5;
+	public String current_URL;
 	
 	
-	@Test(dataProvider="IndirectOpportunity_Create", dataProviderClass=DataProviders.class, groups={"Smoke", "Master"})
+	@Test(dataProvider="IndirectOpportunity_Create", dataProviderClass=DataProviders.class, retryAnalyzer = RetryAnalyzer.class, groups={"Smoke", "Master"})
 	public void createIndirectOpportunity (String userName, String accountName, String opportunityType, String opportunityName, String primaryContact, String salesPlay, String salesType, String installedBaseType, String currency, String channel, String pathway, String partnerSalesModel, String endCustomerUsage, String reseller, String resellerSalesRep, String resellerSE) throws InterruptedException, IOException
 	{
 		
@@ -39,7 +43,9 @@ public class TC_CreateIndirectOpportunity extends BaseClass{
 		
 		try
 		{	
-//-----------------Login Screen-----------------------------------------------
+//-----------------Login Screen--------------------------------------------------------
+			if(pre_Count==1)
+			{	
 			lp.enterEmailAddress(userName);
 			logger.info("Entered email address as " + userName);
 			lp.clickNextButton();
@@ -52,8 +58,15 @@ public class TC_CreateIndirectOpportunity extends BaseClass{
 			logger.info("Click on stay signin yes button");	
 			bp.captureScreenshot(driver);
 			logger.info("SFDC homepage screen captured");			
+			pre_Count++;
+			current_URL=driver.getCurrentUrl();
+			logger.info("Captured SFDC homepage url");
+			}	
 
-//---------------Create Indirect Opportunity-----------------------------------------	
+//---------------Create Indirect Opportunity--------------------------------------------	
+			driver.get(current_URL);			
+			logger.info("Navigated to Home page");	
+			Thread.sleep(Duration.ofSeconds(sw));
 			cop.clickOpportunityTab();
 			logger.info("Navigated to opportunities page");
 			cop.clickNewOpportunity();

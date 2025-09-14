@@ -105,7 +105,7 @@ public class tryLogic extends BaseClass{
 //			logger.info("Clicked on unified CPQ");			
 			op.clickCreateQuoteButton();
 			logger.info("Clicked on create quote button");			
-			op.switchToNewTab();
+			op.switchToNewTabAndCloseParentTab();
 			logger.info("Driver control switched to CPQ tab");			
 			
 			//--------CPQ capture home page details-----------------------------------------
