@@ -12,6 +12,7 @@
   		<suiteFile>XMLs_Execution\TC_CreateDirectOpportunity.xml</suiteFile>
   		<browserProperty>Chrome</browserProperty>
   		<test.env.url>https://netapp2--uat.sandbox.lightning.force.com/</test.env.url>
+  		 <maxRetryCount>3</maxRetryCount>
   </properties>
  
  
@@ -44,6 +45,7 @@
 				  <systemPropertyVariables>
 				  	<browserProperty>${browserProperty}</browserProperty>
 				  	 <test.env.url>${test.env.url}</test.env.url>
+				  	 <maxRetryCount>${maxRetryCount}</maxRetryCount>
 				  </systemPropertyVariables>
 				  
 			  </configuration>
