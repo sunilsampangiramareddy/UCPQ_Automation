@@ -11,7 +11,7 @@ import pageObects_SFDC.BasePage;
 import pageObects_SFDC.CreateOpportunitiesPage;
 import pageObects_SFDC.LoginPage;
 import pageObects_SFDC.OpportunitiesPage;
-import pageObject_CPQ.HomePageCPQ;
+import pageObjects_CPQ.HomePageCPQ;
 import testBase.WriteTestResults;
 import utilities.DataProviders;
 import retryAnalyzer.RetryAnalyzer;
@@ -21,7 +21,7 @@ public class TC_CreateDirectOpportunity extends BaseClass{
 	public int pre_Count=1; int sw=5;
 	public String current_URL;
 	
-	@Test(dataProvider="DirectOpportunity_Create", dataProviderClass=DataProviders.class, retryAnalyzer = RetryAnalyzer.class, groups={"Smoke", "Master"})
+	@Test(dataProvider="TC_CreateDirectOpportunity", dataProviderClass=DataProviders.class, retryAnalyzer = RetryAnalyzer.class, groups={"Smoke", "Regression", "Master"})
 	public void createDirectOpportunity (String userName, String accountName, String opportunityType, String opportunityName, String primaryContact, String salesPlay, String salesType, String installedBaseType, String currency, String channel, String pathway, String partnerSalesModel, String endCustomerUsage, String reseller, String resellerSalesRep, String resellerSE) throws InterruptedException, IOException
 	{
 		
@@ -111,7 +111,7 @@ public class TC_CreateDirectOpportunity extends BaseClass{
 			logger.info("Opportunity details screen captured");	
 			
 //-----------Write test results to excel sheet--------------------------------------------------------------
-			wtr.writeCreateDirectOpportunityTestResults(driver, opptyNumber, opptyName, accName, channelName);			
+			wtr.writeTC_CreateDirectOpportunityTestResults(driver, opptyNumber, opptyName, accName, channelName);			
 			logger.info("Test execution results has been written in excel sheet");
 			
 		}

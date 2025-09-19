@@ -22,6 +22,7 @@
     <parameter name="browser" value="chrome"/>    
     
     <classes>
+     	<class name="testCases.TC_StorageGridConfig"/>
      	<class name="testCases.TC_SolidFireConfig"/>
       	<class name="testCases.TC_CreateIndirectOpportunity"/>
       	<class name="testCases.TC_CreateDirectOpportunity"/>

@@ -293,12 +293,12 @@ public class BasePage {
 		
 				
 		//Direct method to capture screenshots
-		public void captureScreenshot(WebDriver driver) throws IOException {
-			File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-			// Now you can do whatever you need to do with it, for example copy somewhere
-			String timeNote=new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
-			FileUtils.copyFile(scrFile, new File(".\\screenshots\\screenshot"+"_"+ timeNote +".png"));
-	    }
+				public void captureScreenshot(WebDriver driver) throws IOException {
+					File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+					// Now you can do whatever you need to do with it, for example copy somewhere
+					String timeNote=new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+					FileUtils.copyFile(scrFile, new File(".\\screenshots\\screenshot"+"_"+ timeNote +".png"));					
+			    }
 		
 						
        //Write test results to excel sheet

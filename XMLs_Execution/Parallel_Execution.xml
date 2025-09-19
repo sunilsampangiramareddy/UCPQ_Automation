@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" thread-count="5" parallel="classes">
+
+	<listeners>
+		<listener class-name="utilities.ExtentReportManager"></listener>
+		<listener class-name="retryAnalyzer.RetryListener" />
+	</listeners>
+  
+  <test name="parallelexecutiontest">
+   
+   	<parameter name="os" value="Windows"/>
+    <parameter name="browser" value="chrome"/>    
+    <classes>
+     	<class name="testCases.TC_CreateDirectOpportunity"/>
+      	<class name="testCases.TC_CreateIndirectOpportunity"/>
+     	<class name="testCases.TC_SolidFireConfig"/>     	
+      	<class name="testCases.TC_StorageGridConfig"/>
+    </classes>
+   
+   
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

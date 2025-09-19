@@ -7,12 +7,12 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <parameter name="os" value="Windows"/>
-    <parameter name="browser" value="Chrome"/>
+    <parameter name="browser" value="chrome"/>
     <classes>
       <class name="testCases.TC_CreateDirectOpportunity">
         <methods>
-          <include name="setup"/>
           <include name="createDirectOpportunity" invocation-numbers="2"/>
+          <include name="setup"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- testCases.TC_CreateDirectOpportunity -->

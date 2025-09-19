@@ -1,5 +1,33 @@
 *** Pre-Steps to run from Jenkins via pom.xml file***
 1) BaseClass= Enable below line of code to run browser parameter from POM.xml file or Jenkins browser parameters
 			  //br=System.getProperty("browserProperty");
-2) BaseClass= Enable below line of code to read url from POM.xml file or Jenkins URL parameters----------------
+2) BaseClass= Enable below line of code to read url from POM.xml file or Jenkins URL parameters
 		      //baseUrl = System.getProperty("test.env.url");
+3) RetryAnalyzer=Enable below two lines of code to read Retry Execution from POM.xml file or Jenkins URL parameters
+	             //public static String maxRetryCountProperty = System.getProperty("maxRetryCount");
+	             //public static final int MAX_RETRY_COUNT= Integer.parseInt(maxRetryCountProperty);
+	             ------And disable below line of code----------------------------------------
+	             //public static final int MAX_RETRY_COUNT = 3; // Define maximum retry attempts
+	             
+------------------------------------------------------------------------------------------------------------------------------            
+	
+***Pre-Steps to run from Selenium Grid Server***
+1) Enable remote execution and disable local execution in Config.properties file
+	#execution_env=local
+	execution_env=remote
+2) Go to C drive where you have selenium gird server software and run below command in cmd prompt
+   java -jar selenium-server-4.35.0.jar standalone
+3) Now open Selenium Grid in browser "http://localhost:4444"
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+***Pre-Steps to run headless mode of execution***
+1) BaseClass = a) Enable below three lines of code to run headless mode of execution and disable other line in b) point
+						ChromeOptions options=new ChromeOptions();
+						options.addArguments("--headless=new");
+						driver=new ChromeDriver(options);
+			   b) Enable below line of code to run head mode of execution			
+						//driver=new ChromeDriver(); 
+
+-------------------------------------------------------------------------------------------------------------------------------
+			

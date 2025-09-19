@@ -60,7 +60,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-Suite" class="navigator-link ">
-                    <span>2 groups</span>
+                    <span>3 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods,  2 skipped,  3 passed</span>
+                    <span class="method-stats">6 methods,  3 skipped,  3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title skipped">Retried methods</span>
@@ -101,6 +101,11 @@
                       <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
                     </span>
                     <div class="method-list-content skipped suite-Suite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testCases.TC_CreateDirectOpportunity" class="method navigator-link" hash-for-method="createDirectOpportunity(APPTESTMBOB4@netapp.com, Apple Inc., Standard, Test Automation, Amit Jain, To be Determined During Q...)">createDirectOpportunity(APPTESTMBOB4@netapp.com, Apple Inc., Standard, Test Automation, Amit Jain, To be Determined During Q...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="skipped.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="testCases.TC_CreateDirectOpportunity" class="method navigator-link" hash-for-method="createDirectOpportunity(APPTESTMBOB4@netapp.com, Apple Inc., Standard, Test Automation, Amit Jain, To be Determined During Q...)">createDirectOpportunity(APPTESTMBOB4@netapp.com, Apple Inc., Standard, Test Automation, Amit Jain, To be Determined During Q...)</a> <!-- method navigator-link -->
@@ -122,12 +127,12 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testCases.TC_CreateDirectOpportunity" class="method navigator-link" hash-for-method="createDirectOpportunity(APPTESTMBOB4@netapp.com, Apple Inc., Standard, Test Automation, Amit Jain, To be Determined During Q...)">createDirectOpportunity(APPTESTMBOB4@netapp.com, Apple Inc., Standard, Test Automation, Amit Jain, To be Determined During Q...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="testCases.TC_CreateDirectOpportunity" class="method navigator-link" hash-for-method="createDirectOpportunity(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null)">createDirectOpportunity(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testCases.TC_CreateDirectOpportunity" class="method navigator-link" hash-for-method="createDirectOpportunity(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null)">createDirectOpportunity(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="testCases.TC_CreateDirectOpportunity" class="method navigator-link" hash-for-method="createDirectOpportunity(APPTESTMBOB4@netapp.com, Apple Inc., Standard, Test Automation, Amit Jain, To be Determined During Q...)">createDirectOpportunity(APPTESTMBOB4@netapp.com, Apple Inc., Standard, Test Automation, Amit Jain, To be Determined During Q...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -159,15 +164,15 @@
                   </a> <!-- createDirectOpportunity(APPTESTMBOB4@netapp.com, Apple Inc., Standard, Test Automation, Amit Jain, To be Determined During Q...) -->
                   <span class="method-name">createDirectOpportunity</span>
                   <span class="parameters">(APPTESTMBOB4@netapp.com,Apple Inc.,Standard,Test Automation,Amit Jain,To be Determined During Qualify Sales Stage,Up-sell/Cross-sell,None,USD - U.S. Dollar,Direct,,,,,,)</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//lightning-button[2]/buttonasdf&quot;}
-  (Session info: chrome=140.0.7339.128)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (601, 460)
+  (Session info: chrome=140.0.7339.185)
 Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.4&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [776d7c22189461373bd090933983a313, findElement {value=//lightning-button[2]/buttonasdf, using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.82 (bc93617e21c3..., userDataDir: C:\Users\sunilr2\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59393}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59393/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 776d7c22189461373bd090933983a313
+Command: [6f90fdb4925e4d9870193776ef21f660, clickElement {id=f.D0A54AFBB5943654F0162B807BC96D3F.d.DC88768506412912F94851E90DD0066E.e.494}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.185, chrome: {chromedriverVersion: 140.0.7339.185 (eeea00e459e..., userDataDir: C:\Users\sunilr2\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54254}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54254/devtoo..., se:cdpVersion: 140.0.7339.185, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (6f90fdb4925e4d9870193776ef21f660)] -&gt; xpath: //lightning-button[2]/button]
+Session ID: 6f90fdb4925e4d9870193776ef21f660
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -175,17 +180,14 @@ Session ID: 776d7c22189461373bd090933983a313
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy31.click(Unknown Source)
-	at pageObects_SFDC.CreateOpportunitiesPage.clickSelectButton(CreateOpportunitiesPage.java:187)
-	at testCases.TC_CreateDirectOpportunity.createDirectOpportunity(TC_CreateDirectOpportunity.java:75)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy33.click(Unknown Source)
+	at pageObects_SFDC.CreateOpportunitiesPage.clickNextButton2(CreateOpportunitiesPage.java:298)
+	at testCases.TC_CreateDirectOpportunity.createDirectOpportunity(TC_CreateDirectOpportunity.java:95)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 28 stack frames
+... Removed 30 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -195,15 +197,15 @@ Session ID: 776d7c22189461373bd090933983a313
                   </a> <!-- createDirectOpportunity(APPTESTMBOB4@netapp.com, Apple Inc., Standard, Test Automation, Amit Jain, To be Determined During Q...) -->
                   <span class="method-name">createDirectOpportunity</span>
                   <span class="parameters">(APPTESTMBOB4@netapp.com,Apple Inc.,Standard,Test Automation,Amit Jain,To be Determined During Qualify Sales Stage,Up-sell/Cross-sell,None,USD - U.S. Dollar,Direct,,,,,,)</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//lightning-button[2]/buttonasdf&quot;}
-  (Session info: chrome=140.0.7339.128)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (601, 460)
+  (Session info: chrome=140.0.7339.185)
 Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.4&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [776d7c22189461373bd090933983a313, findElement {value=//lightning-button[2]/buttonasdf, using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.82 (bc93617e21c3..., userDataDir: C:\Users\sunilr2\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59393}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59393/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 776d7c22189461373bd090933983a313
+Command: [6f90fdb4925e4d9870193776ef21f660, clickElement {id=f.D0A54AFBB5943654F0162B807BC96D3F.d.8DB0085996361C0FF1207A6205EFEA4A.e.717}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.185, chrome: {chromedriverVersion: 140.0.7339.185 (eeea00e459e..., userDataDir: C:\Users\sunilr2\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54254}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54254/devtoo..., se:cdpVersion: 140.0.7339.185, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (6f90fdb4925e4d9870193776ef21f660)] -&gt; xpath: //lightning-button[2]/button]
+Session ID: 6f90fdb4925e4d9870193776ef21f660
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -211,17 +213,47 @@ Session ID: 776d7c22189461373bd090933983a313
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy31.click(Unknown Source)
-	at pageObects_SFDC.CreateOpportunitiesPage.clickSelectButton(CreateOpportunitiesPage.java:187)
-	at testCases.TC_CreateDirectOpportunity.createDirectOpportunity(TC_CreateDirectOpportunity.java:75)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy33.click(Unknown Source)
+	at pageObects_SFDC.CreateOpportunitiesPage.clickNextButton2(CreateOpportunitiesPage.java:298)
+	at testCases.TC_CreateDirectOpportunity.createDirectOpportunity(TC_CreateDirectOpportunity.java:95)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 28 stack frames
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="createDirectOpportunity(APPTESTMBOB4@netapp.com, Apple Inc., Standard, Test Automation, Amit Jain, To be Determined During Q...)">
+                  </a> <!-- createDirectOpportunity(APPTESTMBOB4@netapp.com, Apple Inc., Standard, Test Automation, Amit Jain, To be Determined During Q...) -->
+                  <span class="method-name">createDirectOpportunity</span>
+                  <span class="parameters">(APPTESTMBOB4@netapp.com,Apple Inc.,Standard,Test Automation,Amit Jain,To be Determined During Qualify Sales Stage,Up-sell/Cross-sell,None,USD - U.S. Dollar,Direct,,,,,,)</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (601, 460)
+  (Session info: chrome=140.0.7339.185)
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.4&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6f90fdb4925e4d9870193776ef21f660, clickElement {id=f.D0A54AFBB5943654F0162B807BC96D3F.d.E2DA84A110DD76201731C89D49084336.e.293}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.185, chrome: {chromedriverVersion: 140.0.7339.185 (eeea00e459e..., userDataDir: C:\Users\sunilr2\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54254}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54254/devtoo..., se:cdpVersion: 140.0.7339.185, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (6f90fdb4925e4d9870193776ef21f660)] -&gt; xpath: //lightning-button[2]/button]
+Session ID: 6f90fdb4925e4d9870193776ef21f660
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy33.click(Unknown Source)
+	at pageObects_SFDC.CreateOpportunitiesPage.clickNextButton2(CreateOpportunitiesPage.java:298)
+	at testCases.TC_CreateDirectOpportunity.createDirectOpportunity(TC_CreateDirectOpportunity.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -235,18 +267,18 @@ Session ID: 776d7c22189461373bd090933983a313
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="createDirectOpportunity(APPTESTMBOB4@netapp.com, Apple Inc., Standard, Test Automation, Amit Jain, To be Determined During Q...)">
-                  </a> <!-- createDirectOpportunity(APPTESTMBOB4@netapp.com, Apple Inc., Standard, Test Automation, Amit Jain, To be Determined During Q...) -->
-                  <span class="method-name">createDirectOpportunity</span>
-                  <span class="parameters">(APPTESTMBOB4@netapp.com,Apple Inc.,Standard,Test Automation,Amit Jain,To be Determined During Qualify Sales Stage,Up-sell/Cross-sell,None,USD - U.S. Dollar,Direct,,,,,,)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="createDirectOpportunity(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null)">
                   </a> <!-- createDirectOpportunity(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null) -->
                   <span class="method-name">createDirectOpportunity</span>
                   <span class="parameters">(null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="createDirectOpportunity(APPTESTMBOB4@netapp.com, Apple Inc., Standard, Test Automation, Amit Jain, To be Determined During Q...)">
+                  </a> <!-- createDirectOpportunity(APPTESTMBOB4@netapp.com, Apple Inc., Standard, Test Automation, Amit Jain, To be Determined During Q...) -->
+                  <span class="method-name">createDirectOpportunity</span>
+                  <span class="parameters">(APPTESTMBOB4@netapp.com,Apple Inc.,Standard,Test Automation,Amit Jain,To be Determined During Qualify Sales Stage,Up-sell/Cross-sell,None,USD - U.S. Dollar,Direct,,,,,,)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -275,7 +307,7 @@ Session ID: 776d7c22189461373bd090933983a313
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;parameter name=&quot;os&quot; value=&quot;Windows&quot;/&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;Chrome&quot;/&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;testCases.TC_CreateDirectOpportunity&quot;/&gt;
     &lt;/classes&gt;
@@ -310,6 +342,14 @@ Session ID: 776d7c22189461373bd090933983a313
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
             <div class="test-group">
+              <span class="test-group-name">Regression</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">createDirectOpportunity</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
               <span class="test-group-name">Smoke</span>
               <br/>
               <div class="method-in-group">
@@ -333,32 +373,36 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(5);
+data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'createDirectOpportunity')
 data.setCell(0, 2, 'testCases.TC_CreateDirectOpportunity')
-data.setCell(0, 3, 84818);
+data.setCell(0, 3, 128546);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'createDirectOpportunity')
 data.setCell(1, 2, 'testCases.TC_CreateDirectOpportunity')
-data.setCell(1, 3, 56592);
+data.setCell(1, 3, 114036);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'createDirectOpportunity')
 data.setCell(2, 2, 'testCases.TC_CreateDirectOpportunity')
-data.setCell(2, 3, 54494);
+data.setCell(2, 3, 102558);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'createDirectOpportunity')
 data.setCell(3, 2, 'testCases.TC_CreateDirectOpportunity')
-data.setCell(3, 3, 63);
+data.setCell(3, 3, 101248);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'createDirectOpportunity')
 data.setCell(4, 2, 'testCases.TC_CreateDirectOpportunity')
-data.setCell(4, 3, 0);
+data.setCell(4, 3, 117);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'createDirectOpportunity')
+data.setCell(5, 2, 'testCases.TC_CreateDirectOpportunity')
+data.setCell(5, 3, 9);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 minutes</span>
+              <span class="suite-total-time">Total running time: 7 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -386,32 +430,36 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">testCases.TC_CreateDirectOpportunity</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setup(Windows, Chrome)</span>
+                <span class="method-name">setup(Windows, chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">createDirectOpportunity(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null)</span>
-                <span class="method-start">16239 ms</span>
+                <span class="method-start">17373 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">createDirectOpportunity(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null)</span>
-                <span class="method-start">16339 ms</span>
+                <span class="method-start">17613 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">createDirectOpportunity(APPTESTMBOB4@netapp.com, Apple Inc., Standard, Test Automation, Amit Jain, To be Determined During Q...)</span>
-                <span class="method-start">16350 ms</span>
+                <span class="method-start">17634 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">createDirectOpportunity(APPTESTMBOB4@netapp.com, Apple Inc., Standard, Test Automation, Amit Jain, To be Determined During Q...)</span>
-                <span class="method-start">101184 ms</span>
+                <span class="method-start">146196 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">createDirectOpportunity(APPTESTMBOB4@netapp.com, Apple Inc., Standard, Test Automation, Amit Jain, To be Determined During Q...)</span>
-                <span class="method-start">155744 ms</span>
+                <span class="method-start">260244 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">createDirectOpportunity(APPTESTMBOB4@netapp.com, Apple Inc., Standard, Test Automation, Amit Jain, To be Determined During Q...)</span>
+                <span class="method-start">362823 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">212349 ms</span>
+                <span class="method-start">464087 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

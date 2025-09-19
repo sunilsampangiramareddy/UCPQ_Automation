@@ -14,10 +14,10 @@ import org.testng.annotations.DataProvider;
 public class DataProviders {
 	
 	//DataProvider 1	
-		@DataProvider(name="SolidFire_Config")
-		public String [][] getData_SolidFire_Config() throws IOException
+		@DataProvider(name="TC_SolidFireConfig")
+		public String [][] getData_TC_SolidFireConfig() throws IOException
 		{
-			String path=".\\testData\\SolidFire_Config.xlsx";//taking xl file from testData
+			String path=".\\testData\\TC_SolidFireConfig.xlsx";//taking xl file from testData
 					
 			ExcelUtility xlutil=new ExcelUtility(path);//creating an object for XLUtility
 			
@@ -38,10 +38,10 @@ public class DataProviders {
 		
 		
 		//DataProvider 2	
-				@DataProvider(name="DirectOpportunity_Create")
-				public String [][] getData_DirectOpportunity_Create() throws IOException
+				@DataProvider(name="TC_CreateDirectOpportunity")
+				public String [][] getData_TC_CreateDirectOpportunity() throws IOException
 				{
-					String path=".\\testData\\DirectOpportunity_Create.xlsx";//taking xl file from testData
+					String path=".\\testData\\TC_CreateDirectOpportunity.xlsx";//taking xl file from testData
 							
 					ExcelUtility xlutil=new ExcelUtility(path);//creating an object for XLUtility
 					
@@ -62,10 +62,10 @@ public class DataProviders {
 		
 		
 		//DataProvider 3	
-				@DataProvider(name="IndirectOpportunity_Create")
-				public String [][] getData_IndirectOpportunity_Create() throws IOException
+				@DataProvider(name="TC_CreateIndirectOpportunity")
+				public String [][] getData_TC_CreateIndirectOpportunity() throws IOException
 				{
-					String path=".\\testData\\IndirectOpportunity_Create.xlsx";//taking xl file from testData
+					String path=".\\testData\\TC_CreateIndirectOpportunity.xlsx";//taking xl file from testData
 							
 					ExcelUtility xlutil=new ExcelUtility(path);//creating an object for XLUtility
 					
@@ -84,7 +84,28 @@ public class DataProviders {
 				return logindata;//returning two dimension array					
 				}
 		
-		
+		//DataProvider 4	
+				@DataProvider(name="TC_StorageGridConfig")
+				public String [][] getData_TC_StorageGridConfig() throws IOException
+				{
+					String path=".\\testData\\TC_StorageGridConfig.xlsx";//taking xl file from testData
+							
+					ExcelUtility xlutil=new ExcelUtility(path);//creating an object for XLUtility
+					
+					int totalrows=xlutil.getRowCount("Sheet1");	
+					int totalcols=xlutil.getCellCount("Sheet1",1);
+							
+					String logindata[][]=new String[totalrows][totalcols];//created for two dimension array which can store the data user and password
+					
+					for(int i=3;i<=totalrows;i++)  //1   //read the data from xl storing in two deminsional array
+					{		
+						for(int j=0;j<totalcols;j++)  //0    i is rows j is col
+						{
+							logindata[i-1][j]= xlutil.getCellData("Sheet1",i, j);  //1,0
+						}
+					}
+				return logindata;//returning two dimension array					
+				}
 		
 	}	
 		

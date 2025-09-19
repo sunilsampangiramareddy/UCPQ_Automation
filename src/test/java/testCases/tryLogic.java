@@ -17,16 +17,21 @@ import pageObects_SFDC.BasePage;
 import pageObects_SFDC.CreateOpportunitiesPage;
 import pageObects_SFDC.LoginPage;
 import pageObects_SFDC.OpportunitiesPage;
-import pageObject_CPQ.HomePageCPQ;
-import pageObject_SolidFIre.HomePageSolidFire;
+import pageObjects_CPQ.HomePageCPQ;
+import pageObjects_SolidFIre.HomePageSolidFire;
+import retryAnalyzer.RetryAnalyzer;
+import testBase.WriteTestResults;
 import utilities.DataProviders;
 import java.util.Properties;
 
 public class tryLogic extends BaseClass{
 	public Properties p;
+	public int sw=5; public int mw=10; public int lw=20;
+	public int pre_Count=1;
+	public String current_URL;
 	
 	
-	@Test(dataProvider="SolidFire_Config", dataProviderClass=DataProviders.class, groups={"Regression", "Master"})
+	@Test(dataProvider="TC_SolidFireConfig", dataProviderClass=DataProviders.class, retryAnalyzer = RetryAnalyzer.class, groups={"Regression", "Master"})
 	public void verifyHappyPath(String userName, String accountName, String opportunityType, String opportunityName, String primaryContact, String salesPlay, String salesType, String installedBaseType, String currency, String channel, String pathway, String partnerSalesModel, String endCustomerUsage, String reseller, String resellerSalesRep, String resellerSE, String product, String salesPrice, String subProduct, String newCapacity, String newTerm) throws InterruptedException, IOException
 	{
 		
@@ -37,16 +42,19 @@ public class tryLogic extends BaseClass{
 		AddProductsPage app=new AddProductsPage(driver);
 		HomePageCPQ hpc=new HomePageCPQ(driver);
 		HomePageSolidFire hpsf=new HomePageSolidFire(driver);
+		WriteTestResults wtr=new WriteTestResults(driver);
 		//loading config.properties file
 		FileReader file=new FileReader(".\\src\\test\\resources\\Config.properties");
 		p=new Properties();
 		p.load(file);
 		
-		logger.info("Started TC001_HappyPath Test Execution");
+		logger.info("Started TC_SolidFireConfig Test Execution");
 		
 		try
 		{	
-			//-------Login Screen-----------------------------------------------
+//-----------------Login Screen--------------------------------------------------------------------------------
+			if(pre_Count==1)
+			{	
 			lp.enterEmailAddress(userName);
 			logger.info("Entered email address as " + userName);
 			lp.clickNextButton();
@@ -56,7 +64,14 @@ public class tryLogic extends BaseClass{
 			lp.clickSignInButton();
 			logger.info("Click on sign in button");			
 			lp.clickStaySignInButton();
-			logger.info("Click on stay signin yes button");		
+			logger.info("Click on stay signin yes button");	
+			bp.captureScreenshot(driver);
+			logger.info("SFDC homepage screen captured");			
+			pre_Count++;
+			current_URL=driver.getCurrentUrl();
+			logger.info("Captured SFDC homepage url");
+			}	
+		
 			
 //---------------Create Direct Opportunity-----------------------------------------	
 //			cop.navigateToOpportunitiesPage();
@@ -98,30 +113,31 @@ public class tryLogic extends BaseClass{
 			driver.navigate().to("https://netapp2--uat.sandbox.lightning.force.com/lightning/r/Opportunity/006ce000008VyT7AAK/view");
 			Thread.sleep(Duration.ofSeconds(10));
 			
-			//--------Create Quote-----------------------------------------------------------
+			//---------------------Create Quote-----------------------------------------------------------------------
 			op.clickCreateQuote();
 			logger.info("Clicked on create qutoe");			
-//			op.clickUnifiedCPQ();
-//			logger.info("Clicked on unified CPQ");			
+			//op.clickUnifiedCPQ();
+			//logger.info("Clicked on unified CPQ");			
 			op.clickCreateQuoteButton();
 			logger.info("Clicked on create quote button");			
 			op.switchToNewTabAndCloseParentTab();
-			logger.info("Driver control switched to CPQ tab");			
+			logger.info("Driver control switched to new CPQ tab and closed parent sfdc tab");			
 			
-			//--------CPQ capture home page details-----------------------------------------
-						
-//			String quoteName=hpc.getQuoteName();
-//			logger.info("Captured quote name "+quoteName);			
-//			String quoteNumber=hpc.getQuoteNumber();
-//			logger.info("Captured quote number "+quoteNumber);			
-//			String quoteStatus=hpc.getQuoteStatus();
-//			logger.info("Captured quote status "+quoteStatus);			
-//			hpc.clickSaveButton();
-//			logger.info("Clicked on save button");
-//			bp.captureScreenshot(driver);
-//			logger.info("CPQ homepage screen captured");
+//-------------------CPQ capture home page details---------------------------------------------------------
+			op.clickSaveButton();
+			logger.info("Clicked on save button");
+			String quoteNumber=hpc.getQuoteNumber();
+			logger.info("Captured quote number "+quoteNumber);	
+			String quoteName=hpc.getQuoteName();
+			logger.info("Captured quote name "+quoteName);	
+			String quoteStatus=hpc.getQuoteStatus();
+			logger.info("Captured quote status "+quoteStatus);			
+			bp.captureScreenshot(driver);
+			logger.info("CPQ homepage screen captured");
+
 			
 			
+//--------------------Configure Solid Fire product-------------------------------------------------------------
 			hpc.clickProdctsTab();
 			logger.info("Clicked on products tab");			
 			hpc.clickConfigureProduct();
@@ -135,17 +151,22 @@ public class tryLogic extends BaseClass{
 			hpsf.selectNewTerm(newTerm);
 			logger.info("Entered new term in months "+newTerm);	
 			bp.captureScreenshot(driver);
+			logger.info("Captured screen shot of solid fire product config");			
 			hpsf.clickAddToQuote();
 			logger.info("Clicked on add to quote button");
 //			op.clickSaveButton();
 //			logger.info("Clicked on save button");
 			hpc.clickSettingsExpandAll();
 			logger.info("Clicked on settings and clicked on expand all option");			
-			hpc.readFullTable(driver);
-			logger.info("Reading prodct table details");
-			bp.captureScreenshot(driver);
+			//hpc.readFullTable(driver);
+			//logger.info("Reading prodct table details");
+			//bp.captureScreenshot(driver);
 			
 			
+			hpc.readProductColumnFromProductsTable(4);
+			logger.info("Reading prodcut column data from products table");
+			hpc.clickSaveIcon();
+			logger.info("Clicked on save icon");
 
 			
 			

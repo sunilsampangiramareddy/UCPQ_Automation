@@ -4,14 +4,12 @@ pageObects_SFDC\OpportunitiesPage.class
 testCases\tryLogic.class
 testBase\testBase.class
 retryAnalyzer\RetryListener.class
-pageObject_CPQ\HomePageCPQ.class
 utilities\ExcelUtility.class
 testCases\TC_SolidFireConfig.class
 retryAnalyzer\RetryAnalyzer.class
 pageObects_SFDC\AddProductsPage.class
 testCases\BaseClass.class
 testCases\TC_CreateDirectOpportunity.class
-pageObject_SolidFIre\HomePageSolidFire.class
 testCases\TC_CreateIndirectOpportunity.class
 utilities\ExtentReportManager.class
 utilities\DataProviders.class

@@ -14,8 +14,8 @@ import pageObects_SFDC.BasePage;
 import pageObects_SFDC.CreateOpportunitiesPage;
 import pageObects_SFDC.LoginPage;
 import pageObects_SFDC.OpportunitiesPage;
-import pageObject_CPQ.HomePageCPQ;
-import pageObject_SolidFIre.HomePageSolidFire;
+import pageObjects_CPQ.HomePageCPQ;
+import pageObjects_SolidFIre.HomePageSolidFire;
 import retryAnalyzer.RetryAnalyzer;
 import testBase.WriteTestResults;
 import utilities.DataProviders;
@@ -26,7 +26,7 @@ public class TC_SolidFireConfig extends BaseClass{
 	public int pre_Count=1;
 	public String current_URL;
 	
-	@Test(dataProvider="SolidFire_Config", dataProviderClass=DataProviders.class, retryAnalyzer = RetryAnalyzer.class, groups={"Regression", "Master"})
+	@Test(dataProvider="TC_SolidFireConfig", dataProviderClass=DataProviders.class, retryAnalyzer = RetryAnalyzer.class, groups={"Regression", "Master"})
 	public void createSolidFireConfig (String userName, String accountName, String opportunityType, String opportunityName, String primaryContact, String salesPlay, String salesType, String installedBaseType, String currency, String channel, String pathway, String partnerSalesModel, String endCustomerUsage, String reseller, String resellerSalesRep, String resellerSE, String product, String salesPrice, String subProduct, String newCapacity, String newTerm) throws InterruptedException, IOException
 	{
 		
@@ -157,12 +157,10 @@ public class TC_SolidFireConfig extends BaseClass{
 			logger.info("Captured quote name "+quoteName);	
 			String quoteStatus=hpc.getQuoteStatus();
 			logger.info("Captured quote status "+quoteStatus);			
-			hpc.clickSaveButton();
-			logger.info("Clicked on save button");
 			bp.captureScreenshot(driver);
 			logger.info("CPQ homepage screen captured");
 			
-//--------------------Config Solid Fire product-------------------------------------------------------------
+//--------------------Configure Solid Fire product-------------------------------------------------------------
 			hpc.clickProdctsTab();
 			logger.info("Clicked on products tab");			
 			hpc.clickConfigureProduct();
@@ -179,19 +177,17 @@ public class TC_SolidFireConfig extends BaseClass{
 			logger.info("Captured screen shot of solid fire product config");			
 			hpsf.clickAddToQuote();
 			logger.info("Clicked on add to quote button");
-//			op.clickSaveButton();
-//			logger.info("Clicked on save button");
-//			hpc.clickSettingsExpandAll();
-//			logger.info("Clicked on settings and clicked on expand all option");			
-//			hpc.readFullTable(driver);
-//			logger.info("Reading product table details");
-//			quoteStatus=hpc.getQuoteStatus();
-//			logger.info("Captured quote status "+quoteStatus);
+			hpc.clickSettingsExpandAll();
+			logger.info("Clicked on settings and clicked on expand all option");	
+			hpc.readProductColumnFromProductsTable(4);
+			logger.info("Reading prodcut column data from products table");
 			bp.captureScreenshot(driver);
 			logger.info("Captured screen shot of solid fire product config");
+			hpc.clickSaveIcon();
+			logger.info("Clicked on save icon");
 			
 //-----------Write test results to excel sheet--------------------------------------------------------------
-			wtr.writeSolidFireConfigTestResults(driver, opptyNumber, opptyName, accName, channelName, quoteNumber, quoteName, quoteStatus);			
+			wtr.writeTC_SolidFireConfigTestResults(driver, opptyNumber, opptyName, accName, channelName, quoteNumber, quoteName, quoteStatus);			
 			logger.info("Test execution results has been written in excel sheet");
 			
 		}

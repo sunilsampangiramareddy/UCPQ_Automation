@@ -50,9 +50,7 @@ public int sw=5; public int mw=10; public int lw=20;
 	@CacheLookup
 	WebElement createQuoteButton;
 	
-	//@FindBy(how = How.XPATH, using = "//li[5]/div/div[2]/div/oj-vb-fragment/oj-module/oj-c-button/button")
-	@FindBy(how = How.XPATH, using = "//button[@aria-label='Save Quote']")
-	
+	@FindBy(how = How.XPATH, using = "//button[@aria-label='Save Quote']")	
 	@CacheLookup
 	WebElement saveButtonCPQ;
 	
@@ -135,6 +133,7 @@ public int sw=5; public int mw=10; public int lw=20;
 		Thread.sleep(Duration.ofSeconds(mw));
 		
 	}
+	
 	
 	
 	

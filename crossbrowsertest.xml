@@ -15,7 +15,7 @@
     </classes>
   </test> <!-- Test -->
   
-   <test name="edgetest">   
+    <test name="edgetest">   
    	<parameter name="os" value="Windows"/>
     <parameter name="browser" value="edge"/>    
     <classes>
