@@ -27,7 +27,7 @@ public int nw=3; int sw=5; public int mw=10; public int lw=20;
 	}
 	
 //Write Direct opportunity test results to excel sheet
-	public void writeTC_CreateDirectOpportunityTestResults(WebDriver driver, String optyNumber, String optyName, String accName, String channel ) throws IOException
+	public void writeTC_CreateDirectOpportunityTestResults(WebDriver driver, String testcase, String optyNumber, String optyName, String accName, String channel, String executionStatus ) throws IOException
 	{
 		// workbook object
         XSSFWorkbook workbook = new XSSFWorkbook();
@@ -38,8 +38,8 @@ public int nw=3; int sw=5; public int mw=10; public int lw=20;
         
      // This data needs to be written (Object[])
         Map<String, Object[]> studentData = new TreeMap<String, Object[]>();
-        studentData.put("1", new Object[] { "Opportunity Number", "Opportunity Name", "Account Name", "Channel"});
-        studentData.put("2", new Object[] { optyNumber, optyName, accName, channel});
+        studentData.put("1", new Object[] { "Test Case", "Opportunity Number", "Opportunity Name", "Account Name", "Channel", "Execution Status"});
+        studentData.put("2", new Object[] { testcase, optyNumber, optyName, accName, channel, executionStatus});
        
         Set<String> keyid = studentData.keySet();
         int rowid = 0;
@@ -66,7 +66,7 @@ public int nw=3; int sw=5; public int mw=10; public int lw=20;
 	}
 
 	//Write Indirect opportunity test results to excel sheet
-		public void writeTC_CreateIndirectOpportunityTestResults(WebDriver driver, String optyNumber, String optyName, String accName, String channel ) throws IOException
+		public void writeTC_CreateIndirectOpportunityTestResults(WebDriver driver, String testCase, String optyNumber, String optyName, String accName, String channel, String executionStatus ) throws IOException
 		{
 			// workbook object
 	        XSSFWorkbook workbook = new XSSFWorkbook();
@@ -77,8 +77,8 @@ public int nw=3; int sw=5; public int mw=10; public int lw=20;
 	        
 	     // This data needs to be written (Object[])
 	        Map<String, Object[]> studentData = new TreeMap<String, Object[]>();
-	        studentData.put("1", new Object[] { "Opportunity Number", "Opportunity Name", "Account Name", "Channel"});
-	        studentData.put("2", new Object[] { optyNumber, optyName, accName, channel});
+	        studentData.put("1", new Object[] { "Test Case", "Opportunity Number", "Opportunity Name", "Account Name", "Channel", "Execution Status"});
+	        studentData.put("2", new Object[] { testCase, optyNumber, optyName, accName, channel, executionStatus});
 	       
 	        Set<String> keyid = studentData.keySet();
 	        int rowid = 0;
@@ -106,7 +106,7 @@ public int nw=3; int sw=5; public int mw=10; public int lw=20;
 
 	
 //Write TC_SolidFireConfig test results to excel sheet
-		public void writeTC_SolidFireConfigTestResults(WebDriver driver, String optyNumber, String optyName, String accName, String channel, String quoteNum, String quoteName, String quoteStatus ) throws IOException
+		public void writeTC_SolidFireConfigTestResults(WebDriver driver, String testCase, String optyNumber, String optyName, String accName, String channel, String quoteNum, String quoteName, String quoteStatus, String executionStatus) throws IOException
 		{
 			// workbook object
 	        XSSFWorkbook workbook = new XSSFWorkbook();
@@ -117,8 +117,8 @@ public int nw=3; int sw=5; public int mw=10; public int lw=20;
 	        
 	     // This data needs to be written (Object[])
 	        Map<String, Object[]> studentData = new TreeMap<String, Object[]>();
-	        studentData.put("1", new Object[] { "Opportunity Number", "Opportunity Name", "Account Name", "Channel", "Quote Number", "Quote Name", "Quote Status"});
-	        studentData.put("2", new Object[] { optyNumber, optyName, accName, channel, quoteNum, quoteName, quoteStatus });
+	        studentData.put("1", new Object[] { "Test Case", "Opportunity Number", "Opportunity Name", "Account Name", "Channel", "Quote Number", "Quote Name", "Quote Status", "Execution Status"});
+	        studentData.put("2", new Object[] { testCase, optyNumber, optyName, accName, channel, quoteNum, quoteName, quoteStatus, executionStatus });
 	       
 	        Set<String> keyid = studentData.keySet();
 	        int rowid = 0;
@@ -145,7 +145,7 @@ public int nw=3; int sw=5; public int mw=10; public int lw=20;
 		}
 	
 //Write TC_StorageGridConfig test results to excel sheet
-				public void write_TC_StorageGridConfigTestResults(WebDriver driver, String optyNumber, String optyName, String accName, String channel, String quoteNum, String quoteName, String quoteStatus ) throws IOException
+				public void write_TC_StorageGridConfigTestResults(WebDriver driver, String testCase, String optyNumber, String optyName, String accName, String channel, String quoteNum, String quoteName, String quoteStatus, String executionStatus) throws IOException
 				{
 					// workbook object
 			        XSSFWorkbook workbook = new XSSFWorkbook();
@@ -156,8 +156,8 @@ public int nw=3; int sw=5; public int mw=10; public int lw=20;
 			        
 			     // This data needs to be written (Object[])
 			        Map<String, Object[]> studentData = new TreeMap<String, Object[]>();
-			        studentData.put("1", new Object[] { "Opportunity Number", "Opportunity Name", "Account Name", "Channel", "Quote Number", "Quote Name", "Quote Status"});
-			        studentData.put("2", new Object[] { optyNumber, optyName, accName, channel, quoteNum, quoteName, quoteStatus });
+			        studentData.put("1", new Object[] { "Test Case", "Opportunity Number", "Opportunity Name", "Account Name", "Channel", "Quote Number", "Quote Name", "Quote Status", "Execution Status"});
+			        studentData.put("2", new Object[] { testCase, optyNumber, optyName, accName, channel, quoteNum, quoteName, quoteStatus, executionStatus });
 			       
 			        Set<String> keyid = studentData.keySet();
 			        int rowid = 0;

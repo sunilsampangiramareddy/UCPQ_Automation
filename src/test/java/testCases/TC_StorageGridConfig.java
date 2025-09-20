@@ -23,7 +23,7 @@ public class TC_StorageGridConfig extends BaseClass{
 	public Properties p;
 	public int sw=5; public int mw=10; public int lw=20;
 	public int pre_Count=1;
-	public String current_URL;
+	public String current_URL; String testCase="TC_StorageGridConfig"; String booleanStatus="PASS"; 
 	
 	@Test(dataProvider="TC_StorageGridConfig", dataProviderClass=DataProviders.class, retryAnalyzer = RetryAnalyzer.class, groups={"Regression", "Master"})
 	public void createStorageGridConfig (String userName, String accountName, String opportunityType, String opportunityName, String primaryContact, String salesPlay, String salesType, String installedBaseType, String currency, String channel, String pathway, String partnerSalesModel, String endCustomerUsage, String reseller, String resellerSalesRep, String resellerSE, String product, String salesPrice, String subProduct, String modelStorageNodes, String driveTypeStorageNodes, String qtyStorageNodes) throws InterruptedException, IOException
@@ -188,7 +188,7 @@ public class TC_StorageGridConfig extends BaseClass{
 			logger.info("Clicked on save icon");
 			
 //-----------Write test results to excel sheet--------------------------------------------------------------
-			wtr.write_TC_StorageGridConfigTestResults(driver, opptyNumber, opptyName, accName, channelName, quoteNumber, quoteName, quoteStatus);			
+			wtr.write_TC_StorageGridConfigTestResults(driver, testCase, opptyNumber, opptyName, accName, channelName, quoteNumber, quoteName, quoteStatus, booleanStatus);			
 			logger.info("Test execution results has been written in excel sheet");
 			
 		}

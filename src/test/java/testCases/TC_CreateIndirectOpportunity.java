@@ -20,7 +20,7 @@ import utilities.DataProviders;
 public class TC_CreateIndirectOpportunity extends BaseClass{
 	public Properties p;
 	public int pre_Count=1; int sw=5;
-	public String current_URL;
+	public String current_URL; String testCase="TC_CreateIndirectOpportunity"; String booleanStatus="PASS";
 	
 	
 	@Test(dataProvider="TC_CreateIndirectOpportunity", dataProviderClass=DataProviders.class, retryAnalyzer = RetryAnalyzer.class, groups={"Smoke", "Regression", "Master"})
@@ -137,7 +137,7 @@ public class TC_CreateIndirectOpportunity extends BaseClass{
 			logger.info("Opportunity details screen captured");	
 			
 //-----------Write test results to excel sheet--------------------------------------------------------------
-			wtr.writeTC_CreateIndirectOpportunityTestResults(driver, opptyNumber, opptyName, accName, channelName);			
+			wtr.writeTC_CreateIndirectOpportunityTestResults(driver, testCase, opptyNumber, opptyName, accName, channelName, booleanStatus);			
 			logger.info("Test execution results has been written in excel sheet");
 			
 		}

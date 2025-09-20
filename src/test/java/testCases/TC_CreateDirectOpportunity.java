@@ -19,7 +19,8 @@ import retryAnalyzer.RetryListener;
 public class TC_CreateDirectOpportunity extends BaseClass{
 	public Properties p;
 	public int pre_Count=1; int sw=5;
-	public String current_URL;
+	public String current_URL; String testCase="TC_CreateDirectOpportunity"; String booleanStatus="PASS";
+	
 	
 	@Test(dataProvider="TC_CreateDirectOpportunity", dataProviderClass=DataProviders.class, retryAnalyzer = RetryAnalyzer.class, groups={"Smoke", "Regression", "Master"})
 	public void createDirectOpportunity (String userName, String accountName, String opportunityType, String opportunityName, String primaryContact, String salesPlay, String salesType, String installedBaseType, String currency, String channel, String pathway, String partnerSalesModel, String endCustomerUsage, String reseller, String resellerSalesRep, String resellerSE) throws InterruptedException, IOException
@@ -111,7 +112,7 @@ public class TC_CreateDirectOpportunity extends BaseClass{
 			logger.info("Opportunity details screen captured");	
 			
 //-----------Write test results to excel sheet--------------------------------------------------------------
-			wtr.writeTC_CreateDirectOpportunityTestResults(driver, opptyNumber, opptyName, accName, channelName);			
+			wtr.writeTC_CreateDirectOpportunityTestResults(driver, testCase, opptyNumber, opptyName, accName, channelName, booleanStatus);			
 			logger.info("Test execution results has been written in excel sheet");
 			
 		}
