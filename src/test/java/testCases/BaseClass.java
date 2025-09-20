@@ -111,7 +111,7 @@ public class BaseClass {
 		
 		 		                 
 //-------Enable below line of code to run browser parameter from POM.xml file or Jenkins browser parameters---------------
-			//br=System.getProperty("browserProperty");
+			br=System.getProperty("browserProperty");
 			
 		//execution in local machine environment
 		if(p.getProperty("execution_env").equalsIgnoreCase("local"))
@@ -140,7 +140,7 @@ public class BaseClass {
 		String baseUrl=p.getProperty("sfdcURL");
 		
 //-----Enable below line of code to read url from POM.xml file or Jenkins URL parameters----------------
-		//baseUrl = System.getProperty("test.env.url");
+		baseUrl = System.getProperty("test.env.url");
         
 		driver.get(baseUrl);
 		logger.info("Application url loaded "+baseUrl);
