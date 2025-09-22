@@ -9,13 +9,12 @@
     <parameter name="os" value="Windows"/>
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="testCases.TC_CreateDirectOpportunity">
+      <class name="testCases.TC_SolidFireConfig">
         <methods>
-          <include name="createDirectOpportunity" invocation-numbers="2"/>
           <include name="setup"/>
-          <include name="tearDown"/>
+          <include name="createSolidFireConfig" invocation-numbers="2"/>
         </methods>
-      </class> <!-- testCases.TC_CreateDirectOpportunity -->
+      </class> <!-- testCases.TC_SolidFireConfig -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -2,6 +2,7 @@ package pageObjects_CPQ;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -111,17 +112,51 @@ public int nw=2; int sw=5; int mw=10; int lw=20;
 		Thread.sleep(Duration.ofSeconds(lw));
 	}
 	
-	//Read Product column from Products table
-	public void readProductColumnFromProductsTable(int count) throws InterruptedException 
-	{
-		String firstPath="//*[@id=\"cx-cpq-line-item-";
-		String lastPath="\"]";
-		for(int i=2;i<(count+2);i++)
-		{
-			String finalPath=firstPath+i+lastPath;
-			System.out.println(driver.findElement(By.xpath(finalPath)).getText());	
-		}
-	 Thread.sleep(Duration.ofSeconds(mw));
-	 }
+//	//Read Product column from Products table
+//	public void readProductColumnFromProductsTable(int count) throws InterruptedException 
+//	{
+//		String firstPath="//*[@id=\"cx-cpq-line-item-";
+//		String lastPath="\"]";
+//		for(int i=2;i<(count+2);i++)
+//		{
+//			String finalPath=firstPath+i+lastPath;
+//			System.out.println(driver.findElement(By.xpath(finalPath)).getText());	
+//		}
+//	 Thread.sleep(Duration.ofSeconds(mw));
+//	 }
 	
+	
+	
+	
+	//Read Product column from Products table
+		public void readProductColumnFromProductsTable(int count) throws InterruptedException 
+		{
+			String firstPath="//*[@id=\"cx-cpq-line-item-";
+			String lastPath="\"]";
+			for(int i=2;i<(count+2);i++)
+			{
+				String finalPath=firstPath+i+lastPath;
+				List<WebElement> elements=driver.findElements(By.xpath(finalPath));
+				if (!elements.isEmpty()) {
+					String elementText = elements.get(0).getText();
+                    System.out.println(elementText);	
+				}
+				else {
+                    // If the element is not found, exit the loop
+                    System.out.println("Completed reading of all products");
+                    break;
+                }
+			}
+		 Thread.sleep(Duration.ofSeconds(mw));
+		 }
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 }

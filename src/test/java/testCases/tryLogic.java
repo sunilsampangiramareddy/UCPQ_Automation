@@ -163,7 +163,7 @@ public class tryLogic extends BaseClass{
 			//bp.captureScreenshot(driver);
 			
 			
-			hpc.readProductColumnFromProductsTable(4);
+			hpc.readProductColumnFromProductsTable(8);
 			logger.info("Reading prodcut column data from products table");
 			hpc.clickSaveIcon();
 			logger.info("Clicked on save icon");

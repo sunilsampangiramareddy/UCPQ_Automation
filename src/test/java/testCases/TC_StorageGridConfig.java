@@ -22,7 +22,7 @@ import utilities.DataProviders;
 public class TC_StorageGridConfig extends BaseClass{
 	public Properties p;
 	public int sw=5; public int mw=10; public int lw=20;
-	public int pre_Count=1;
+	public int pre_Count=1; int product_Count=20;
 	public String current_URL; String testCase="TC_StorageGridConfig"; String booleanStatus="PASS"; 
 	
 	@Test(dataProvider="TC_StorageGridConfig", dataProviderClass=DataProviders.class, retryAnalyzer = RetryAnalyzer.class, groups={"Regression", "Master"})
@@ -180,7 +180,7 @@ public class TC_StorageGridConfig extends BaseClass{
 			logger.info("clicked on add to quote");	
 			hpc.clickSettingsExpandAll();
 			logger.info("Clicked on settings and clicked on expand all option");	
-			hpc.readProductColumnFromProductsTable(4);
+			hpc.readProductColumnFromProductsTable(product_Count);
 			logger.info("Reading prodcut column data from products table");
 			bp.captureScreenshot(driver);
 			logger.info("Captured screen shot of storage grid product config");

@@ -3,6 +3,7 @@ package testCases;
 import java.io.FileReader;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.NoSuchElementException;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
@@ -23,7 +24,7 @@ import utilities.DataProviders;
 public class TC_SolidFireConfig extends BaseClass{
 	public Properties p;
 	public int sw=5; public int mw=10; public int lw=20;
-	public int pre_Count=1;
+	public int pre_Count=1; int product_Count=10;
 	public String current_URL; String testCase="TC_SolidFireConfig"; String booleanStatus="PASS";
 	
 	@Test(dataProvider="TC_SolidFireConfig", dataProviderClass=DataProviders.class, retryAnalyzer = RetryAnalyzer.class, groups={"Regression", "Master"})
@@ -179,8 +180,8 @@ public class TC_SolidFireConfig extends BaseClass{
 			logger.info("Clicked on add to quote button");
 			hpc.clickSettingsExpandAll();
 			logger.info("Clicked on settings and clicked on expand all option");	
-			hpc.readProductColumnFromProductsTable(4);
-			logger.info("Reading prodcut column data from products table");
+			hpc.readProductColumnFromProductsTable(product_Count);
+			logger.info("Reading product column data from products table");
 			bp.captureScreenshot(driver);
 			logger.info("Captured screen shot of solid fire product config");
 			hpc.clickSaveIcon();
@@ -201,7 +202,6 @@ public class TC_SolidFireConfig extends BaseClass{
 			e.printStackTrace();
 			throw e;
 		}		
-		
 	}
 
 }
