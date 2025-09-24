@@ -12,32 +12,9 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.DataProvider;
 
 public class DataProviders {
-	
-	//DataProvider 1	
-		@DataProvider(name="TC_SolidFireConfig")
-		public String [][] getData_TC_SolidFireConfig() throws IOException
-		{
-			String path=".\\testData\\TC_SolidFireConfig.xlsx";//taking xl file from testData
-					
-			ExcelUtility xlutil=new ExcelUtility(path);//creating an object for XLUtility
-			
-			int totalrows=xlutil.getRowCount("Sheet1");	
-			int totalcols=xlutil.getCellCount("Sheet1",1);
-					
-			String logindata[][]=new String[totalrows][totalcols];//created for two dimension array which can store the data user and password
-			
-			for(int i=3;i<=totalrows;i++)  //1   //read the data from xl storing in two deminsional array
-			{		
-				for(int j=0;j<totalcols;j++)  //0    i is rows j is col
-				{
-					logindata[i-1][j]= xlutil.getCellData("Sheet1",i, j);  //1,0
-				}
-			}
-		return logindata;//returning two dimension array					
-		}
 		
 		
-		//DataProvider 2	
+		//DataProvider 1	
 				@DataProvider(name="TC_CreateDirectOpportunity")
 				public String [][] getData_TC_CreateDirectOpportunity() throws IOException
 				{
@@ -61,7 +38,7 @@ public class DataProviders {
 				}
 		
 		
-		//DataProvider 3	
+		//DataProvider 2	
 				@DataProvider(name="TC_CreateIndirectOpportunity")
 				public String [][] getData_TC_CreateIndirectOpportunity() throws IOException
 				{
@@ -83,8 +60,57 @@ public class DataProviders {
 					}
 				return logindata;//returning two dimension array					
 				}
-		
+				
+				
+			//DataProvider 3	
+				@DataProvider(name="TC_Create1POpportunity")
+				public String [][] getData_TC_Create1POpportunity() throws IOException
+				{
+					String path=".\\testData\\TC_Create1POpportunity.xlsx";//taking xl file from testData
+							
+					ExcelUtility xlutil=new ExcelUtility(path);//creating an object for XLUtility
+					
+					int totalrows=xlutil.getRowCount("Sheet1");	
+					int totalcols=xlutil.getCellCount("Sheet1",1);
+							
+					String logindata[][]=new String[totalrows][totalcols];//created for two dimension array which can store the data user and password
+					
+					for(int i=3;i<=totalrows;i++)  //1   //read the data from xl storing in two deminsional array
+					{		
+						for(int j=0;j<totalcols;j++)  //0    i is rows j is col
+						{
+							logindata[i-1][j]= xlutil.getCellData("Sheet1",i, j);  //1,0
+						}
+					}
+				return logindata;//returning two dimension array					
+				}
+				
+				
 		//DataProvider 4	
+				@DataProvider(name="TC_SolidFireConfig")
+				public String [][] getData_TC_SolidFireConfig() throws IOException
+				{
+					String path=".\\testData\\TC_SolidFireConfig.xlsx";//taking xl file from testData
+							
+					ExcelUtility xlutil=new ExcelUtility(path);//creating an object for XLUtility
+					
+					int totalrows=xlutil.getRowCount("Sheet1");	
+					int totalcols=xlutil.getCellCount("Sheet1",1);
+							
+					String logindata[][]=new String[totalrows][totalcols];//created for two dimension array which can store the data user and password
+					
+					for(int i=3;i<=totalrows;i++)  //1   //read the data from xl storing in two deminsional array
+					{		
+						for(int j=0;j<totalcols;j++)  //0    i is rows j is col
+						{
+							logindata[i-1][j]= xlutil.getCellData("Sheet1",i, j);  //1,0
+						}
+					}
+				return logindata;//returning two dimension array					
+				}
+				
+		
+		//DataProvider 5	
 				@DataProvider(name="TC_StorageGridConfig")
 				public String [][] getData_TC_StorageGridConfig() throws IOException
 				{
@@ -107,6 +133,28 @@ public class DataProviders {
 				return logindata;//returning two dimension array					
 				}
 		
+			//DataProvider 6	
+				@DataProvider(name="TC_FastQuotesConfig")
+				public String [][] getData_TC_FastQuotesConfig() throws IOException
+				{
+					String path=".\\testData\\TC_FastQuotesConfig.xlsx";//taking xl file from testData
+							
+					ExcelUtility xlutil=new ExcelUtility(path);//creating an object for XLUtility
+					
+					int totalrows=xlutil.getRowCount("Sheet1");	
+					int totalcols=xlutil.getCellCount("Sheet1",1);
+							
+					String logindata[][]=new String[totalrows][totalcols];//created for two dimension array which can store the data user and password
+					
+					for(int i=3;i<=totalrows;i++)  //1   //read the data from xl storing in two deminsional array
+					{		
+						for(int j=0;j<totalcols;j++)  //0    i is rows j is col
+						{
+							logindata[i-1][j]= xlutil.getCellData("Sheet1",i, j);  //1,0
+						}
+					}
+				return logindata;//returning two dimension array					
+				}
 	}	
 		
 		
@@ -121,7 +169,7 @@ public class DataProviders {
 		
 		
 		
-//		//DataProvider 2
+//		//DataProvider
 //		@DataProvider(name="excelData")	
 //		public Object[][] excelDataProvider() throws IOException {
 //			Object[][] arrObj=getExcelData(".\\testData\\TestDataSheet.xlsx", "Test"); //Excel sheet location and tab name
@@ -157,7 +205,7 @@ public class DataProviders {
 //		}
 	//}
 		
-		//DataProvider3 - Use above 'DataProvide1' or this function - Both are same and working
+		//DataProvider - Use above 'DataProvide1' or this function - Both are same and working
 //		@DataProvider(name = "excelData")
 //	    public Object[][] getExcelData() throws IOException {
 //	        String excelFilePath = ".\\testData\\TestDataSheet.xlsx"; // Specify your Excel file path

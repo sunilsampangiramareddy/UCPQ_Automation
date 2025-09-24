@@ -1,250 +1,254 @@
 [RemoteTestNG] detected TestNG version 7.10.2
-23:52:06.941 [main] DEBUG org.testng.TestNG - suiteXmlPath: "C:\Users\sunilr2\eclipse-workspace\UCPQ_Automation\XMLs_Execution\TC_SolidFireConfig.xml"
-23:52:07.371 [main] TRACE org.testng.internal.Graph - [Graph] ADDING NODE BaseClass.setup(java.lang.String,java.lang.String)[pri:0, instance:null] 1285819254
-23:52:07.371 [main] TRACE org.testng.internal.Graph - [Graph] ================ SORTING
-23:52:07.377 [main] TRACE org.testng.internal.Graph - [Graph] =============== DONE SORTING
-23:52:07.377 [main] TRACE org.testng.internal.Graph - [Graph] ====== SORTED NODES
-23:52:07.377 [main] TRACE org.testng.internal.Graph - [Graph] ====== END SORTED NODES
-23:52:07.399 [main] TRACE org.testng.internal.Graph - [Graph] ADDING NODE TC_SolidFireConfig.createSolidFireConfig(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_SolidFireConfig@ccb4b1b] -1033103675
-23:52:07.399 [main] TRACE org.testng.internal.Graph - [Graph] ================ SORTING
-23:52:07.400 [main] TRACE org.testng.internal.Graph - [Graph] =============== DONE SORTING
-23:52:07.400 [main] TRACE org.testng.internal.Graph - [Graph] ====== SORTED NODES
-23:52:07.400 [main] TRACE org.testng.internal.Graph - [Graph] ====== END SORTED NODES
-23:52:07.416 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+22:26:11.025 [main] DEBUG org.testng.TestNG - suiteXmlPath: "C:\Users\sunilr2\eclipse-workspace\UCPQ_Automation\XMLs_Execution\TC_SolidFireConfig.xml"
+22:26:11.458 [main] TRACE org.testng.internal.Graph - [Graph] ADDING NODE BaseClass.setup(java.lang.String,java.lang.String)[pri:0, instance:null] 1580168771
+22:26:11.459 [main] TRACE org.testng.internal.Graph - [Graph] ================ SORTING
+22:26:11.465 [main] TRACE org.testng.internal.Graph - [Graph] =============== DONE SORTING
+22:26:11.465 [main] TRACE org.testng.internal.Graph - [Graph] ====== SORTED NODES
+22:26:11.465 [main] TRACE org.testng.internal.Graph - [Graph] ====== END SORTED NODES
+22:26:11.483 [main] TRACE org.testng.internal.Graph - [Graph] ADDING NODE TC_SolidFireConfig.createSolidFireConfig(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases_SolifFire.TC_SolidFireConfig@ccb4b1b] -1260974223
+22:26:11.484 [main] TRACE org.testng.internal.Graph - [Graph] ================ SORTING
+22:26:11.494 [main] TRACE org.testng.internal.Graph - [Graph] =============== DONE SORTING
+22:26:11.494 [main] TRACE org.testng.internal.Graph - [Graph] ====== SORTED NODES
+22:26:11.495 [main] TRACE org.testng.internal.Graph - [Graph] ====== END SORTED NODES
+22:26:11.511 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
   C:\Users\sunilr2\eclipse-workspace\UCPQ_Automation\XMLs_Execution\TC_SolidFireConfig.xml
 
-Sept 22, 2025 11:52:16 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Sept 24, 2025 10:26:16 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 140, returning the closest version; found: 138; Please update to a Selenium version that supports CDP version 140
-23:52:20.330 [main] INFO  testCases.TC_SolidFireConfig - Application url loaded https://netapp2--uat.sandbox.lightning.force.com/
-23:52:26.877 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
-23:52:26.882 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
-23:52:26.884 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
-23:52:27.268 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Loading type system org.apache.poi.schemas.ooxml.system.ooxml
-23:52:27.279 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Loading type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
-23:52:27.284 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Loading type system org.apache.xmlbeans.metadata.system.sXMLLANG
-23:52:27.287 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Loading type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
-23:52:27.290 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Loading type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
-23:52:27.295 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
-23:52:27.328 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
-23:52:27.330 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
-23:52:27.347 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
-23:52:27.348 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLLANG
-23:52:27.349 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLLANG
-23:52:27.351 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
-23:52:27.352 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
-23:52:27.354 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Reading unresolved handles for type system org.apache.poi.schemas.ooxml.system.ooxml
-23:52:27.468 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Finished loading type system org.apache.poi.schemas.ooxml.system.ooxml
-23:52:27.470 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle themefd26doctype
-23:52:27.561 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle stylesheet5d8bdoctype
-23:52:27.582 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctstylesheet4257type
-23:52:27.593 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctfonts6623type
-23:52:27.600 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctfont14d8type
-23:52:27.614 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctfills2c6ftype
-23:52:27.619 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctfill550ctype
-23:52:27.624 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctborders0d66type
-23:52:27.630 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctborderf935type
-23:52:27.638 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctcellxfs1322type
-23:52:27.643 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctxf97f7type
-23:52:27.650 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctcellstylexfsa81ftype
-23:52:27.654 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctdxfsb26atype
-23:52:27.658 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle cttablestyles872ftype
-23:52:27.666 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle sstf81fdoctype
-23:52:27.676 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctsst44f3type
-23:52:27.691 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctrsta472type
-23:52:27.734 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle workbookec17doctype
-23:52:27.741 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctworkbook83c3type
-23:52:27.750 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctsheets49fdtype
-23:52:27.756 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctsheet4dbetype
-23:52:27.760 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle strelationshipid1e94type
-23:52:27.766 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle worksheetf539doctype
-23:52:27.779 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctworksheet530dtype
-23:52:27.793 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctsheetdata8408type
-23:52:27.800 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctrowdd39type
-23:52:27.808 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctcell842btype
-23:52:27.820 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle stcellrefe4e0type
-23:52:27.840 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctcols627ctype
-23:52:27.849 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctcola95ftype
-23:52:27.893 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle cthyperlinks6416type
-23:52:27.899 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle cthyperlink0c85type
-23:52:27.907 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle stxstringf179type
-23:52:27.925 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
-23:52:27.929 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
-23:52:27.931 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
-23:52:28.001 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
-23:52:28.003 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
-23:52:28.006 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
-23:52:28.076 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle stcelltypebf95type
-23:52:28.105 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
-23:52:28.107 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
-23:52:28.109 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
-23:52:28.186 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
-23:52:28.189 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
-23:52:28.192 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
-23:52:28.261 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
-23:52:28.265 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
-23:52:28.270 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
-23:52:28.327 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
-23:52:28.331 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
-23:52:28.332 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
-23:52:28.386 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
-23:52:28.388 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
-23:52:28.389 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
-23:52:28.460 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
-23:52:28.462 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
-23:52:28.464 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
-23:52:28.529 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
-23:52:28.530 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
-23:52:28.533 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
-23:52:28.589 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
-23:52:28.591 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
-23:52:28.592 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
-23:52:28.646 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
-23:52:28.649 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
-23:52:28.650 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
-23:52:28.694 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
-23:52:28.695 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
-23:52:28.697 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
-23:52:28.744 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
-23:52:28.745 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
-23:52:28.747 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
-23:52:28.794 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
-23:52:28.800 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
-23:52:28.802 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
-23:52:28.847 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
-23:52:28.849 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
-23:52:28.852 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
-23:52:28.893 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
-23:52:28.894 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
-23:52:28.896 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
-23:52:28.932 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
-23:52:28.936 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
-23:52:28.940 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
-23:52:28.985 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
-23:52:28.988 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
-23:52:28.990 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
-23:52:29.032 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
-23:52:29.033 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
-23:52:29.036 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
-23:52:29.079 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle stcellstylexfid70c7type
-23:52:29.096 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle stnumfmtid76fbtype
-23:52:29.103 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctworkbookpr03a5type
-23:52:29.125 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
-23:52:29.127 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
-23:52:29.130 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
-23:52:29.173 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
-23:52:29.176 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
-23:52:29.178 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
-23:52:29.212 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
-23:52:29.214 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
-23:52:29.215 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
-23:52:29.354 [main] INFO  testCases.TC_SolidFireConfig - Started TC_SolidFireConfig Test Execution
+22:26:20.125 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Application url loaded https://netapp2--uat.sandbox.lightning.force.com/
+22:26:26.618 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:26:26.628 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:26:26.635 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+22:26:27.218 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Loading type system org.apache.poi.schemas.ooxml.system.ooxml
+22:26:27.234 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Loading type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
+22:26:27.243 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Loading type system org.apache.xmlbeans.metadata.system.sXMLLANG
+22:26:27.251 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Loading type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+22:26:27.258 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Loading type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
+22:26:27.266 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
+22:26:27.317 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLTOOLS
+22:26:27.319 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+22:26:27.348 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA
+22:26:27.351 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLLANG
+22:26:27.356 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLLANG
+22:26:27.360 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
+22:26:27.367 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLCONFIG
+22:26:27.371 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Reading unresolved handles for type system org.apache.poi.schemas.ooxml.system.ooxml
+22:26:27.566 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Finished loading type system org.apache.poi.schemas.ooxml.system.ooxml
+22:26:27.570 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle themefd26doctype
+22:26:27.760 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle stylesheet5d8bdoctype
+22:26:27.776 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctstylesheet4257type
+22:26:27.794 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctfonts6623type
+22:26:27.808 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctfont14d8type
+22:26:27.825 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctfills2c6ftype
+22:26:27.832 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctfill550ctype
+22:26:27.840 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctborders0d66type
+22:26:27.850 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctborderf935type
+22:26:27.861 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctcellxfs1322type
+22:26:27.868 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctxf97f7type
+22:26:27.877 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctcellstylexfsa81ftype
+22:26:27.884 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctdxfsb26atype
+22:26:27.894 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle cttablestyles872ftype
+22:26:27.907 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle sstf81fdoctype
+22:26:27.918 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctsst44f3type
+22:26:27.945 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctrsta472type
+22:26:28.015 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle workbookec17doctype
+22:26:28.027 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctworkbook83c3type
+22:26:28.041 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctsheets49fdtype
+22:26:28.051 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctsheet4dbetype
+22:26:28.058 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle strelationshipid1e94type
+22:26:28.064 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle worksheetf539doctype
+22:26:28.084 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctworksheet530dtype
+22:26:28.102 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctsheetdata8408type
+22:26:28.111 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctrowdd39type
+22:26:28.128 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctcell842btype
+22:26:28.145 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle stcellrefe4e0type
+22:26:28.169 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctcols627ctype
+22:26:28.189 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctcola95ftype
+22:26:28.239 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle cthyperlinks6416type
+22:26:28.245 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle cthyperlink0c85type
+22:26:28.259 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle stxstringf179type
+22:26:28.285 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:26:28.288 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:26:28.289 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+22:26:28.376 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:26:28.379 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:26:28.382 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+22:26:28.448 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle stcelltypebf95type
+22:26:28.483 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:26:28.486 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:26:28.489 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+22:26:28.572 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:26:28.574 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:26:28.585 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+22:26:28.663 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:26:28.666 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:26:28.669 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+22:26:28.748 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:26:28.751 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:26:28.752 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+22:26:28.823 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:26:28.825 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:26:28.831 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+22:26:28.906 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:26:28.910 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:26:28.911 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+22:26:28.976 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:26:28.979 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:26:28.981 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+22:26:29.050 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:26:29.051 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:26:29.056 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+22:26:29.120 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:26:29.123 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:26:29.125 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+22:26:29.191 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:26:29.193 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:26:29.195 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+22:26:29.257 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:26:29.259 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:26:29.261 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+22:26:29.320 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:26:29.323 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:26:29.325 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+22:26:29.381 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:26:29.383 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:26:29.385 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+22:26:29.441 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:26:29.445 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:26:29.447 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+22:26:29.513 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:26:29.517 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:26:29.519 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+22:26:29.567 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:26:29.570 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:26:29.572 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+22:26:29.623 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:26:29.626 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:26:29.628 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+22:26:29.681 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:26:29.682 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:26:29.685 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+22:26:29.737 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle stcellstylexfid70c7type
+22:26:29.751 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle stnumfmtid76fbtype
+22:26:29.764 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctworkbookpr03a5type
+22:26:29.787 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:26:29.789 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:26:29.791 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+22:26:29.838 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:26:29.841 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:26:29.843 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+22:26:29.899 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+22:26:29.903 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+22:26:29.908 [main] DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+22:26:30.134 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Started TC_SolidFireConfig Test Execution
 Error message: Cannot invoke "String.isEmpty()" because "email" is null
 NullPointerException has been handled
-23:52:29.409 [main] INFO  testCases.TC_SolidFireConfig - Started TC_SolidFireConfig Test Execution
+22:26:30.226 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Started TC_SolidFireConfig Test Execution
 Error message: Cannot invoke "String.isEmpty()" because "email" is null
 NullPointerException has been handled
-23:52:29.423 [main] INFO  testCases.TC_SolidFireConfig - Started TC_SolidFireConfig Test Execution
-23:52:29.764 [main] INFO  testCases.TC_SolidFireConfig - Entered email address as APPTESTMBOB4@netapp.com
-23:52:29.968 [main] INFO  testCases.TC_SolidFireConfig - Clicked on Next button
-23:52:37.869 [main] INFO  testCases.TC_SolidFireConfig - Entered password
-23:52:39.412 [main] INFO  testCases.TC_SolidFireConfig - Click on sign in button
-23:53:00.774 [main] INFO  testCases.TC_SolidFireConfig - Click on stay signin yes button
-23:53:01.431 [main] INFO  testCases.TC_SolidFireConfig - SFDC homepage screen captured
-23:53:01.464 [main] INFO  testCases.TC_SolidFireConfig - Captured SFDC homepage url
-23:53:02.837 [main] INFO  testCases.TC_SolidFireConfig - Navigated to Home page
-23:53:18.586 [main] INFO  testCases.TC_SolidFireConfig - Navigated to opportunities page
-23:53:28.973 [main] INFO  testCases.TC_SolidFireConfig - Clicked on new opportunity button
-23:53:34.311 [main] INFO  testCases.TC_SolidFireConfig - Entered account name Apple Inc.
-23:53:39.629 [main] INFO  testCases.TC_SolidFireConfig - Clicked on search lightning icon
-23:53:44.954 [main] INFO  testCases.TC_SolidFireConfig - Searched account has been selected
-23:53:50.233 [main] INFO  testCases.TC_SolidFireConfig - Clicked on select button
-23:54:00.568 [main] INFO  testCases.TC_SolidFireConfig - Clicked on next button
-23:54:00.869 [main] INFO  testCases.TC_SolidFireConfig - Selected opportunity type Standard
-23:54:34.810 [main] INFO  testCases.TC_SolidFireConfig - Entered opportunity name Test Automation
-23:54:36.697 [main] INFO  testCases.TC_SolidFireConfig - Selected primary contact Amit Jain
-23:54:36.945 [main] INFO  testCases.TC_SolidFireConfig - Selected sales play To be Determined During Qualify Sales Stage
-23:54:37.173 [main] INFO  testCases.TC_SolidFireConfig - Selected sales type Up-sell/Cross-sell
-23:54:37.400 [main] INFO  testCases.TC_SolidFireConfig - Selected installed base type None
-23:54:37.630 [main] INFO  testCases.TC_SolidFireConfig - Selected currency USD - U.S. Dollar
-23:54:42.954 [main] INFO  testCases.TC_SolidFireConfig - Selected channel Direct
-23:55:03.244 [main] INFO  testCases.TC_SolidFireConfig - Clicked on next button
-23:55:03.465 [main] INFO  testCases.TC_SolidFireConfig - Captured opportunity number 102188064
-23:55:03.589 [main] INFO  testCases.TC_SolidFireConfig - Captured opportunity name Apple Inc.-Opp-102188064-Test Automation-40539
-23:55:03.703 [main] INFO  testCases.TC_SolidFireConfig - Captured account name Apple Inc.
-23:55:03.809 [main] INFO  testCases.TC_SolidFireConfig - Captured channel name Direct
-23:55:04.335 [main] INFO  testCases.TC_SolidFireConfig - Opportunity created screen captured
-23:55:09.879 [main] INFO  testCases.TC_SolidFireConfig - Click on products link
-23:55:15.379 [main] INFO  testCases.TC_SolidFireConfig - Clicked on add products
-23:55:20.920 [main] INFO  testCases.TC_SolidFireConfig - Entered product name All SAN Array Flash Config
-23:55:26.254 [main] INFO  testCases.TC_SolidFireConfig - Clicked on search lightning icon
-23:55:26.664 [main] INFO  testCases.TC_SolidFireConfig - selected searched product
-23:55:31.942 [main] INFO  testCases.TC_SolidFireConfig - Click on next button
-23:55:37.828 [main] INFO  testCases.TC_SolidFireConfig - Entered sales price 1000
-23:55:43.202 [main] INFO  testCases.TC_SolidFireConfig - Clickec on save button
-23:55:48.981 [main] INFO  testCases.TC_SolidFireConfig - Navigating back to opportunity page
-23:55:49.413 [main] INFO  testCases.TC_SolidFireConfig - Add product screen captured
-23:55:54.825 [main] INFO  testCases.TC_SolidFireConfig - Clicked on create qutoe
-23:56:00.093 [main] INFO  testCases.TC_SolidFireConfig - Clicked on unified CPQ
-23:56:10.388 [main] INFO  testCases.TC_SolidFireConfig - Clicked on create quote button
-23:56:50.566 [main] INFO  testCases.TC_SolidFireConfig - Driver control switched to new CPQ tab and closed parent sfdc tab
-23:57:00.871 [main] INFO  testCases.TC_SolidFireConfig - Clicked on save button
-23:57:00.985 [main] INFO  testCases.TC_SolidFireConfig - Captured quote number 199683
-23:57:01.090 [main] INFO  testCases.TC_SolidFireConfig - Captured quote name Quote 199683 for Apple Inc.
-23:57:01.191 [main] INFO  testCases.TC_SolidFireConfig - Captured quote status Draft
-23:57:01.576 [main] INFO  testCases.TC_SolidFireConfig - CPQ homepage screen captured
-23:57:06.674 [main] INFO  testCases.TC_SolidFireConfig - Clicked on products tab
-23:57:26.773 [main] INFO  testCases.TC_SolidFireConfig - Clicked on configure product button
-23:57:33.697 [main] INFO  testCases.TC_SolidFireConfig - Clicked on solid fire prodcut
-23:57:50.621 [main] INFO  testCases.TC_SolidFireConfig - clicked on configure button for the sub product Term Based Capacity License Software
-23:58:01.092 [main] INFO  testCases.TC_SolidFireConfig - Entered new capacity in TB 10
-23:58:06.914 [main] INFO  testCases.TC_SolidFireConfig - Entered new term in months 24 Months
-23:58:07.237 [main] INFO  testCases.TC_SolidFireConfig - Captured screen shot of solid fire product config
-23:58:37.656 [main] INFO  testCases.TC_SolidFireConfig - Clicked on add to quote button
-23:58:50.219 [main] INFO  testCases.TC_SolidFireConfig - Clicked on settings and clicked on expand all option
+22:26:30.244 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Started TC_SolidFireConfig Test Execution
+22:26:30.680 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Entered email address as APPTESTMBOB4@netapp.com
+22:26:30.897 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Clicked on Next button
+22:26:38.261 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Entered password
+22:26:39.663 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Click on sign in button
+22:27:22.180 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Click on stay signin yes button
+22:27:22.932 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - SFDC homepage screen captured
+22:27:22.960 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Captured SFDC homepage url
+22:27:26.257 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Navigated to Home page
+22:27:42.981 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Navigated to opportunities page
+22:27:53.320 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Clicked on new opportunity button
+22:27:58.663 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Entered account name Apple Inc.
+22:28:04.057 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Clicked on search lightning icon
+22:28:09.505 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Searched account has been selected
+22:28:14.893 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Clicked on select button
+22:28:25.269 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Clicked on next button
+22:28:25.626 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Selected opportunity type Standard
+22:29:00.252 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Entered opportunity name Test Automation
+22:29:02.348 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Selected primary contact Amit Jain
+22:29:02.658 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Selected sales play To be Determined During Qualify Sales Stage
+22:29:02.959 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Selected sales type Up-sell/Cross-sell
+22:29:03.224 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Selected installed base type None
+22:29:03.503 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Selected currency USD - U.S. Dollar
+22:29:08.822 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Selected channel Direct
+22:29:29.193 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Clicked on next button
+22:29:29.361 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Captured opportunity number 102188234
+22:29:29.498 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Captured opportunity name Apple Inc.-Opp-102188234-Test Automation-75934
+22:29:29.661 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Captured account name Apple Inc.
+22:29:29.818 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Captured channel name Direct
+22:29:30.356 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Opportunity created screen captured
+22:29:35.977 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Click on products link
+22:29:41.530 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Clicked on add products
+22:29:47.282 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Entered product name All SAN Array Flash Config
+22:29:52.709 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Clicked on search lightning icon
+22:29:53.201 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - selected searched product
+22:29:58.626 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Click on next button
+22:30:04.519 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Entered sales price 1000
+22:30:10.013 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Clickec on save button
+22:30:15.851 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Navigating back to opportunity page
+22:30:16.296 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Add product screen captured
+22:30:21.757 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Clicked on create qutoe
+22:30:27.065 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Clicked on unified CPQ
+22:30:37.527 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Clicked on create quote button
+22:31:17.734 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Driver control switched to new CPQ tab and closed parent sfdc tab
+22:31:28.275 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Clicked on save button
+22:31:28.386 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Captured quote number 200372
+22:31:28.479 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Captured quote name Quote 200372 for Apple Inc.
+22:31:28.580 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Captured quote status Draft
+22:31:29.013 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - CPQ homepage screen captured
+22:31:34.143 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Clicked on products tab
+22:31:54.241 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Clicked on configure product button
+22:32:07.822 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Clicked on solid fire prodcut
+22:33:34.386 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - clicked on configure button for the sub product Term Based Capacity License Software
+22:33:49.187 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Entered new capacity in TB 10
+22:33:55.231 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Entered new term in months 24 Months
+22:33:55.513 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Captured screen shot of solid fire product config
+22:34:25.634 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Clicked on add to quote button
+22:34:38.334 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Clicked on settings and clicked on expand all option
+22:34:38.438 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Reading line count number from products table 4
 Term Based Capacity License Software
 SW-H-SERIES-CAP-TERM
 SW-H-SERIES-2Y-1T
 SES-SYSTEM
-Completed reading of all products
-23:59:10.779 [main] INFO  testCases.TC_SolidFireConfig - Reading prodcut column data from products table
-23:59:11.074 [main] INFO  testCases.TC_SolidFireConfig - Captured screen shot of solid fire product config
-23:59:21.566 [main] INFO  testCases.TC_SolidFireConfig - Clicked on save icon
-23:59:21.574 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctbookviewsb864type
-23:59:21.578 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctbookviewf677type
-23:59:21.589 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle propertiesee84doctype
-23:59:21.593 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctproperties3f10type
-23:59:21.603 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle properties288cdoctype
-23:59:21.606 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctproperties2c18type
-23:59:21.613 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctfontsizeb3b9type
-23:59:21.617 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctcolord2c2type
-23:59:21.621 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctfontname2dc3type
-23:59:21.629 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctfontfamily685ctype
-23:59:21.632 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle stfontfamily9c6ctype
-23:59:21.637 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctfontschemebf5dtype
-23:59:21.639 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle stfontschemef36dtype
-23:59:21.641 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctpatternfill7452type
-23:59:21.645 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle stpatterntype7939type
-23:59:21.647 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctborderpre497type
-23:59:21.649 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle stfontid9d63type
-23:59:21.652 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle stfillida097type
-23:59:21.654 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle stborderid1a80type
-23:59:21.657 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctsheetformatprdef7type
-23:59:21.660 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctsheetviewsb918type
-23:59:21.663 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctsheetview0f43type
-23:59:21.671 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctsheetdimensiond310type
-23:59:21.673 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle stref90a2type
-23:59:21.675 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctpagemargins5455type
-23:59:21.701 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctnumfmtsb58btype
-23:59:21.720 [main] DEBUG org.apache.poi.openxml4j.opc.ZipPackage - Save core properties part
-23:59:21.720 [main] DEBUG org.apache.poi.openxml4j.opc.ZipPackage - Save content types part
-23:59:21.806 [main] DEBUG org.apache.poi.openxml4j.opc.ZipPackage - Save package relationships
-23:59:21.812 [main] DEBUG org.apache.poi.openxml4j.opc.ZipPackage - Save part 'docProps/app.xml'
-23:59:21.813 [main] DEBUG org.apache.poi.openxml4j.opc.ZipPackage - Save part 'docProps/core.xml'
-23:59:21.818 [main] DEBUG org.apache.poi.openxml4j.opc.ZipPackage - Save part 'xl/sharedStrings.xml'
-23:59:21.820 [main] DEBUG org.apache.poi.openxml4j.opc.ZipPackage - Save part 'xl/styles.xml'
-23:59:21.820 [main] DEBUG org.apache.poi.openxml4j.opc.ZipPackage - Save part 'xl/workbook.xml'
-23:59:21.823 [main] DEBUG org.apache.poi.openxml4j.opc.ZipPackage - Save part 'xl/worksheets/sheet1.xml'
-23:59:21.834 [main] INFO  testCases.TC_SolidFireConfig - Test execution results has been written in excel sheet
+22:34:48.870 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Reading product column data from products table
+22:34:49.916 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Captured screen shot of solid fire product config
+22:34:50.100 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Captured quote status Configured
+22:35:01.786 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Clicked on save icon
+22:35:01.800 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctbookviewsb864type
+22:35:01.811 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctbookviewf677type
+22:35:01.829 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle propertiesee84doctype
+22:35:01.839 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctproperties3f10type
+22:35:01.865 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle properties288cdoctype
+22:35:01.877 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctproperties2c18type
+22:35:01.896 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctfontsizeb3b9type
+22:35:01.903 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctcolord2c2type
+22:35:01.911 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctfontname2dc3type
+22:35:01.918 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctfontfamily685ctype
+22:35:01.923 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle stfontfamily9c6ctype
+22:35:01.932 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctfontschemebf5dtype
+22:35:01.941 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle stfontschemef36dtype
+22:35:01.946 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctpatternfill7452type
+22:35:01.952 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle stpatterntype7939type
+22:35:01.959 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctborderpre497type
+22:35:01.965 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle stfontid9d63type
+22:35:01.970 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle stfillida097type
+22:35:01.976 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle stborderid1a80type
+22:35:01.992 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctsheetformatprdef7type
+22:35:01.998 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctsheetviewsb918type
+22:35:02.004 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctsheetview0f43type
+22:35:02.015 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctsheetdimensiond310type
+22:35:02.020 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle stref90a2type
+22:35:02.025 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctpagemargins5455type
+22:35:02.062 [main] TRACE org.apache.xmlbeans.impl.common.XBeanDebug - Resolving type for handle ctnumfmtsb58btype
+22:35:02.089 [main] DEBUG org.apache.poi.openxml4j.opc.ZipPackage - Save core properties part
+22:35:02.089 [main] DEBUG org.apache.poi.openxml4j.opc.ZipPackage - Save content types part
+22:35:02.259 [main] DEBUG org.apache.poi.openxml4j.opc.ZipPackage - Save package relationships
+22:35:02.270 [main] DEBUG org.apache.poi.openxml4j.opc.ZipPackage - Save part 'docProps/app.xml'
+22:35:02.271 [main] DEBUG org.apache.poi.openxml4j.opc.ZipPackage - Save part 'docProps/core.xml'
+22:35:02.276 [main] DEBUG org.apache.poi.openxml4j.opc.ZipPackage - Save part 'xl/sharedStrings.xml'
+22:35:02.277 [main] DEBUG org.apache.poi.openxml4j.opc.ZipPackage - Save part 'xl/styles.xml'
+22:35:02.278 [main] DEBUG org.apache.poi.openxml4j.opc.ZipPackage - Save part 'xl/workbook.xml'
+22:35:02.281 [main] DEBUG org.apache.poi.openxml4j.opc.ZipPackage - Save part 'xl/worksheets/sheet1.xml'
+22:35:02.292 [main] INFO  testCases_SolifFire.TC_SolidFireConfig - Test execution results has been written in excel sheet
 
 ===============================================
 Suite

@@ -12,7 +12,7 @@
    	<parameter name="os" value="Windows"/>
     <parameter name="browser" value="Chrome"/>    
        <classes>
-     	 <class name="testCases.TC_CreateIndirectOpportunity"/>
+     	 <class name="testCases_SFDC.TC_CreateIndirectOpportunity"/>
        </classes>
    
    

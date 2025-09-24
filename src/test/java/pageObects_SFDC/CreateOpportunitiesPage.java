@@ -16,8 +16,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
 public class CreateOpportunitiesPage extends BasePage {
-
-public int sw=5; public int mw=10; public int lw=20;
+	public BasePage bp=new BasePage(driver);
+	public int sw=5; public int mw=10; public int lw=20;
 
 	public CreateOpportunitiesPage(WebDriver driver)
 	{
@@ -69,6 +69,14 @@ public int sw=5; public int mw=10; public int lw=20;
 	@CacheLookup
 	WebElement primary_Contact;
 	
+	@FindBy(how = How.XPATH, using = "//div[2]/div/div/div[1]/input")
+	@CacheLookup
+	WebElement primary_Contact_1P;
+	
+	@FindBy(how = How.XPATH, using = "//li[1]/div/span/span")
+	@CacheLookup
+	WebElement primary_Contact_1P_Select;
+	
 	@FindBy(how = How.XPATH, using = "//flowruntime-screen-field[11]/flowruntime-lwc-field/div/flowruntime-picklist-input-lwc/div/lightning-select/div/div/select")
 	@CacheLookup
 	WebElement sales_Play;
@@ -76,6 +84,10 @@ public int sw=5; public int mw=10; public int lw=20;
 	@FindBy(how = How.XPATH, using = "//flowruntime-screen-field[3]/flowruntime-lwc-field/div/flowruntime-picklist-input-lwc/div/lightning-select/div/div/select")
 	@CacheLookup
 	WebElement sales_Type;
+	
+	@FindBy(how = How.XPATH, using = "//flowruntime-screen-field[4]/flowruntime-lwc-field/div/flowruntime-picklist-input-lwc/div/lightning-select/div/div/select")
+	@CacheLookup
+	WebElement sales_Type_1P;
 	
 	@FindBy(how = How.XPATH, using = "//flowruntime-screen-field[8]/flowruntime-lwc-field/div/flowruntime-picklist-input-lwc/div/lightning-select/div/div/select")
 	@CacheLookup
@@ -85,10 +97,17 @@ public int sw=5; public int mw=10; public int lw=20;
 	@CacheLookup
 	WebElement currency_Type;
 	
+	@FindBy(how = How.XPATH, using = "//flowruntime-screen-field[2]/flowruntime-list-container/div/flowruntime-base-section/div/flowruntime-screen-field[1]/flowruntime-lwc-field/div/flowruntime-picklist-input-lwc/div/lightning-select/div/div/select")
+	@CacheLookup
+	WebElement currency_Type_1P;
+	
 	@FindBy(how = How.XPATH, using = "//flowruntime-screen-field[13]/flowruntime-lwc-field/div/flowruntime-picklist-input-lwc/div/lightning-select/div/div/select")
 	@CacheLookup
 	WebElement channelType;
 	
+	@FindBy(how = How.XPATH, using = "//flowruntime-screen-field[2]/flowruntime-list-container/div/flowruntime-base-section/div/flowruntime-screen-field[3]/flowruntime-lwc-field/div/flowruntime-picklist-input-lwc/div/lightning-select/div/div/select")
+	@CacheLookup
+	WebElement hyperscaler;
 	
 	@FindBy(how = How.XPATH, using = "//div/flowruntime-base-section/div/flowruntime-screen-field[1]/flowruntime-list-container/div/flowruntime-base-section/div/flowruntime-screen-field/flowruntime-lwc-field/div/flowruntime-picklist-input-lwc/div/lightning-select/div/div/select")
 	@CacheLookup
@@ -96,8 +115,7 @@ public int sw=5; public int mw=10; public int lw=20;
 	
 	@FindBy(how = How.XPATH, using = "//div/flowruntime-base-section/div/flowruntime-screen-field[2]/flowruntime-list-container/div/flowruntime-base-section/div/flowruntime-screen-field/flowruntime-lwc-field/div/flowruntime-picklist-input-lwc/div/lightning-select/div/div/select")
 	@CacheLookup
-	WebElement partner_SalesModel;	
-	
+	WebElement partner_SalesModel;		
 	
 	@FindBy(how = How.XPATH, using = "//lightning-button[2]/button")
 	@CacheLookup
@@ -138,6 +156,8 @@ public int sw=5; public int mw=10; public int lw=20;
 	@FindBy(how = How.XPATH, using = "//lightning-button[2]/button")
 	@CacheLookup
 	WebElement nextButton_3;
+	
+	
 	
 	public void navigateToOpportunitiesPage() throws InterruptedException
 	{
@@ -228,6 +248,16 @@ public int sw=5; public int mw=10; public int lw=20;
 		}
 	}
 	
+	public void selectPrimaryContact_1P(String primaryContact) 
+	{
+		if(!(primaryContact.isEmpty()))
+		{
+		BasePage.actDoubleClick(driver, primary_Contact_1P);
+		primary_Contact_1P.sendKeys(primaryContact);
+		primary_Contact_1P_Select.click();		
+		}
+	}
+	
 	public void selectSalesPlay(String salesPlay) 
 	{
 		if(!(salesPlay.isEmpty()))
@@ -242,6 +272,15 @@ public int sw=5; public int mw=10; public int lw=20;
 		if(!(salesType.isEmpty()))
 		{
 			Select dd = new Select(sales_Type);
+			dd.selectByVisibleText(salesType);
+		}
+	}
+	
+	public void selectSalesType_1P(String salesType) 
+	{
+		if(!(salesType.isEmpty()))
+		{
+			Select dd = new Select(sales_Type_1P);
 			dd.selectByVisibleText(salesType);
 		}
 	}
@@ -264,6 +303,15 @@ public int sw=5; public int mw=10; public int lw=20;
 		}
 	}
 	
+	public void selectCurrency_1P(String currency) 
+	{
+		if(!(currency.isEmpty()))
+		{
+			Select dd = new Select(currency_Type_1P);
+			dd.selectByVisibleText(currency); 
+		}
+	}
+	
 	public void selectChannel(String channel) throws InterruptedException 
 	{
 		if(!(channel.isEmpty()))
@@ -271,6 +319,15 @@ public int sw=5; public int mw=10; public int lw=20;
 			Select dd = new Select(channelType);
 			dd.selectByVisibleText(channel);
 			Thread.sleep(Duration.ofSeconds(sw));
+		}
+	}
+	
+	public void selectHyperscaler(String hyperScaler) 
+	{
+		if(!(hyperScaler.isEmpty()))
+		{
+		Select dd = new Select(hyperscaler);
+		dd.selectByVisibleText(hyperScaler);
 		}
 	}
 	

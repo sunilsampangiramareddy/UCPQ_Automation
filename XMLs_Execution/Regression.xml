@@ -19,10 +19,10 @@
     <parameter name="browser" value="chrome"/>    
     
     <classes>
-     	<class name="testCases.TC_CreateDirectOpportunity"/>
-      	<class name="testCases.TC_CreateIndirectOpportunity"/>
-     	<class name="testCases.TC_SolidFireConfig"/>     	
-      	<class name="testCases.TC_StorageGridConfig"/>
+     	<class name="testCases_SFDC.TC_CreateDirectOpportunity"/>
+      	<class name="testCases_SFDC.TC_CreateIndirectOpportunity"/>
+     	 <class name="testCases_SolifFire.TC_SolidFireConfig"/>   	
+      	<class name="testCases_StorageGrid.TC_StorageGridConfig"/>
     </classes>
    
   </test> <!-- Test -->

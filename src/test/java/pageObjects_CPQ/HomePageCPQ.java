@@ -33,7 +33,11 @@ public int nw=2; int sw=5; int mw=10; int lw=20;
 	
 	@FindBy(how = How.XPATH, using = "//div[3]/div[2]/div[2]")
 	@CacheLookup
-	WebElement quoteStatus;
+	WebElement quoteDraftStatus;
+	
+	@FindBy(how = How.XPATH, using = "//div[normalize-space()='Configured']")
+	@CacheLookup
+	WebElement quoteConfiguredStatus;
 	
 	@FindBy(how = How.XPATH, using = "(//span[@class='oj-ux-icon-size-5x oj-ux-ico-save'])[1]")
 	@CacheLookup
@@ -55,6 +59,11 @@ public int nw=2; int sw=5; int mw=10; int lw=20;
 	@CacheLookup
 	WebElement expandAll;
 	
+	@FindBy(how = How.XPATH, using = "//*[@id=\"cx-cpq-line-items-div\"]/div/ul/div[1]/div[2]")
+	@CacheLookup
+	WebElement lineCount;
+	
+	
 	public String getQuoteNumber()
 	{
 		return quoteNumber.getText();
@@ -65,9 +74,9 @@ public int nw=2; int sw=5; int mw=10; int lw=20;
 		return quoteName.getText();
 	}
 	
-	public String getQuoteStatus()
+	public String getQuoteDraftStatus()
 	{
-		return quoteStatus.getText();
+		return quoteDraftStatus.getText();
 	}
 
 	public void clickSaveIcon() throws InterruptedException
@@ -111,7 +120,7 @@ public int nw=2; int sw=5; int mw=10; int lw=20;
 		}
 		Thread.sleep(Duration.ofSeconds(lw));
 	}
-	
+		
 //	//Read Product column from Products table
 //	public void readProductColumnFromProductsTable(int count) throws InterruptedException 
 //	{
@@ -125,6 +134,13 @@ public int nw=2; int sw=5; int mw=10; int lw=20;
 //	 Thread.sleep(Duration.ofSeconds(mw));
 //	 }
 	
+	
+	public int getLineCount()
+	{
+		String line_Count=lineCount.getText();
+		return Integer.parseInt(line_Count.trim());
+		
+	}
 	
 	
 	
@@ -151,10 +167,10 @@ public int nw=2; int sw=5; int mw=10; int lw=20;
 		 }
 		
 		
-		
-		
-		
-		
+		public String getQuoteConfiguredStatus()
+		{
+			return quoteConfiguredStatus.getText();
+		}
 		
 		
 		

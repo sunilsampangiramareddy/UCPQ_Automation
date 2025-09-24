@@ -11,7 +11,7 @@
    	<parameter name="os" value="Windows"/>
     <parameter name="browser" value="chrome"/>    
     <classes>
-      <class name="testCases.TC_CreateDirectOpportunity"/>
+      <class name="testCases_SFDC.TC_CreateDirectOpportunity"/>
     </classes>
   </test> <!-- Test -->  
      
@@ -19,7 +19,7 @@
    	<parameter name="os" value="Windows"/>
     <parameter name="browser" value="firefox"/>   
     <classes>
-      <class name="testCases.TC_CreateDirectOpportunity"/>
+      <class name="testCases_SFDC.TC_CreateDirectOpportunity"/>
     </classes>
   </test> <!-- Test -->
   
