@@ -1,6 +1,7 @@
 package pageObjects_CPQ;
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 
@@ -63,6 +64,11 @@ public int nw=2; int sw=5; int mw=10; int lw=20;
 	@CacheLookup
 	WebElement lineCount;
 	
+	@FindBy(how = How.XPATH, using = "//div[contains(@class, 'oj-flex-bar oj-sm-12 oj-sm-align-self-center oj-sm-flex-wrap-nowrap oracle-cx-cpq-fragmentsUI-cx-cpq-fragment-dataGridColumnTruncate cx-cpq-line-item-row')]")
+	@CacheLookup
+	WebElement productColumn;
+	
+	
 	
 	public String getQuoteNumber()
 	{
@@ -121,58 +127,121 @@ public int nw=2; int sw=5; int mw=10; int lw=20;
 		Thread.sleep(Duration.ofSeconds(lw));
 	}
 		
-//	//Read Product column from Products table
-//	public void readProductColumnFromProductsTable(int count) throws InterruptedException 
-//	{
-//		String firstPath="//*[@id=\"cx-cpq-line-item-";
-//		String lastPath="\"]";
-//		for(int i=2;i<(count+2);i++)
-//		{
-//			String finalPath=firstPath+i+lastPath;
-//			System.out.println(driver.findElement(By.xpath(finalPath)).getText());	
-//		}
-//	 Thread.sleep(Duration.ofSeconds(mw));
-//	 }
-	
-	
+
 	public int getLineCount()
 	{
 		String line_Count=lineCount.getText();
 		return Integer.parseInt(line_Count.trim());
 		
 	}
-	
-	
-	
-	//Read Product column from Products table
-		public void readProductColumnFromProductsTable(int count) throws InterruptedException 
-		{
-			String firstPath="//*[@id=\"cx-cpq-line-item-";
-			String lastPath="\"]";
-			for(int i=2;i<(count+2);i++)
-			{
-				String finalPath=firstPath+i+lastPath;
-				List<WebElement> elements=driver.findElements(By.xpath(finalPath));
-				if (!elements.isEmpty()) {
-					String elementText = elements.get(0).getText();
-                    System.out.println(elementText);	
-				}
-				else {
-                    // If the element is not found, exit the loop
-                    System.out.println("Completed reading of all products");
-                    break;
-                }
-			}
-		 Thread.sleep(Duration.ofSeconds(mw));
-		 }
-		
-		
-		public String getQuoteConfiguredStatus()
+			
+	public String getQuoteConfiguredStatus()
 		{
 			return quoteConfiguredStatus.getText();
 		}
 		
 		
-		
+	// Create an ArrayList to store the values
+	public ArrayList<String> productColumnValues = new ArrayList<>();
+	public void readProductsTableByColumnName(String columnName) throws InterruptedException
+	{
+		switch (columnName) {
+		case "Product":
+			// Locate elements using XPath
+	        List<WebElement> elements_1 = driver.findElements(By.xpath("//div[contains(@class, 'oj-flex-bar oj-sm-12 oj-sm-align-self-center oj-sm-flex-wrap-nowrap oracle-cx-cpq-fragmentsUI-cx-cpq-fragment-dataGridColumnTruncate cx-cpq-line-item-row')]"));
+	        // Extract and print text of each element
+	        for (WebElement element_1 : elements_1) {
+	        	BasePage.jsScrollToElement(driver, element_1);
+	        	productColumnValues.add(element_1.getText()); //Store product values in array list
+	            System.out.println(element_1.getText());
+	           }
+	        Thread.sleep(Duration.ofSeconds(nw));
+	    break;
+	    case "List Price":
+        		// Locate elements using XPath
+                List<WebElement> elements_2 = driver.findElements(By.xpath("//div[contains(@class, 'oj-flex oracle-cx-cpq-fragmentsUI-cx-cpq-fragment-dataGridColumnTruncate oj-fa-cx-cpq-field-listPrice_l_c')]"));
+                // Extract and print text of each element
+                for (WebElement element_2 : elements_2) {
+                	BasePage.jsScrollToElement(driver, element_2);
+                    System.out.println(element_2.getText());
+                }
+                Thread.sleep(Duration.ofSeconds(nw));
+         break;
+        case "Net Price":
+        		// Locate elements using XPath
+                List<WebElement> elements_3 = driver.findElements(By.xpath("//div[contains(@class, 'oj-flex oracle-cx-cpq-fragmentsUI-cx-cpq-fragment-dataGridColumnTruncate oj-fa-cx-cpq-field-netPrice_l_c')]"));
+                // Extract and print text of each element
+                for (WebElement element_3 : elements_3) {
+                	BasePage.jsScrollToElement(driver, element_3);
+                    System.out.println(element_3.getText());
+                 }
+                Thread.sleep(Duration.ofSeconds(nw));
+        break;  	
+        case "Current Discount":
+    		// Locate elements using XPath
+            List<WebElement> elements_4 = driver.findElements(By.xpath("//div[contains(@class, 'oj-flex oracle-cx-cpq-fragmentsUI-cx-cpq-fragment-dataGridColumnTruncate oj-fa-cx-cpq-field-currentDiscount_l_c')]"));
+            // Extract and print text of each element
+            for (WebElement element_4 : elements_4) {
+            	BasePage.jsScrollToElement(driver, element_4);
+                System.out.println(element_4.getText());
+               }
+            Thread.sleep(Duration.ofSeconds(nw));
+        break;
+        case "Eligible Discount":
+    		// Locate elements using XPath
+            List<WebElement> elements_5 = driver.findElements(By.xpath("//div[contains(@class, 'oj-flex oracle-cx-cpq-fragmentsUI-cx-cpq-fragment-dataGridColumnTruncate oj-fa-cx-cpq-field-eligibleDiscount_l_c')]"));
+            // Extract and print text of each element
+            for (WebElement element_5 : elements_5) {
+            	BasePage.jsScrollToElement(driver, element_5);
+                System.out.println(element_5.getText());
+              }
+            Thread.sleep(Duration.ofSeconds(nw));
+        break;
+        case "Part Description":
+    		// Locate elements using XPath
+            List<WebElement> elements_6 = driver.findElements(By.xpath("//div[contains(@class, 'oj-flex oracle-cx-cpq-fragmentsUI-cx-cpq-fragment-dataGridColumnTruncate oj-fa-cx-cpq-field-partDescription_l_c')]"));
+            // Extract and print text of each element
+            for (WebElement element_6 : elements_6) {
+            	BasePage.jsScrollToElement(driver, element_6);
+                System.out.println(element_6.getText());
+              }
+            Thread.sleep(Duration.ofSeconds(nw));
+        break;
+        case "Treshold Group":
+    		// Locate elements using XPath
+            List<WebElement> elements_7 = driver.findElements(By.xpath("//div[contains(@class, 'oj-flex oracle-cx-cpq-fragmentsUI-cx-cpq-fragment-dataGridColumnTruncate oj-fa-cx-cpq-field-thresholdGroup_l_c')]"));
+            // Extract and print text of each element
+            for (WebElement element_7 : elements_7) {
+            	BasePage.jsScrollToElement(driver, element_7);
+                System.out.println(element_7.getText());
+              }
+            Thread.sleep(Duration.ofSeconds(nw));
+        break;
+        default:
+        		System.out.println("Invalid column name");
+        break;
+            
+		}
+	}
+	
+	
+	
+	public void verifyProductColumnValueInArrayList(String value)
+		{
+			// Check if the value is present in the ArrayList
+	        if (productColumnValues.contains(value)) {
+	            System.out.println(value + " product name has been verified in products table");
+	        } else {
+	            System.out.println(value + " product name is not present in products table ");
+	        }
+		}
+
+	
+	
+	
+	
+	
+	
+	
 		
 }

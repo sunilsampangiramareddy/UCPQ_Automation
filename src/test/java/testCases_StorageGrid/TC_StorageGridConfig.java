@@ -183,7 +183,7 @@ public class TC_StorageGridConfig extends BaseClass{
 			logger.info("Clicked on settings and clicked on expand all option");
 			lineCount=hpc.getLineCount();
 			logger.info("Reading line count number from products table "+lineCount);
-			hpc.readProductColumnFromProductsTable(lineCount);
+			hpc.readProductsTableByColumnName("Product");
 			logger.info("Reading prodcut column data from products table");
 			bp.captureScreenshot(driver);
 			logger.info("Captured screen shot of storage grid product config");

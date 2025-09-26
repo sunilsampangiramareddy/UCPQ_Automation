@@ -169,20 +169,38 @@ public class TC_FastQuotesConfig extends BaseClass{
 			logger.info("Clicked on fast quotes prodcut");
 			hpfq.clickAddToQuoteFASTQUOTEAFFA20001(subProduct);
 			logger.info("clicked on configure button for the sub product "+subProduct);	
+			
+//--------------------Validate Product table details in Products page-------------------------------------------------------------			
 			hpc.clickSettingsExpandAll();
 			logger.info("Clicked on settings and clicked on expand all option");	
 			lineCount= hpc.getLineCount();
-			logger.info("Reading line count number from products table "+lineCount);
-			hpc.readProductColumnFromProductsTable(lineCount);
+			logger.info("Reading line count number from products table "+lineCount);			
+			hpc.readProductsTableByColumnName("Product");
 			logger.info("Reading product column data from products table");
 			bp.captureScreenshot(driver);
 			logger.info("Captured screen shot of product configured");
 			quoteStatus=hpc.getQuoteConfiguredStatus();
 			logger.info("Captured quote status "+quoteStatus);
+			System.out.println("Product values in the Collection DB: " + hpc.productColumnValues);
+			logger.info("Stored all product column details in Collection DB");
+			hpc.verifyProductColumnValueInArrayList(subProduct);
+			logger.info("Expected product name has been verified in products table "+ subProduct);
+			hpc.readProductsTableByColumnName("List Price");
+			logger.info("Reading List Price column values from products table");
+			hpc.readProductsTableByColumnName("Net Price");
+			logger.info("Reading Net Price column values from products table");
+			hpc.readProductsTableByColumnName("Current Discount");
+			logger.info("Reading Current Discount values from products table");
+			hpc.readProductsTableByColumnName("Eligible Discount");
+			logger.info("Reading Eligible Discount values from products table");
+			hpc.readProductsTableByColumnName("Part Description");
+			logger.info("Reading Part Description values from products table");
+			hpc.readProductsTableByColumnName("Treshold Group");
+			logger.info("Reading Treshold Group values from products table");
+			
 			hpc.clickSaveIcon();
 			logger.info("Clicked on save icon");
 			
-		
 //-----------Write test results to excel sheet--------------------------------------------------------------
 			wtr.write_TC_FastQuotesConfigTestResults(driver, testCase, opptyNumber, opptyName, accName, channelName, quoteNumber, quoteName, quoteStatus, booleanStatus);			
 			logger.info("Test execution results has been written in excel sheet");			

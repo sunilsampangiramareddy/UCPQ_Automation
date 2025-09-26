@@ -9,13 +9,12 @@
     <parameter name="os" value="Windows"/>
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="testCases_FastQuotes.TC_FastQuotesConfig">
+      <class name="testCases_SolifFire.TC_SolidFireConfig">
         <methods>
-          <include name="createFastQuotesConfig" invocation-numbers="2"/>
+          <include name="createSolidFireConfig" invocation-numbers="2"/>
           <include name="setup"/>
-          <include name="tearDown"/>
         </methods>
-      </class> <!-- testCases_FastQuotes.TC_FastQuotesConfig -->
+      </class> <!-- testCases_SolifFire.TC_SolidFireConfig -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

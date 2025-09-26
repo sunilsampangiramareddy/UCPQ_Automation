@@ -39,7 +39,7 @@ public int nw=3; int sw=5; public int mw=10; public int lw=20;
 	{
 		if(!(subProdct.isEmpty()))
 		{
-			if(subProdct.contains("FASTQUOTE-AFF A20-001"))
+			if(subProdct.contains("FASTQUOTE-AFF-A20-001"))
 			{
 				BasePage.jsClick(driver, configureFASTQUOTEAFFA20001);
 			}
