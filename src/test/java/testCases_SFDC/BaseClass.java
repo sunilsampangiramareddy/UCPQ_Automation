@@ -21,7 +21,20 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
+
+import com.aventstack.extentreports.ExtentTest;
+
+import utilities.AutoScreenshotCleanup;
+
+import org.testng.ITestContext;
+import org.testng.ITestListener;
+import org.testng.ITestResult;
+
+
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 import java.io.File;
@@ -43,6 +56,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -53,13 +67,19 @@ import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
 
-
 public class BaseClass {
 	
 	public WebDriver driver;
 	public Logger logger;
 	public Properties p;
 	
+	 @BeforeSuite
+	    public void setup() {
+		// Pass the number of days as an argument to delete old screen shots 
+		 AutoScreenshotCleanup.deleteOldScreenshots(15);  
+	    }
+	
+	 
 	@BeforeClass(groups= {"Sanity", "Regression", "Master"})
 	@Parameters({"os","browser"})
 	public void setup(String os, String br) throws InterruptedException, IOException
@@ -130,7 +150,7 @@ public class BaseClass {
 		case "edge" : driver=new EdgeDriver(); break;
 		case "firefox" : driver=new FirefoxDriver(); break;
 		default : System.out.println("Invalid browser name.."); return;
-		}
+		}	 
 		}
 		
 		driver.manage().deleteAllCookies();
@@ -149,29 +169,10 @@ public class BaseClass {
 	}
 	
 	
-	
-	
-//	@AfterMethod(groups= {"Sanity", "Regression", "Master"})
-//	public void captureFailedScreenshot(ITestResult result) throws IOException
-//	{
-//		{   if (ITestResult.FAILURE==(result.getStatus()-1)){
-//			try {
-//	            TakesScreenshot ts = (TakesScreenshot) driver;
-//	            File source = ts.getScreenshotAs(OutputType.FILE);
-//	            String timeNote=new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
-//	            String screenshotName = "FailedScreenShot_"+result.getName()+"_" +timeNote+ ".png";
-//	            File destination = new File(".\\screenshots\\" + screenshotName); // Create a 'screenshots' folder in your project
-//	            FileUtils.copyFile(source, destination);
-//	            System.out.println("Screenshot captured for failed test: " + result.getName());
-//	        } catch (Exception e) {
-//	            System.out.println("Exception while taking screenshot: " + e.getMessage());
-//	        	}		
-//			}
-//	   }
-//     }
-	
-	
-	
+	@BeforeMethod
+	 public void setUp(ITestContext context) {
+	    context.setAttribute("driver", driver);
+	    }
 	
 	
 //	@AfterClass(groups= {"Sanity", "Regression", "Master"})
@@ -180,7 +181,7 @@ public class BaseClass {
 //		driver.quit();		
 //	}
 	
-	
+		
 		
 	public String captureScreen(String tname) throws IOException {
 		String timeStamp=new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());		

@@ -16,6 +16,7 @@ import pageObjects_CPQ.HomePageCPQ;
 import retryAnalyzer.RetryAnalyzer;
 import testBase.WriteTestResults;
 import utilities.DataProviders;
+import utilities.ExtentReport;
 
 public class TC_CreateIndirectOpportunity extends BaseClass{
 	public Properties p;
@@ -48,16 +49,26 @@ public class TC_CreateIndirectOpportunity extends BaseClass{
 			{	
 			lp.enterEmailAddress(userName);
 			logger.info("Entered email address as " + userName);
+			ExtentReport.logStep(driver, "Entered email address-"+userName);
+			
 			lp.clickNextButton();
-			logger.info("Clicked on Next button");			
+			logger.info("Clicked on Next button");	
+			ExtentReport.logStep(driver, "Clicked on Next button ");
+			
 			lp.enterPassword(p.getProperty("pwd"));
 			logger.info("Entered password");
+			
 			lp.clickSignInButton();
-			logger.info("Click on sign in button");			
+			logger.info("Click on sign in button");	
+			ExtentReport.logStep(driver, "Click on sign in button ");
+			
 			lp.clickStaySignInButton();
-			logger.info("Click on stay signin yes button");	
-			bp.captureScreenshot(driver);
-			logger.info("SFDC homepage screen captured");			
+			logger.info("Click on stay signin yes button");
+			ExtentReport.logStep(driver, "Click on stay signin yes button ");
+			
+			logger.info("SFDC homepage screen captured");	
+			ExtentReport.logStep(driver, "SFDC homepage screen captured ");
+			
 			pre_Count++;
 			current_URL=driver.getCurrentUrl();
 			logger.info("Captured SFDC homepage url");
@@ -67,74 +78,138 @@ public class TC_CreateIndirectOpportunity extends BaseClass{
 			driver.get(current_URL);			
 			logger.info("Navigated to Home page");	
 			Thread.sleep(Duration.ofSeconds(sw));
+			
 			cop.clickOpportunityTab();
 			logger.info("Navigated to opportunities page");
+			ExtentReport.logStep(driver, "Navigated to opportunities page ");
+			
 			cop.clickNewOpportunity();
-			logger.info("Clicked on new opportunity button");			
+			logger.info("Clicked on new opportunity button");
+			ExtentReport.logStep(driver, "Clicked on new opportunity button ");
+			
 			cop.enterSearchAccount(accountName);
-			logger.info("Entered account name "+ accountName);			
+			logger.info("Entered account name "+ accountName);	
+			ExtentReport.logStep(driver, "Entered account name-"+accountName);
+			
 			cop.clickLightningIcon();
-			logger.info("Clicked on search lightning icon");			
+			logger.info("Clicked on search lightning icon");
+			ExtentReport.logStep(driver, "Clicked on search lightning icon");
+			
 			cop.selectSearchedAccount();
-			logger.info("Searched account has been selected");			
+			logger.info("Searched account has been selected");	
+			ExtentReport.logStep(driver, "Searched account has been selected ");
+			
 			cop.clickSelectButton();
-			logger.info("Clicked on select button");			
+			logger.info("Clicked on select button");
+			ExtentReport.logStep(driver, "Clicked on select button");
+			
 			cop.clickNextButton();
-			logger.info("Clicked on next button");			
+			logger.info("Clicked on next button");
+			ExtentReport.logStep(driver, "Clicked on next button ");
+			
 			cop.selectOpportunityType(opportunityType);
-			logger.info("Selected opportunity type "+opportunityType);				
+			logger.info("Selected opportunity type "+opportunityType);
+			ExtentReport.logStep(driver, "Selected opportunity type-"+opportunityType);
+			
 			cop.enterOpportunityName(opportunityName);
-			logger.info("Entered opportunity name "+opportunityName);			
+			logger.info("Entered opportunity name "+opportunityName);
+			ExtentReport.logStep(driver, "Entered opportunity name-"+opportunityName);
+			
 			cop.selectPrimaryContact(primaryContact);
-			logger.info("Selected primary contact "+primaryContact);			
+			logger.info("Selected primary contact "+primaryContact);
+			ExtentReport.logStep(driver, "Selected primary contact-"+primaryContact);
+			
 			cop.selectSalesPlay(salesPlay);
-			logger.info("Selected sales play "+salesPlay);			
+			logger.info("Selected sales play "+salesPlay);
+			ExtentReport.logStep(driver, "Selected sales play-"+salesPlay);
+			
 			cop.selectSalesType(salesType);
-			logger.info("Selected sales type "+salesType);			
+			logger.info("Selected sales type "+salesType);
+			ExtentReport.logStep(driver, "Selected sales type-"+salesType);
+			
 			cop.selectInstalledBaseType(installedBaseType);
-			logger.info("Selected installed base type "+installedBaseType);			
+			logger.info("Selected installed base type "+installedBaseType);
+			ExtentReport.logStep(driver, "Selected installed base type-"+installedBaseType);
+			
 			cop.selectCurrency(currency);
-			logger.info("Selected currency "+currency);			
+			logger.info("Selected currency "+currency);
+			ExtentReport.logStep(driver, "Selected currency-"+currency);
+			
 			cop.selectChannel(channel);
-			logger.info("Selected channel "+channel);	
+			logger.info("Selected channel "+channel);
+			ExtentReport.logStep(driver, "Selected channel-"+channel);
+						
 			cop.selectPathway(pathway);
-			logger.info("Selected pathway "+pathway);	
+			logger.info("Selected pathway "+pathway);
+			ExtentReport.logStep(driver, "Selected pathway-"+pathway);
+			
 			cop.selectPartnerSalesModel(partnerSalesModel);
 			logger.info("Selected partner sales model "+partnerSalesModel);	
+			ExtentReport.logStep(driver, "Selected partner sales model-"+partnerSalesModel);
+			
 			cop.clickNextButton2();
-			logger.info("Clicked on next button");			
+			logger.info("Clicked on next button");
+			ExtentReport.logStep(driver, "Clicked on next button");
+			
 			cop.selectEndCustomerUsage(endCustomerUsage);
-			logger.info("Selected end customer usage "+endCustomerUsage);	
+			logger.info("Selected end customer usage "+endCustomerUsage);
+			ExtentReport.logStep(driver, "Selected end customer usage-"+endCustomerUsage);
+			
 			cop.enterReseller(reseller);
 			logger.info("Entered reseller "+reseller);
+			ExtentReport.logStep(driver, "Entered reseller-"+reseller);
+			
 			cop.clickLightningIcon_2();
 			logger.info("Clicked on lightning icon");
+			ExtentReport.logStep(driver, "Clicked on lightning icon");
+			
 			cop.selectSearchedAccount_2();
-			logger.info("Selected searched account");			
+			logger.info("Selected searched account");
+			ExtentReport.logStep(driver, "Selected searched account");
+			
 			cop.clickSelectButton_2();
-			logger.info("Clicked select button");			
+			logger.info("Clicked select button");
+			ExtentReport.logStep(driver, "Clicked select button");
+			
 			cop.clickNextButton_2();
 			logger.info("Clicked next button");
+			ExtentReport.logStep(driver, "Clicked next button");
+			
 			cop.selectResellerSalesRep(resellerSalesRep);
-			logger.info("Selected reseller sales rep "+resellerSalesRep);			
+			logger.info("Selected reseller sales rep "+resellerSalesRep);
+			ExtentReport.logStep(driver, "Selected reseller sales rep-"+resellerSalesRep);
+			
 			cop.selectResellerSE(resellerSE);
-			logger.info("Selected reseller SE "+resellerSE);			
+			logger.info("Selected reseller SE "+resellerSE);
+			ExtentReport.logStep(driver, "Selected reseller SE-"+resellerSE);
+			
 			cop.clickNextButton_3();
 			logger.info("Clicked next button");
-			bp.captureScreenshot(driver);
+			ExtentReport.logStep(driver, "Clicked next button");
+			
 			logger.info("Opportunity created and screen captured");
+			ExtentReport.logStep(driver, "Opportunity created and screen captured");
 
 //----------------Capture Opportunity details--------------------------------------------------------------
 			String opptyNumber= op.getOpportunityNumber();
-			logger.info("Captured opportunity number "+opptyNumber);			
+			logger.info("Captured opportunity number "+opptyNumber);
+			ExtentReport.logStep(driver, "Captured opportunity number-"+opptyNumber);
+			
 			String opptyName=op.getOpportunityName();
-			logger.info("Captured opportunity name "+opptyName);			
+			logger.info("Captured opportunity name "+opptyName);	
+			ExtentReport.logStep(driver, "Captured opportunity name-"+opptyName);
+			
 			String accName=op.getAccountName();
-			logger.info("Captured account name "+accName);			
+			logger.info("Captured account name "+accName);	
+			ExtentReport.logStep(driver, "Captured account name-"+accName);
+			
 			String channelName=op.getChannelName();
 			logger.info("Captured channel name "+channelName);
+			ExtentReport.logStep(driver, "Captured channel name-"+channelName);
+			
 			bp.captureScreenshot(driver);
 			logger.info("Opportunity details screen captured");	
+			ExtentReport.logStep(driver, "Opportunity details screen captured");
 			
 //-----------Write test results to excel sheet--------------------------------------------------------------
 			wtr.writeTC_CreateIndirectOpportunityTestResults(driver, testCase, opptyNumber, opptyName, accName, channelName, booleanStatus);			

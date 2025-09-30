@@ -3,8 +3,9 @@
 <suite name="Suite" thread-count="5" parallel="tests">
 
 	<listeners>
-		<listener class-name="utilities.ExtentReportManager" />
 		<listener class-name="retryAnalyzer.RetryListener" />
+		<listener class-name="utilities.ExtentReportManager"></listener>
+		<listener class-name="utilities.ExtentReport" />
 	</listeners>
 
   <test name="chrometest">  

@@ -9,8 +9,9 @@
   </groups>
   
 	<listeners>
-		<listener class-name="utilities.ExtentReportManager" />
 		<listener class-name="retryAnalyzer.RetryListener" />
+		<listener class-name="utilities.ExtentReportManager"></listener>
+		<listener class-name="utilities.ExtentReport" />
 	</listeners>
 
   <test thread-count="5" name="Test">
@@ -21,8 +22,10 @@
     <classes>
      	<class name="testCases_SFDC.TC_CreateDirectOpportunity"/>
       	<class name="testCases_SFDC.TC_CreateIndirectOpportunity"/>
+      	<class name="testCases_SFDC.TC_Create1POpportunity"/>
      	 <class name="testCases_SolifFire.TC_SolidFireConfig"/>   	
       	<class name="testCases_StorageGrid.TC_StorageGridConfig"/>
+      	<class name="testCases_FastQuotes.TC_FastQuotesConfig"/>
     </classes>
    
   </test> <!-- Test -->

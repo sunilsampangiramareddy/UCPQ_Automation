@@ -22,4 +22,7 @@ C:\Users\sunilr2\eclipse-workspace\UCPQ_Automation\src\test\java\testCases_Stora
 C:\Users\sunilr2\eclipse-workspace\UCPQ_Automation\src\test\java\utilities\DataProviders.java
 C:\Users\sunilr2\eclipse-workspace\UCPQ_Automation\src\test\java\utilities\encodeString.java
 C:\Users\sunilr2\eclipse-workspace\UCPQ_Automation\src\test\java\utilities\ExcelUtility.java
+C:\Users\sunilr2\eclipse-workspace\UCPQ_Automation\src\test\java\utilities\ExtentReport.java
 C:\Users\sunilr2\eclipse-workspace\UCPQ_Automation\src\test\java\utilities\ExtentReportManager.java
+C:\Users\sunilr2\eclipse-workspace\UCPQ_Automation\src\test\java\utilities\ScreenshotCleanup.java
+C:\Users\sunilr2\eclipse-workspace\UCPQ_Automation\src\test\java\utilities\ScreenshotUtils.java

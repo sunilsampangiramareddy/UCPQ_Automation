@@ -3,18 +3,20 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="utilities.ExtentReportManager"/>
+    <listener class-name="utilities.ExtentReport"/>
     <listener class-name="retryAnalyzer.RetryListener"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <parameter name="os" value="Windows"/>
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="testCases_SolifFire.TC_SolidFireConfig">
+      <class name="testCases_SFDC.TC_CreateDirectOpportunity">
         <methods>
-          <include name="createSolidFireConfig" invocation-numbers="2"/>
           <include name="setup"/>
+          <include name="setUp"/>
+          <include name="createDirectOpportunity" invocation-numbers="2"/>
         </methods>
-      </class> <!-- testCases_SolifFire.TC_SolidFireConfig -->
+      </class> <!-- testCases_SFDC.TC_CreateDirectOpportunity -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

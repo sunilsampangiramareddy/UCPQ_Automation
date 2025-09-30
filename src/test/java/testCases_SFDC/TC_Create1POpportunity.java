@@ -14,6 +14,7 @@ import pageObects_SFDC.OpportunitiesPage;
 import retryAnalyzer.RetryAnalyzer;
 import testBase.WriteTestResults;
 import utilities.DataProviders;
+import utilities.ExtentReport;
 
 public class TC_Create1POpportunity extends BaseClass{
 	public Properties p;
@@ -44,16 +45,27 @@ public class TC_Create1POpportunity extends BaseClass{
 			{	
 			lp.enterEmailAddress(userName);
 			logger.info("Entered email address as " + userName);
+			ExtentReport.logStep(driver, "Entered email address-"+userName);
+			
 			lp.clickNextButton();
-			logger.info("Clicked on Next button");			
+			logger.info("Clicked on Next button");
+			ExtentReport.logStep(driver, "Clicked on Next button ");
+			
 			lp.enterPassword(p.getProperty("pwd"));
 			logger.info("Entered password");
+			
 			lp.clickSignInButton();
-			logger.info("Click on sign in button");			
+			logger.info("Click on sign in button");	
+			ExtentReport.logStep(driver, "Click on sign in button ");
+			
 			lp.clickStaySignInButton();
 			logger.info("Click on stay signin yes button");	
+			ExtentReport.logStep(driver, "Click on stay signin yes button ");
+			
 			bp.captureScreenshot(driver);
-			logger.info("SFDC homepage screen captured");			
+			logger.info("SFDC homepage screen captured");
+			ExtentReport.logStep(driver, "SFDC homepage screen captured ");
+						
 			pre_Count++;
 			current_URL=driver.getCurrentUrl();
 			logger.info("Captured SFDC homepage url");
@@ -63,48 +75,87 @@ public class TC_Create1POpportunity extends BaseClass{
 			driver.get(current_URL);			
 			logger.info("Navigated to Home page");	
 			Thread.sleep(Duration.ofSeconds(sw));
+			
 			cop.clickOpportunityTab();
 			logger.info("Navigated to opportunities page");
+			ExtentReport.logStep(driver, "Navigated to opportunities page ");
+			
 			cop.clickNewOpportunity();
-			logger.info("Clicked on new opportunity button");			
+			logger.info("Clicked on new opportunity button");	
+			ExtentReport.logStep(driver, "Clicked on new opportunity button ");
+			
 			cop.enterSearchAccount(accountName);
-			logger.info("Entered account name "+ accountName);			
+			logger.info("Entered account name "+ accountName);	
+			ExtentReport.logStep(driver, "Entered account name-"+accountName);
+			
 			cop.clickLightningIcon();
-			logger.info("Clicked on search lightning icon");			
+			logger.info("Clicked on search lightning icon");
+			ExtentReport.logStep(driver, "Clicked on search lightning icon");
+			
 			cop.selectSearchedAccount();
-			logger.info("Searched account has been selected");			
+			logger.info("Searched account has been selected");	
+			ExtentReport.logStep(driver, "Searched account has been selected ");
+			
 			cop.clickSelectButton();
-			logger.info("Clicked on select button");			
+			logger.info("Clicked on select button");
+			ExtentReport.logStep(driver, "Clicked on select button");
+			
 			cop.clickNextButton();
 			logger.info("Clicked on next button");	
+			ExtentReport.logStep(driver, "Clicked on next button ");
+			
 			cop.selectOpportunityType(opportunityType);
-			logger.info("Selected opportunity type "+opportunityType);	
+			logger.info("Selected opportunity type "+opportunityType);
+			ExtentReport.logStep(driver, "Selected opportunity type-"+opportunityType);
+			
 			cop.enterOpportunityName(opportunityName);
 			logger.info("Entered opportunity name "+opportunityName);
+			ExtentReport.logStep(driver, "Entered opportunity name-"+opportunityName);
+			
 			cop.selectSalesType_1P(salesType);
 			logger.info("Selected sales type "+salesType);
+			ExtentReport.logStep(driver, "Selected sales type-"+salesType);
+			
 			cop.selectPrimaryContact_1P(primaryContact);
 			logger.info("Selected primary contact "+primaryContact);
+			ExtentReport.logStep(driver, "Selected primary contact-"+primaryContact);
+			
 			cop.selectCurrency_1P(currency);
-			logger.info("Selected currency "+currency);			
+			logger.info("Selected currency "+currency);	
+			ExtentReport.logStep(driver, "Selected currency-"+currency);
+			
 			cop.selectHyperscaler(hyperscaler);	
 			logger.info("Selected hyperscaler "+hyperscaler);
+			ExtentReport.logStep(driver, "Selected hyperscaler-"+hyperscaler);
+			
 			cop.clickNextButton2();
 			logger.info("Clicked on next button");
+			ExtentReport.logStep(driver, "Clicked on next button");
+			
 			bp.captureScreenshot(driver);
 			logger.info("1P Opportunity created screen captured");
+			ExtentReport.logStep(driver, "Opportunity created and screen captured ");
 	
 //----------------Capture Opportunity details--------------------------------------------------------------
 			String opptyNumber= op.getOpportunityNumber();
-			logger.info("Captured opportunity number "+opptyNumber);			
+			logger.info("Captured opportunity number "+opptyNumber);
+			ExtentReport.logStep(driver, "Captured opportunity number-"+opptyNumber);
+			
 			String opptyName=op.getOpportunityName();
-			logger.info("Captured opportunity name "+opptyName);			
+			logger.info("Captured opportunity name "+opptyName);
+			ExtentReport.logStep(driver, "Captured opportunity name-"+opptyName);
+			
 			String accName=op.getAccountName();
-			logger.info("Captured account name "+accName);			
+			logger.info("Captured account name "+accName);	
+			ExtentReport.logStep(driver, "Captured account name-"+accName);
+			
 			String channelName=op.getChannelName();
 			logger.info("Captured channel name "+channelName);
+			ExtentReport.logStep(driver, "Captured channel name-"+channelName);
+			
 			bp.captureScreenshot(driver);
 			logger.info("Opportunity details screen captured");	
+			ExtentReport.logStep(driver, "Opportunity details screen captured");
 
 //-----------Write test results to excel sheet--------------------------------------------------------------
 			wtr.writeTC_Create1POpportunityTestResults(driver, testCase, opptyNumber, opptyName, accName, channelName, booleanStatus);			

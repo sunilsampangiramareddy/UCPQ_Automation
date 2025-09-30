@@ -6,7 +6,7 @@ import org.testng.ITestResult;
 public class RetryAnalyzer  implements IRetryAnalyzer {
 	    public int retryCount = 0;
 	    
-	    public static final int MAX_RETRY_COUNT = 3; // Define maximum retry attempts
+	    public static final int MAX_RETRY_COUNT = 1; // Define maximum retry attempts
 
 //-----Enable below two lines of code to read Retry Execution from POM.xml file or Jenkins URL parameters----------------
 	    //public static String maxRetryCountProperty = System.getProperty("maxRetryCount");

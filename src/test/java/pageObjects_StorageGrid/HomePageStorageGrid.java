@@ -3,6 +3,7 @@ package pageObjects_StorageGrid;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -99,7 +100,8 @@ public int nw=3; int sw=5; public int mw=10; public int lw=20;
 		{
 		qtyStorageNodes.click();
 		qtyStorageNodes.sendKeys(qty_StorageNodes);
-		Thread.sleep(Duration.ofSeconds(mw));
+		qtyStorageNodes.sendKeys(Keys.TAB);
+		Thread.sleep(Duration.ofSeconds(sw));
 		}
 	}
 	
