@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-01T01:18:40 IST" name="ScreenshotCleanupSuite" finished-at="2025-10-01T01:18:41 IST" duration-ms="157">
+  <suite started-at="2025-10-02T00:19:42 IST" name="ScreenshotCleanupSuite" finished-at="2025-10-02T00:19:42 IST" duration-ms="362">
     <groups>
     </groups>
-    <test started-at="2025-10-01T01:18:40 IST" name="ScreenshotCleanupTest" finished-at="2025-10-01T01:18:41 IST" duration-ms="157">
+    <test started-at="2025-10-02T00:19:42 IST" name="ScreenshotCleanupTest" finished-at="2025-10-02T00:19:42 IST" duration-ms="362">
       <class name="utilities.ScreenshotCleanup">
-        <test-method signature="deleteScreenshots()[pri:0, instance:utilities.ScreenshotCleanup@3e821657]" started-at="2025-10-01T01:18:40 IST" name="deleteScreenshots" finished-at="2025-10-01T01:18:41 IST" duration-ms="112" status="PASS">
+        <test-method signature="deleteScreenshots()[pri:0, instance:utilities.ScreenshotCleanup@3e821657]" started-at="2025-10-02T00:19:42 IST" name="deleteScreenshots" finished-at="2025-10-02T00:19:42 IST" duration-ms="318" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteScreenshots -->

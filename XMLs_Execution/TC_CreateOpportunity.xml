@@ -3,17 +3,18 @@
 <suite name="Suite">
 
 	<listeners>
+	   	<listener class-name="retryAnalyzer.RetryListener" />
 		<listener class-name="utilities.ExtentReportManager"></listener>
-		<listener class-name="retryAnalyzer.RetryListener" />
+		<listener class-name="utilities.ExtentReport" />
 	</listeners>
   
   <test thread-count="5" name="Test">
    
    	<parameter name="os" value="Windows"/>
     <parameter name="browser" value="chrome"/>    
-    <classes>
-       	<class name="testCases_SFDC.tryLogic"/>
-    </classes>
+       <classes>
+     	 <class name="testCases_SFDC.TC_CreateOpportunity"/>
+       </classes>
    
    
   </test> <!-- Test -->

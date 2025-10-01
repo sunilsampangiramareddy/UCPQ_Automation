@@ -28,6 +28,7 @@ public class TC_SolidFireConfig extends BaseClass{
 	public int sw=5; public int mw=10; public int lw=20;
 	public int pre_Count=1; int lineCount;
 	public String current_URL; String testCase="TC_SolidFireConfig"; String booleanStatus="PASS";
+	public String createDirectOpportunity="Direct"; String createInDirectOpportunity="Indirect"; String opportunityTypeStandard="Standard"; String opportunityType1P="1P";
 	
 	@Test(dataProvider="TC_SolidFireConfig", dataProviderClass=DataProviders.class, retryAnalyzer = RetryAnalyzer.class, groups={"Regression", "Master"})
 	public void createSolidFireConfig (String userName, String accountName, String opportunityType, String opportunityName, String primaryContact, String salesPlay, String salesType, String installedBaseType, String currency, String channel, String hyperscaler, String pathway, String partnerSalesModel, String endCustomerUsage, String reseller, String resellerSalesRep, String resellerSE, String product, String salesPrice, String subProduct, String newCapacity, String newTerm, String expectedLabel) throws InterruptedException, IOException
@@ -81,7 +82,7 @@ public class TC_SolidFireConfig extends BaseClass{
 			logger.info("Captured SFDC homepage url");
 			}	
 			
-//-------------------Create Opportunity-------------------------------------------------------------------------	
+//---------------Add Account to Opportunity-------------------------------------------------------------------
 			driver.get(current_URL);			
 			logger.info("Navigated to Home page");	
 			Thread.sleep(Duration.ofSeconds(sw));
@@ -91,67 +92,153 @@ public class TC_SolidFireConfig extends BaseClass{
 			ExtentReport.logStep(driver, "Navigated to opportunities page ");
 			
 			cop.clickNewOpportunity();
-			logger.info("Clicked on new opportunity button");	
-			ExtentReport.logStep(driver, "Clicked on new opportunity button ");
+			logger.info("Clicked on new opportunity button");
+			ExtentReport.logStep(driver, "Clicked on new opportunity button");
 			
 			cop.enterSearchAccount(accountName);
-			logger.info("Entered account name "+ accountName);	
+			logger.info("Entered account name "+ accountName);
 			ExtentReport.logStep(driver, "Entered account name-"+accountName);
 			
 			cop.clickLightningIcon();
-			logger.info("Clicked on search lightning icon");	
+			logger.info("Clicked on search lightning icon");
 			ExtentReport.logStep(driver, "Clicked on search lightning icon");
-			
+						
 			cop.selectSearchedAccount();
 			logger.info("Searched account has been selected");	
-			ExtentReport.logStep(driver, "Searched account has been selected ");
+			ExtentReport.logStep(driver, "Searched account has been selected");
 			
 			cop.clickSelectButton();
-			logger.info("Clicked on select button");	
+			logger.info("Clicked on select button");
 			ExtentReport.logStep(driver, "Clicked on select button");
-			
+						
 			cop.clickNextButton();
 			logger.info("Clicked on next button");	
 			ExtentReport.logStep(driver, "Clicked on next button ");
+
+//---------------Create Opportunity------------------------------------------------------------------------------------	
+			if(opportunityType.equalsIgnoreCase(opportunityTypeStandard))
+			{
+				if(channel.equalsIgnoreCase(createDirectOpportunity) || channel.equalsIgnoreCase(createInDirectOpportunity))
+				{			
+					cop.selectOpportunityType(opportunityType);
+					logger.info("Selected opportunity type "+opportunityType);
+					ExtentReport.logStep(driver, "Selected opportunity type-"+opportunityType);
+						
+					cop.enterOpportunityName(opportunityName);
+					logger.info("Entered opportunity name "+opportunityName);
+					ExtentReport.logStep(driver, "Entered opportunity name-"+opportunityName);
+						
+					cop.selectPrimaryContact(primaryContact);
+					logger.info("Selected primary contact "+primaryContact);
+					ExtentReport.logStep(driver, "Selected primary contact-"+primaryContact);
+					
+					cop.selectSalesPlay(salesPlay);
+					logger.info("Selected sales play "+salesPlay);
+					ExtentReport.logStep(driver, "Selected sales play-"+salesPlay);
+					
+					cop.selectSalesType(salesType);
+					logger.info("Selected sales type "+salesType);
+					ExtentReport.logStep(driver, "Selected sales type-"+salesType);
+					
+					cop.selectInstalledBaseType(installedBaseType);
+					logger.info("Selected installed base type "+installedBaseType);	
+					ExtentReport.logStep(driver, "Selected installed base type-"+installedBaseType);
+						
+					cop.selectCurrency(currency);
+					logger.info("Selected currency "+currency);	
+					ExtentReport.logStep(driver, "Selected currency-"+currency);
 			
-			cop.selectOpportunityType(opportunityType);
-			logger.info("Selected opportunity type "+opportunityType);	
-			ExtentReport.logStep(driver, "Selected opportunity type-"+opportunityType);
+					cop.selectChannel(channel);
+					logger.info("Selected channel "+channel);
+					ExtentReport.logStep(driver, "Selected channel-"+channel);
 			
-			cop.enterOpportunityName(opportunityName);
-			logger.info("Entered opportunity name "+opportunityName);	
-			ExtentReport.logStep(driver, "Entered opportunity name-"+opportunityName);
+						if(channel.equalsIgnoreCase(createInDirectOpportunity))
+						{
+							cop.selectPathway(pathway);
+							logger.info("Selected pathway "+pathway);
+							ExtentReport.logStep(driver, "Selected pathway-"+pathway);
 			
-			cop.selectPrimaryContact(primaryContact);
-			logger.info("Selected primary contact "+primaryContact);	
-			ExtentReport.logStep(driver, "Selected primary contact-"+primaryContact);
+							cop.selectPartnerSalesModel(partnerSalesModel);
+							logger.info("Selected partner sales model "+partnerSalesModel);	
+							ExtentReport.logStep(driver, "Selected partner sales model-"+partnerSalesModel);
+						}
 			
-			cop.selectSalesPlay(salesPlay);
-			logger.info("Selected sales play "+salesPlay);	
-			ExtentReport.logStep(driver, "Selected sales play-"+salesPlay);
+					cop.clickNextButton2();
+					logger.info("Clicked on next button");
+					ExtentReport.logStep(driver, "Clicked on next button");		
+				}
+				   		if(channel.equalsIgnoreCase(createInDirectOpportunity))
+				   		{
+						   cop.selectEndCustomerUsage(endCustomerUsage);
+						   logger.info("Selected end customer usage "+endCustomerUsage);
+						   ExtentReport.logStep(driver, "Selected end customer usage-"+endCustomerUsage);
 			
-			cop.selectSalesType(salesType);
-			logger.info("Selected sales type "+salesType);
-			ExtentReport.logStep(driver, "Selected sales type-"+salesType);
+						   cop.enterReseller(reseller);
+						   logger.info("Entered reseller "+reseller);
+						   ExtentReport.logStep(driver, "Entered reseller-"+reseller);
 			
-			cop.selectInstalledBaseType(installedBaseType);
-			logger.info("Selected installed base type "+installedBaseType);
-			ExtentReport.logStep(driver, "Selected installed base type-"+installedBaseType);
+						   cop.clickLightningIcon_2();
+						   logger.info("Clicked on lightning icon");
+						   ExtentReport.logStep(driver, "Clicked on lightning icon");
 			
-			cop.selectCurrency(currency);
-			logger.info("Selected currency "+currency);	
-			ExtentReport.logStep(driver, "Selected currency-"+currency);
+						   cop.selectSearchedAccount_2();
+						   logger.info("Selected searched account");
+						   ExtentReport.logStep(driver, "Selected searched account");
 			
-			cop.selectChannel(channel);
-			logger.info("Selected channel "+channel);
-			ExtentReport.logStep(driver, "Selected channel-"+channel);
+						   cop.clickSelectButton_2();
+						   logger.info("Clicked select button");
+						   ExtentReport.logStep(driver, "Clicked select button");
 			
-			cop.clickNextButton2();
-			logger.info("Clicked on next button");	
-			ExtentReport.logStep(driver, "Clicked on next button");
+						   cop.clickNextButton_2();
+						   logger.info("Clicked next button");
+						   ExtentReport.logStep(driver, "Clicked next button");
+			
+						   cop.selectResellerSalesRep(resellerSalesRep);
+						   logger.info("Selected reseller sales rep "+resellerSalesRep);
+						   ExtentReport.logStep(driver, "Selected reseller sales rep-"+resellerSalesRep);
+			
+						   cop.selectResellerSE(resellerSE);
+						   logger.info("Selected reseller SE "+resellerSE);
+						   ExtentReport.logStep(driver, "Selected reseller SE-"+resellerSE);
+			
+						   cop.clickNextButton_3();
+						   logger.info("Clicked next button");
+						   ExtentReport.logStep(driver, "Clicked next button");
+					     }
+				}
+			else if(opportunityType.equalsIgnoreCase(opportunityType1P))
+				{
+					cop.selectOpportunityType(opportunityType);
+					logger.info("Selected opportunity type "+opportunityType);
+					ExtentReport.logStep(driver, "Selected opportunity type-"+opportunityType);
+					
+					cop.enterOpportunityName(opportunityName);
+					logger.info("Entered opportunity name "+opportunityName);
+					ExtentReport.logStep(driver, "Entered opportunity name-"+opportunityName);
+					
+					cop.selectSalesType_1P(salesType);
+					logger.info("Selected sales type "+salesType);
+					ExtentReport.logStep(driver, "Selected sales type-"+salesType);
+					
+					cop.selectPrimaryContact_1P(primaryContact);
+					logger.info("Selected primary contact "+primaryContact);
+					ExtentReport.logStep(driver, "Selected primary contact-"+primaryContact);
+					
+					cop.selectCurrency_1P(currency);
+					logger.info("Selected currency "+currency);	
+					ExtentReport.logStep(driver, "Selected currency-"+currency);
+					
+					cop.selectHyperscaler(hyperscaler);	
+					logger.info("Selected hyperscaler "+hyperscaler);
+					ExtentReport.logStep(driver, "Selected hyperscaler-"+hyperscaler);
+					
+					cop.clickNextButton2();
+					logger.info("Clicked on next button");
+					ExtentReport.logStep(driver, "Clicked on next button");
+				}
 			
 			logger.info("Opportunity created and screen captured");
-			ExtentReport.logStep(driver, "Opportunity created and screen captured ");
+			ExtentReport.logStep(driver, "Opportunity created and screen captured");
 			
 //----------------Capture Opportunity details--------------------------------------------------------------
 			String opptyNumber= op.getOpportunityNumber();

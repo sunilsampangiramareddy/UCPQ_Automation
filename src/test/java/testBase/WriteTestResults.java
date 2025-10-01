@@ -142,6 +142,49 @@ public int nw=3; int sw=5; public int mw=10; public int lw=20;
 	        workbook.write(out);
 	        out.close();
 		}
+		
+	//Write all kinds of opportunity test results to excel sheet
+		public void writeTC_CreateOpportunityTestResults(WebDriver driver, String testcase, String optyNumber, String optyName, String accName, String channel, String executionStatus ) throws IOException
+		{
+			// workbook object
+	        XSSFWorkbook workbook = new XSSFWorkbook();
+	        // spreadsheet object
+	        XSSFSheet spreadsheet = workbook.createSheet("TC_CreateOpportunity Results");
+	        // creating a row object
+	        XSSFRow row;
+	        
+	     // This data needs to be written (Object[])
+	        Map<String, Object[]> studentData = new TreeMap<String, Object[]>();
+	        studentData.put("1", new Object[] { "Test Case", "Opportunity Number", "Opportunity Name", "Account Name", "Channel", "Execution Status"});
+	        studentData.put("2", new Object[] { testcase, optyNumber, optyName, accName, channel, executionStatus});
+	       
+	        Set<String> keyid = studentData.keySet();
+	        int rowid = 0;
+	        
+	     // writing the data into the sheets...
+	        for (String key : keyid) 
+	        {
+	        	row = spreadsheet.createRow(rowid++);
+	            Object[] objectArr = studentData.get(key);
+	            int cellid = 0;
+
+	            for (Object obj : objectArr) 
+	            {
+	                Cell cell = row.createCell(cellid++);
+	                cell.setCellValue((String)obj);
+	            }
+	        }
+	        // writing the workbook into the file...
+	    	// Now you can do whatever you need to do with it, for example copy somewhere
+			String timeNote=new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());			
+	        FileOutputStream out = new FileOutputStream(new File(".\\excelTestResults\\TC_CreateOpportunity_Test_Results"+"_"+timeNote+".xlsx"));
+	        workbook.write(out);
+	        out.close();
+		}
+
+		
+		
+		
 	
 //Write TC_SolidFireConfig test results to excel sheet
 		public void writeTC_SolidFireConfigTestResults(WebDriver driver, String testCase, String optyNumber, String optyName, String accName, String channel, String quoteNum, String quoteName, String quoteStatus, String executionStatus) throws IOException

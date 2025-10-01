@@ -73,11 +73,11 @@ public class BaseClass {
 	public Logger logger;
 	public Properties p;
 	
-	 @BeforeSuite
-	    public void setup() {
-		// Pass the number of days as an argument to delete old screen shots 
-		 AutoScreenshotCleanup.deleteOldScreenshots(15);  
-	    }
+//	 @BeforeSuite
+//	    public void setup() {
+//		// Pass the number of days as an argument to delete old screen shots 
+//		 AutoScreenshotCleanup.deleteOldScreenshots(15);  
+//	    }
 	
 	 
 	@BeforeClass(groups= {"Sanity", "Regression", "Master"})

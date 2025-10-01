@@ -1,55 +1,47 @@
-package testCases_FastQuotes;
+package testCases_SFDC;
 
 import java.io.FileReader;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
-import pageObects_SFDC.AddProductsPage;
 import pageObects_SFDC.BasePage;
 import pageObects_SFDC.CreateOpportunitiesPage;
 import pageObects_SFDC.LoginPage;
 import pageObects_SFDC.OpportunitiesPage;
-import pageObjects_CPQ.HomePageCPQ;
-import pageObjects_FastQuotes.HomePageFastQuotes;
 import retryAnalyzer.RetryAnalyzer;
 import testBase.WriteTestResults;
-import testCases_SFDC.BaseClass;
 import utilities.DataProviders;
 import utilities.ExtentReport;
 
-public class TC_FastQuotesConfig extends BaseClass{
+public class TC_CreateOpportunity extends BaseClass{
 	public Properties p;
-	public int sw=5; public int mw=10; public int lw=20;
-	public int pre_Count=1; int lineCount;
-	public String current_URL; String testCase="TC_FastQuotesConfig"; String booleanStatus="PASS";
+	public int pre_Count=1; int sw=5;
+	public String current_URL; String testCase="TC_CreateOpportunity"; String booleanStatus="PASS";
 	public String createDirectOpportunity="Direct"; String createInDirectOpportunity="Indirect"; String opportunityTypeStandard="Standard"; String opportunityType1P="1P";
 	
-	@Test(dataProvider="TC_FastQuotesConfig", dataProviderClass=DataProviders.class, retryAnalyzer = RetryAnalyzer.class, groups={"Regression", "Master"})
-	public void createFastQuotesConfig (String userName, String accountName, String opportunityType, String opportunityName, String primaryContact, String salesPlay, String salesType, String installedBaseType, String currency, String channel, String hyperscaler, String pathway, String partnerSalesModel, String endCustomerUsage, String reseller, String resellerSalesRep, String resellerSE, String product, String salesPrice, String subProduct, String expectedLabel) throws InterruptedException, IOException
+	
+	@Test(dataProvider="TC_CreateOpportunity", dataProviderClass=DataProviders.class, retryAnalyzer = RetryAnalyzer.class, groups={"Smoke", "Regression", "Master"})
+	public void createOpportunity (String userName, String accountName, String opportunityType, String opportunityName, String primaryContact, String salesPlay, String salesType, String installedBaseType, String currency, String channel, String hyperscaler, String pathway, String partnerSalesModel, String endCustomerUsage, String reseller, String resellerSalesRep, String resellerSE) throws InterruptedException, IOException
 	{
 		
 		LoginPage lp=new LoginPage(driver);
 		BasePage bp=new BasePage(driver);
 		CreateOpportunitiesPage cop=new CreateOpportunitiesPage(driver);
 		OpportunitiesPage op=new OpportunitiesPage(driver);
-		AddProductsPage app=new AddProductsPage(driver);
-		HomePageCPQ hpc=new HomePageCPQ(driver);
-		HomePageFastQuotes hpfq=new HomePageFastQuotes(driver);
 		WriteTestResults wtr=new WriteTestResults(driver);
 		//loading config.properties file
 		FileReader file=new FileReader(".\\src\\test\\resources\\Config.properties");
 		p=new Properties();
 		p.load(file);
 		
-		logger.info("Started TC_FastQuotesConfig Test Execution");
+		logger.info("Started TC_CreateOpportunity Test Execution");
 		
 		try
-		{	
-//-----------------Login Screen--------------------------------------------------------------------------------
+		{						
+//-----------------Login Screen-----------------------------------------------------------------------------------
 			if(pre_Count==1)
 			{	
 			lp.enterEmailAddress(userName);
@@ -57,29 +49,28 @@ public class TC_FastQuotesConfig extends BaseClass{
 			ExtentReport.logStep(driver, "Entered email address-"+userName);
 			
 			lp.clickNextButton();
-			logger.info("Clicked on Next button");	
+			logger.info("Clicked on Next button");
 			ExtentReport.logStep(driver, "Clicked on Next button");
 			
 			lp.enterPassword(p.getProperty("pwd"));
 			logger.info("Entered password");
-			
+						
 			lp.clickSignInButton();
 			logger.info("Click on sign in button");	
-			ExtentReport.logStep(driver, "Click on sign in button ");
+			ExtentReport.logStep(driver, "Click on sign in button");
 			
 			lp.clickStaySignInButton();
 			logger.info("Click on stay signin yes button");	
 			ExtentReport.logStep(driver, "Click on stay signin yes button");
 			
-			bp.captureScreenshot(driver);
-			logger.info("SFDC homepage screen captured");	
+			logger.info("SFDC homepage screen captured");
 			ExtentReport.logStep(driver, "SFDC homepage screen captured");
 			
 			pre_Count++;
 			current_URL=driver.getCurrentUrl();
 			logger.info("Captured SFDC homepage url");
-			}	
-			
+			}
+
 //---------------Add Account to Opportunity-------------------------------------------------------------------
 			driver.get(current_URL);			
 			logger.info("Navigated to Home page");	
@@ -238,13 +229,13 @@ public class TC_FastQuotesConfig extends BaseClass{
 			logger.info("Opportunity created and screen captured");
 			ExtentReport.logStep(driver, "Opportunity created and screen captured");
 			
-//----------------Capture Opportunity details--------------------------------------------------------------
+//----------------Capture Opportunity details--------------------------------------------------------------------------
 			String opptyNumber= op.getOpportunityNumber();
 			logger.info("Captured opportunity number "+opptyNumber);
 			ExtentReport.logStep(driver, "Captured opportunity number-"+opptyNumber);
 			
 			String opptyName=op.getOpportunityName();
-			logger.info("Captured opportunity name "+opptyName);
+			logger.info("Captured opportunity name "+opptyName);	
 			ExtentReport.logStep(driver, "Captured opportunity name-"+opptyName);
 			
 			String accName=op.getAccountName();
@@ -256,165 +247,13 @@ public class TC_FastQuotesConfig extends BaseClass{
 			ExtentReport.logStep(driver, "Captured channel name-"+channelName);
 			
 			bp.captureScreenshot(driver);
-			logger.info("Opportunity created screen captured");
-			ExtentReport.logStep(driver, "Opportunity details screen captured ");
-			
-//-------------------Add Product in SFDC--------------------------------------------------------------------
-			app.clickProducts();
-			logger.info("Click on products link");	
-			ExtentReport.logStep(driver, "Click on products link");
-			
-			app.clickAddProdcuts();
-			logger.info("Clicked on add products");	
-			ExtentReport.logStep(driver, "Clicked on add products");
-			
-			app.searchProdcut(product);
-			logger.info("Entered product name "+product);
-			ExtentReport.logStep(driver, "Entered product name-"+product);
-			
-			app.clickLightningIcon();
-			logger.info("Clicked on search lightning icon");
-			ExtentReport.logStep(driver, "Clicked on search lightning icon");
-			
-			app.selectSearchedProduct();
-			logger.info("selected searched product");	
-			ExtentReport.logStep(driver, "selected searched product");
-			
-			app.clickNextButton();
-			logger.info("Click on next button");
-			ExtentReport.logStep(driver, "Click on next button");
-			
-			app.enterSalesPrice(salesPrice);
-			logger.info("Entered sales price "+salesPrice);
-			ExtentReport.logStep(driver, "Entered sales price-"+salesPrice);
-			
-			app.clickSaveButton();
-			logger.info("Clickec on save button");	
-			ExtentReport.logStep(driver, "Clickecd on save button");
-			
-			app.clickOpptyLink();
-			logger.info("Navigating back to opportunity page");
-			ExtentReport.logStep(driver, "Navigating back to opportunity page");
-			
-			bp.captureScreenshot(driver);
-			logger.info("Add product screen captured");
-			ExtentReport.logStep(driver, "Add product screen captured");
-			
-//---------------------Create Quote-----------------------------------------------------------------------
-			op.clickCreateQuote();
-			logger.info("Clicked on create qutoe");	
-			ExtentReport.logStep(driver, "Clicked on create qutoe");
-			
-			op.clickUnifiedCPQ();
-			logger.info("Clicked on unified CPQ");	
-			ExtentReport.logStep(driver, "Clicked on unified CPQ");
-			
-			op.clickCreateQuoteButton();
-			logger.info("Clicked on create quote button");	
-			ExtentReport.logStep(driver, "Clicked on create quote button");
-			
-			op.switchToNewTabAndCloseParentTab();
-			logger.info("Driver control switched to new CPQ tab and closed parent sfdc tab");			
-			ExtentReport.logStep(driver, "Driver control switched to new CPQ tab and closed parent sfdc tab");
-			
-//-------------------CPQ capture home page details---------------------------------------------------------
-			op.clickSaveButton();
-			logger.info("Clicked on save button");
-			ExtentReport.logStep(driver, "Clicked on save button");
-			
-			String quoteNumber=hpc.getQuoteNumber();
-			logger.info("Captured quote number "+quoteNumber);	
-			ExtentReport.logStep(driver, "Captured quote number-"+quoteNumber);
-			
-			String quoteName=hpc.getQuoteName();
-			logger.info("Captured quote name "+quoteName);
-			ExtentReport.logStep(driver, "Captured quote name-"+quoteName);
-			
-			String quoteStatus=hpc.getQuoteDraftStatus();
-			logger.info("Captured quote status "+quoteStatus);	
-			ExtentReport.logStep(driver, "Captured quote status-"+quoteStatus);
-			
-			bp.captureScreenshot(driver);
-			logger.info("CPQ homepage screen captured");
-			ExtentReport.logStep(driver, "CPQ homepage screen captured");
-			
-//--------------------Configure Fast Quotes product-------------------------------------------------------------
-			hpc.clickProdctsTab();
-			logger.info("Clicked on products tab");	
-			ExtentReport.logStep(driver, "Clicked on products tab");
-			
-			hpc.clickConfigureProduct();
-			logger.info("Clicked on configure product button");  
-			ExtentReport.logStep(driver, "Clicked on configure product button");
-			
-			hpfq.clickFastQuotesProdcut();
-			logger.info("Clicked on fast quotes prodcut");
-			ExtentReport.logStep(driver, "Clicked on fast quotes prodcut");
-			
-			hpfq.clickAddToQuoteFASTQUOTEAFFA20001(subProduct);
-			logger.info("clicked on add to quote button for the sub product "+subProduct);	
-			ExtentReport.logStep(driver, "clicked on add to quote button for the sub product-"+subProduct);
-			
-//--------------------Validate Product table details in Products page-------------------------------------------------------------			
-			hpc.clickSettingsExpandAll();
-			logger.info("Clicked on settings and clicked on expand all option");
-			ExtentReport.logStep(driver, "Clicked on settings and clicked on expand all option");
-			
-			lineCount= hpc.getLineCount();
-			logger.info("Reading line count number from products table "+lineCount);
-			ExtentReport.logStep(driver, "Reading line count number from products table"+lineCount);
-			
-			hpc.readProductsTableByColumnName("Product");
-			logger.info("Reading product column data from products table");
-			ExtentReport.logStep(driver, "Reading product column data from products table");
-			
-			bp.captureScreenshot(driver);
-			logger.info("Captured screen shot of product configured");
-			ExtentReport.logStep(driver, "Captured screen shot of product configured");
-			
-			quoteStatus=hpc.getQuoteConfiguredStatus();
-			logger.info("Captured quote status "+quoteStatus);
-			ExtentReport.logStep(driver, "Captured quote status-"+quoteStatus);
-			
-			System.out.println("Product values in the Collection DB: " + hpc.productColumnValues);
-			logger.info("Stored all product column details in Collection DB");
-			
-			hpc.verifyProductColumnValueInArrayList(expectedLabel);
-			logger.info("Expected product name has been verified in products table "+ expectedLabel);
-			ExtentReport.logStep(driver, "Expected product name has been verified in products table-"+expectedLabel);
-			
-			hpc.readProductsTableByColumnName("List Price");
-			logger.info("Reading List Price column values from products table");
-			ExtentReport.logStep(driver, "Reading List Price column values from products table");
-			
-			hpc.readProductsTableByColumnName("Net Price");
-			logger.info("Reading Net Price column values from products table");
-			ExtentReport.logStep(driver, "Reading Net Price column values from products table");
-			
-			hpc.readProductsTableByColumnName("Current Discount");
-			logger.info("Reading Current Discount values from products table");
-			ExtentReport.logStep(driver, "Reading Current Discount values from products table");
-			
-			hpc.readProductsTableByColumnName("Eligible Discount");
-			logger.info("Reading Eligible Discount values from products table");
-			ExtentReport.logStep(driver, "Reading Eligible Discount values from products table");
-			
-			hpc.readProductsTableByColumnName("Part Description");
-			logger.info("Reading Part Description values from products table");
-			ExtentReport.logStep(driver, "Reading Part Description values from products table");
-			
-			hpc.readProductsTableByColumnName("Treshold Group");
-			logger.info("Reading Treshold Group values from products table");
-			ExtentReport.logStep(driver, "Reading Treshold Group values from products table");
-			
-			hpc.clickSaveIcon();
-			logger.info("Clicked on save icon");
-			ExtentReport.logStep(driver, "Clicked on save icon");
+			logger.info("Opportunity details screen captured");	
+			ExtentReport.logStep(driver, "Opportunity details screen captured");
 			
 //-----------Write test results to excel sheet--------------------------------------------------------------
-			wtr.write_TC_FastQuotesConfigTestResults(driver, testCase, opptyNumber, opptyName, accName, channelName, quoteNumber, quoteName, quoteStatus, booleanStatus);			
-			logger.info("Test execution results has been written in excel sheet");			
-					
+			wtr.writeTC_CreateOpportunityTestResults(driver, testCase, opptyNumber, opptyName, accName, channelName, booleanStatus);			
+			logger.info("Test execution results has been written in excel sheet");
+			
 		}
 		catch (NullPointerException eNull) {
 			 System.err.println("Error message: " + eNull.getMessage());
@@ -426,5 +265,6 @@ public class TC_FastQuotesConfig extends BaseClass{
 			e.printStackTrace();
 			throw e;
 		}		
+		
 	}
 }

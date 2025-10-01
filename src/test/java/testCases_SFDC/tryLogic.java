@@ -22,6 +22,8 @@ import pageObjects_SolidFIre.HomePageSolidFire;
 import retryAnalyzer.RetryAnalyzer;
 import testBase.WriteTestResults;
 import utilities.DataProviders;
+import utilities.ExtentReport;
+
 import java.util.Properties;
 
 public class tryLogic extends BaseClass{
@@ -32,7 +34,7 @@ public class tryLogic extends BaseClass{
 	
 	
 	@Test(dataProvider="TC_SolidFireConfig", dataProviderClass=DataProviders.class, retryAnalyzer = RetryAnalyzer.class, groups={"Regression", "Master"})
-	public void verifyHappyPath(String userName, String accountName, String opportunityType, String opportunityName, String primaryContact, String salesPlay, String salesType, String installedBaseType, String currency, String channel, String pathway, String partnerSalesModel, String endCustomerUsage, String reseller, String resellerSalesRep, String resellerSE, String product, String salesPrice, String subProduct, String newCapacity, String newTerm) throws InterruptedException, IOException
+	public void verifyTryLogic(String userName, String accountName, String opportunityType, String opportunityName, String primaryContact, String salesPlay, String salesType, String installedBaseType, String currency, String channel, String hyperscaler, String pathway, String partnerSalesModel, String endCustomerUsage, String reseller, String resellerSalesRep, String resellerSE, String product, String salesPrice, String subProduct, String newCapacity, String newTerm, String expectedLabel) throws InterruptedException, IOException
 	{
 		
 		LoginPage lp=new LoginPage(driver);
@@ -57,20 +59,32 @@ public class tryLogic extends BaseClass{
 			{	
 			lp.enterEmailAddress(userName);
 			logger.info("Entered email address as " + userName);
+			ExtentReport.logStep(driver, "Entered email address-"+userName);
+			
 			lp.clickNextButton();
-			logger.info("Clicked on Next button");			
+			logger.info("Clicked on Next button");	
+			ExtentReport.logStep(driver, "Clicked on Next button");
+			
 			lp.enterPassword(p.getProperty("pwd"));
 			logger.info("Entered password");
+			
 			lp.clickSignInButton();
-			logger.info("Click on sign in button");			
+			logger.info("Click on sign in button");	
+			ExtentReport.logStep(driver, "Click on sign in button");
+			
 			lp.clickStaySignInButton();
 			logger.info("Click on stay signin yes button");	
+			ExtentReport.logStep(driver, "Click on stay signin yes button");
+			
 			bp.captureScreenshot(driver);
-			logger.info("SFDC homepage screen captured");			
+			logger.info("SFDC homepage screen captured");	
+			ExtentReport.logStep(driver, "SFDC homepage screen captured");
+			
 			pre_Count++;
 			current_URL=driver.getCurrentUrl();
 			logger.info("Captured SFDC homepage url");
 			}	
+
 		
 			
 //---------------Create Direct Opportunity-----------------------------------------	
@@ -142,31 +156,7 @@ public class tryLogic extends BaseClass{
 			logger.info("Clicked on products tab");			
 			hpc.clickConfigureProduct();
 			logger.info("Clicked on configure product button");            
-			hpsf.clickSolidFireProdcut();
-			logger.info("Clicked on solid fire prodcut");			
-			hpsf.clickConfigureTBCLS(subProduct);
-			logger.info("clicked on configure button for the sub product "+subProduct);			
-			hpsf.enterNewCapacity(newCapacity);
-			logger.info("Entered new capacity in TB "+newCapacity);			
-			hpsf.selectNewTerm(newTerm);
-			logger.info("Entered new term in months "+newTerm);	
-			bp.captureScreenshot(driver);
-			logger.info("Captured screen shot of solid fire product config");			
-			hpsf.clickAddToQuote();
-			logger.info("Clicked on add to quote button");
-//			op.clickSaveButton();
-//			logger.info("Clicked on save button");
-			hpc.clickSettingsExpandAll();
-			logger.info("Clicked on settings and clicked on expand all option");			
-			//hpc.readFullTable(driver);
-			//logger.info("Reading prodct table details");
-			//bp.captureScreenshot(driver);
 			
-			
-			hpc.readProductsTableByColumnName("Product");
-			logger.info("Reading prodcut column data from products table");
-			hpc.clickSaveIcon();
-			logger.info("Clicked on save icon");
 
 			
 			
